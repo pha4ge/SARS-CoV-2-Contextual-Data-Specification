@@ -1,6 +1,5 @@
-# SARS-CoV-2-Contextual-Data-Specification
-Collection template and associated materials for SARS-CoV-2 metadata
-
+# SARS-CoV-2 Contextual Data Specification - Collection template and associated materials for SARS-CoV-2 metadata
+ 
 Public health genomics contextual data includes sample metadata, as well as lab, clinical, epidemiological, and methods information, and enables the interpretation of the sequence data, informs decision making for public health responses, and facilitates scientific understanding of infectious disease. 
 
 Contextual data that are structured and consistent, particularly complying with community standards like minimum information checklists (MIxS, MIGS, Sample Application Standard) and ontologies (OBO Foundry), can be more easily understood and processed by both humans and computers, and can be more easily aggregated and reused for different types of analyses.
