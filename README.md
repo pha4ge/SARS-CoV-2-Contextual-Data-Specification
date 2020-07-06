@@ -81,6 +81,8 @@ limitation, it deviates slightly from the collection template where the "require
 set as required and both the "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields 
 are both set as option. 
 
+The JSON is produced automatically from the csv version of the template using the [this]() script.
+
 **Table 2** Terms for SARS-CoV-2 submission template according to the PHA4GE contextual data collection specification  
 | Column 	| Description 	|
 |:-:	|:-:	|
