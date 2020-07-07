@@ -37,7 +37,7 @@ supporting materials are freely available in this repository.
 |  	| Data submission protocol (NCBI) 	| The SARS-CoV-2 submission protocol for NCBI provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
 |  	| Data submission protocol (ENA) 	| The SARS-CoV-2 submission protocol for ENA provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
 |  	| Data submission protocol (GISAID) 	| The SARS-CoV-2 submission protocol for GISAID provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
-|  	| JSON structure of PHA4GE specification 	| A JSON structure of the PHA4GE specification has been provided for easier integration into software applications. 	|  	|
+| PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json 	| JSON structure of PHA4GE specification 	| A JSON structure of the PHA4GE specification has been provided for easier integration into software applications. 	|  	|
 
 ### Collection template and controlled vocabulary pick lists
 The PHA4GE SARS-CoV-2 Contextual data Collection Template can be used for data management, and consists a 
