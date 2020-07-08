@@ -19,7 +19,8 @@ responses, and facilitates scientific understanding of infectious disease.
 
 Contextual data that are structured and consistent can be more easily understood and processed by both humans and 
 computers, and can be more easily aggregated and reused for different types of analyses. Therefore, this specification 
-is implementable via a collection template, as well as an array of protocols and tools to support the harmonisation and 
+is implementable via a contextual data template package: containing collection template, reference guide, controlled 
+vocabulary and mapping to existing standards, as well as an array of protocols and tools to support the harmonisation and 
 submission of sequence data and contextual information to public repositories. The specification and all of the 
 supporting materials are freely available in this repository.
 
