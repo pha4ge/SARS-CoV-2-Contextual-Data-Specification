@@ -61,9 +61,8 @@ The template SOP provides users with step-by-step instructions for populating th
 terms, and how best to structure sample descriptions. The SOP also highlights a number of ethical, practical, and 
 privacy considerations for data sharing.
 
-### PHA4GE fields to metadata standards mapping TODO
-Mapping of the The PHA4GE SARS-CoV-2 Contextual data Collection Template fields to standards and public repository 
-submission requirements (NCBI, ENA and GISAID). 
+### PHA4GE fields to metadata standards mapping 
+Minimum information checklists are community standards that describe attributes of genomes in a standardized way. There are several existing standards that are useful for structuring SARS-CoV-2 contextual data. The PHA4GE SARS-CoV-2 specification implements these standards, and maps to standardized fields where applicable. Mapping of PHA4GE fields to the Sample Application Standard, MIxS v 5.0, and the MIGS Virus Host-associated package can be found in the reference guide. 
 
 
 ### ENA, NCBI and GISAID submission requirements to PHA4GE field mappings
