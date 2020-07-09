@@ -37,7 +37,7 @@ supporting materials are freely available in this repository.
 | [PHA4GE to Sequence Repository Field Mappings 1.0.xlsx](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20to%20Sequence%20Repository%20Field%20Mappings%201.0.xlsx) 	| ENA, NCBI and GISAID submission requirements to PHA4GE field mappings 	| Many PHA4GE fields have been sourced from public repository submission requirements. The different repositories have different requirements and field names. Repository submission fields have been mapped to PHA4GE fields to demonstrate equivalencies and divergences. 	|  	|
 |  	| Data submission protocol (NCBI) 	| The SARS-CoV-2 submission protocol for NCBI provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
 |  	| Data submission protocol (ENA) 	| The SARS-CoV-2 submission protocol for ENA provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
-|  	| Data submission protocol (GISAID) 	| The SARS-CoV-2 submission protocol for GISAID provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
+|  	| [Data submission protocol (GISAID)](dx.doi.org/10.17504/protocols.io.bh98j99w) 	| The SARS-CoV-2 submission protocol for GISAID provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
 | [PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) 	| JSON structure of PHA4GE specification 	| A JSON structure of the PHA4GE specification has been provided for easier integration into software applications. 	|  	|
 
 ### Collection template and controlled vocabulary pick lists
@@ -72,8 +72,14 @@ submission requirements (NCBI, ENA and GISAID).
 ### Data submission protocol (NCBI)
 
 ### Data submission protocol (ENA) 
+The data submssion process is split into three seperate protocols. 
+
+* [SOP for populating the three templates for SARS-CoV-2 submission to EBI](dx.doi.org/10.17504/protocols.io.bh5dj826)
+* [SARS-CoV-2 EBI submission protocol for Biosamples and seqeuence read data](dx.doi.org/10.17504/protocols.io.bhwdj7a6)
+* [SARS-CoV-2 EBI submission protocol for genome assemblies](dx.doi.org/10.17504/protocols.io.bhwqj7dw)
 
 ### Data submission protocol (GISAID)
+[This protocol](dx.doi.org/10.17504/protocols.io.bh98j99w) provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established,  this protocol covers genome submission sample meta to GISAID.
 
 ### JSON structure of PHA4GE specification
 The versioned specification contextual data collection template in machine-amenable JSON format. Due to JSON format 
