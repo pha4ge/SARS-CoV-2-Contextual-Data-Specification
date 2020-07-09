@@ -70,9 +70,23 @@ Mapping of the The PHA4GE SARS-CoV-2 Contextual data Collection Template fields 
 submission requirements (NCBI, ENA and GISAID).
 
 ### Data submission protocol (NCBI)
+The NCBI data submission process is covered by three separate protocols:
+* [SARS-CoV-2 NCBI submission protocol: SRA, BioSample, and BioProject](http://dx.doi.org/10.17504/protocols.io.bf7bjrin)
+    * Step-by-step instructions for establishing a new NCBI laboratory submission account and for creating and linking a new BioProject to an existing umbrella effort.
+    * Submit SARS-CoV-2 raw data to SRA (Sequence Read Archive) and metadata to BioSample.
+* [SARS-CoV-2 NCBI assembly submission protocol: GenBank](http://dx.doi.org/10.17504/protocols.io.bg2tjyen)
+    * Submit SARS-CoV-2 consensus sequences to NCBI GenBank, linking to existing BioProject, BioSamples, and raw data. 
+    * *Required:* established BioProject and BioSamples
+* [SOP for populating NCBI submission templates for SARS-CoV-2 (BioSample, SRA, and GenBank)](http://dx.doi.org/10.17504/protocols.io.bf89jrz6)
+    * Consult the PHA4GE contextual data specification included on this page **FIRST**, before starting your submission process or populating the templates.
+    * This protocol serves and an extra reference to help map the NCBI template fields to the PHA4GE metadata specification, however, the primary PHA4GE guidance should be followed first to ensure the correct controlled vocabulary terms are used to populate the fields. 
+    * Guidance included in this protocol: 
+        * BioSample metadata template (modified for PHA4GE)
+        * SRA metadata template
+        * GenBank source modifier template (modified for PHA4GE)
 
 ### Data submission protocol (ENA) 
-The data submssion process is split into three seperate protocols. 
+The data submission process is split into three separate protocols. 
 
 * [SOP for populating the three templates for SARS-CoV-2 submission to EBI](dx.doi.org/10.17504/protocols.io.bh5dj826)
 * [SARS-CoV-2 EBI submission protocol for Biosamples and seqeuence read data](dx.doi.org/10.17504/protocols.io.bhwdj7a6)
