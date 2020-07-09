@@ -95,7 +95,7 @@ The JSON is produced automatically from the csv version of the template using th
 | Interface Label 	| Column headers in the submission template 	|
 | Required/Optional 	| Type of requirement according to PHA4GE's template specification. Limited to the values "Optional", "Recommended" and "Required".  	|
 | Definition 	| Short description for the expected interface label value. 	|
-| Value Type 	| Expected interface label's value type. Limited to "string", "integer" and "number". 	|
+| Value Type 	| Expected interface label's value type. Expected values: "String", "Int", "Float", "Bioproject_ID", "Biosample_ID", "SRA_ID", "Genbank_ID", "GISAID_ID", "Email", "Date" and "Integer_or_Range". 	|
 | Example 	| Example for the expected interface label value. 	|
 | Guidance 	| Detailed description for the expected interface label value. 	|
 
