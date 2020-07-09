@@ -93,7 +93,10 @@ The data submission process is split into three separate protocols.
 * [SARS-CoV-2 EBI submission protocol for genome assemblies](https://dx.doi.org/10.17504/protocols.io.bhwqj7dw)
 
 ### Data submission protocol (GISAID)
-[This protocol](https://dx.doi.org/10.17504/protocols.io.bh98j99w) provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established,  this protocol covers genome submission sample meta to GISAID.
+[This protocol](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20GISAID%20Submission%20Protocol.pdf) 
+provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established,  
+this protocol covers genome submission sample metadata to GISAID. 
+**The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bh98j99w](dx.doi.org/10.17504/protocols.io.bh98j99w).**
 
 ### JSON structure of PHA4GE specification
 The versioned specification contextual data collection template in machine-amenable JSON format. Due to JSON format 
