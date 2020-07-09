@@ -42,7 +42,7 @@ supporting materials are freely available in this repository.
 
 ### Collection template and controlled vocabulary pick lists
 The [PHA4GE SARS-CoV-2 Contextual data Collection Template](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx) 
-can be used for data management, and consists a spreadsheet-based (.xlsx) collection template, a reference guide, and a 
+can be used for data management, and consists of a spreadsheet-based (.xlsx) collection template, a reference guide, and a 
 controlled vocabulary list. This information does not have to be shared, but sharing with public repositories is 
 encouraged when permitted. 
 
