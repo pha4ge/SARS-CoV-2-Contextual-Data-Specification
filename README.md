@@ -35,7 +35,7 @@ supporting materials are freely available in this repository.
 | [PHA4GE Contextual Data SOP 1.0.docx](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20Contextual%20Data%20SOP%201.0.docx)	| Collection template SOP 	| Step-by-step instructions for using the collection template are provided in the SOP. Ethical, practical, and privacy considerations are also discussed. Examples and instructions for structuring sample descriptions as well as sourcing additional standardized terms (outside those provided in pick lists) are also discussed. 	|  	|
 | [PHA4GE SARS-CoV-2 Contextual Data Template.xlsx](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template%202.1.xlsx) 	| PHA4GE fields to metadata standards mapping 	| PHA4GE fields are mapped to existing metadata standards such as the [Sample Application Standard](https://www.niaid.nih.gov/research/human-pathogen-and-vector-sequencing-metadata-standards), [MIxS 5.0](https://gensc.org/mixs/), and the [MIGS Virus Host-associated attribute package](https://www.ncbi.nlm.nih.gov/biosample/docs/packages/MIGS.eu.host-associated.5.0/). Mappings are available in the Reference guide tab. Mappings highlight which fields of these standards are considered useful for SARS-CoV-2 public health surveillance and investigations, and which fields are considered not applicable. 	|  	|
 | [PHA4GE to Sequence Repository Field Mappings.xlsx](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20to%20Sequence%20Repository%20Field%20Mappings%201.0.xlsx) 	| ENA, NCBI and GISAID submission requirements to PHA4GE field mappings 	| Many PHA4GE fields have been sourced from public repository submission requirements. The different repositories have different requirements and field names. Repository submission fields have been mapped to PHA4GE fields to demonstrate equivalencies and divergences. 	|  	|
-|  	| Data submission protocol (NCBI) 	| The SARS-CoV-2 submission protocol for NCBI provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
+| [PHA4GE SARS-CoV-2 NCBI submission protocol- SRA, BioSample, and BioProject.pdf](https://github.com/pha4ge/PHA4GE%20SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GEx%20SARS-CoV-2%20NCBI%20submission%20protocol-%20SRA,%20BioSample,%20and%20BioProject.pdf), [SARS-CoV-2 NCBI assembly submission protocol: GenBank.pdf](https://github.com/pha4ge/PHA4GE%20SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GEx%20SARS-CoV-2%20NCBI%20assembly%20submission%20protocol-%20GenBank.pdf) and [PHA4GE SOP for populating NCBI submission templates for SARS-CoV-2 (BioSample, SRA, and GenBank).pdf](https://github.com/pha4ge/PHA4GE%20SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GEx%20SOP%20for%20populating%20NCBI%20submission%templates%20for%20SARS-CoV-2.pdf) | Data submission protocol (NCBI) 	| The SARS-CoV-2 submission protocol for NCBI provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
 |  	| Data submission protocol (ENA) 	| The SARS-CoV-2 submission protocol for ENA provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
 | [PHA4GE SARS-CoV-2 GISAID Submission Protocol](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20GISAID%20Submission%20Protocol.pdf) 	| Data submission protocol (GISAID)	| The SARS-CoV-2 submission protocol for GISAID provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
 | [PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) 	| JSON structure of PHA4GE specification 	| A JSON structure of the PHA4GE specification has been provided for easier integration into software applications. 	|  	|
@@ -71,19 +71,22 @@ submission requirements (NCBI, ENA and GISAID).
 
 ### Data submission protocol (NCBI)
 The NCBI data submission process is covered by three separate protocols:
-* [SARS-CoV-2 NCBI submission protocol: SRA, BioSample, and BioProject](http://dx.doi.org/10.17504/protocols.io.bf7bjrin)
+* [SARS-CoV-2 NCBI submission protocol: SRA, BioSample, and BioProject](https://github.com/pha4ge/PHA4GE%20SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GEx%20SARS-CoV-2%20NCBI%20submission%20protocol-%20SRA,%20BioSample,%20and%20BioProject.pdf)
     * Step-by-step instructions for establishing a new NCBI laboratory submission account and for creating and linking a new BioProject to an existing umbrella effort.
-    * Submit SARS-CoV-2 raw data to SRA (Sequence Read Archive) and metadata to BioSample.
-* [SARS-CoV-2 NCBI assembly submission protocol: GenBank](http://dx.doi.org/10.17504/protocols.io.bg2tjyen)
+    * Submit SARS-CoV-2 raw data to SRA (Sequence Read Archive) and metadata to BioSample. 
+    * **The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bf7bjrin](http://dx.doi.org/10.17504/protocols.io.bf7bjrin).**
+* [SARS-CoV-2 NCBI assembly submission protocol: GenBank](https://github.com/pha4ge/PHA4GE%20SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GEx%20SARS-CoV-2%20NCBI%20assembly%20submission%20protocol-%20GenBank.pdf)
     * Submit SARS-CoV-2 consensus sequences to NCBI GenBank, linking to existing BioProject, BioSamples, and raw data. 
     * *Required:* established BioProject and BioSamples
-* [SOP for populating NCBI submission templates for SARS-CoV-2 (BioSample, SRA, and GenBank)](http://dx.doi.org/10.17504/protocols.io.bf89jrz6)
+    * **The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bg2tjyen](http://dx.doi.org/10.17504/protocols.io.bg2tjyen).**
+* [SOP for populating NCBI submission templates for SARS-CoV-2 (BioSample, SRA, and GenBank)]()
     * Consult the PHA4GE contextual data specification included on this page **FIRST**, before starting your submission process or populating the templates.
     * This protocol serves and an extra reference to help map the NCBI template fields to the PHA4GE metadata specification, however, the primary PHA4GE guidance should be followed first to ensure the correct controlled vocabulary terms are used to populate the fields. 
     * Guidance included in this protocol: 
         * BioSample metadata template (modified for PHA4GE)
         * SRA metadata template
         * GenBank source modifier template (modified for PHA4GE)
+    * **The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bf89jrz6](http://dx.doi.org/10.17504/protocols.io.bf89jrz6)**
 
 ### Data submission protocol (ENA) 
 The data submission process is split into three separate protocols. 
