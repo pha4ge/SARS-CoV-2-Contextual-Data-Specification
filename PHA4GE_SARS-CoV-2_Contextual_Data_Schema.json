@@ -1,1 +1,615 @@
-{"$schema": "http://json-schema.org/draft/2019-09/schema#", "type": "object", "properties": {"bioproject_umbrella_accession": {"description": "The INSDC umbrella accession number of the BioProject to which the BioSample belongs. ", "type": "string", "pattern": "([a-zA-Z]{5})\\d*", "examples": ["PRJNA623807"]}, "bioproject_accession": {"description": "The INSDC accession number of the BioProject(s) to which the BioSample belongs. ", "type": "string", "pattern": "([a-zA-Z]{5})\\d*", "examples": ["PRJNA12345"]}, "biosample_accession": {"description": "The identifier assigned to a BioSample in INSDC archives.", "type": "string", "pattern": "([a-zA-Z]{5})\\d*", "examples": ["SAMN14180202"]}, "sra_accession": {"description": "The Sequence Read Archive (SRA) identifier linking raw read data, methodological metadata and quality control metrics submitted to the INSDC.", "type": "string", "pattern": "([a-zA-Z]{3})\\d*", "examples": ["SRR11177792"]}, "genbank_accession": {"description": "The GenBank identifier assigned to the sequence in the INSDC archives.", "type": "string", "pattern": "([a-zA-Z]{2})\\d*.\\d{1}", "examples": ["MN908947.3"]}, "gisaid_accession": {"description": "The GISAID accession number assigned to the sequence.", "type": "string", "pattern": "([a-zA-Z]{3}_)+\\d*", "examples": ["EPI_ISL_123456"]}, "specimen_collector_sample_id": {"description": "The user-defined name for the sample. ", "type": "string", "examples": ["INSDC: SARS-CoV-2/human/USA/CA-CDPH-001/2020", " GISAID: hCoV-19/USA-CDPH-001/2020"]}, "sample_collected_by": {"description": "The name of the agency that collected the original sample.", "type": "string", "examples": ["Public Health Agency of Canada", " Centers for Disease Control and Prevention"]}, "sample_collector_contact_email": {"description": "The email address of the contact responsible for follow-up regarding the sample.", "type": "string", "format": "email", "examples": ["johnnyblogs@lab.ca", " RespLab@lab.ca"]}, "sample_collector_contact_address": {"description": "The mailing address of the agency submitting the sample.", "type": "string", "examples": ["655 Lab St, Vancouver, British Columbia, V5N 2A2, Canada"]}, "sequence_submitted_by": {"description": "The name of the agency that generated the sequence.", "type": "string", "examples": ["Public Health Agency of Canada", " Centers for Disease Control and Prevention"]}, "bioproject_id": {"description": "The email address of the contact responsible for follow-up regarding the sequence.", "type": "string", "format": "email", "examples": ["johnnyblogs@lab.ca", " RespLab@lab.ca"]}, "sequence_submitter_contact_address": {"description": "The mailing address of the agency submitting the sequence.", "type": "string", "examples": ["123 Sunnybrooke St, Toronto, Ontario, M4P 1L6, Canada"]}, "sample_collection_date": {"description": "The date on which the sample was collected.", "type": "string", "format": "date", "examples": ["2020-03-16"]}, "sample_received_date": {"description": "The date on which the sample was received.", "type": "string", "format": "date", "examples": ["2020-03-20"]}, "geo_loc_name_country": {"description": "Country of origin of the sample.", "type": "string", "examples": ["South Africa"]}, "geo_loc_name_state_province_region": {"description": "State/province/region of origin of the sample.", "type": "string", "examples": ["Western Cape"]}, "organism": {"description": "Taxonomic name of the organism.", "type": "string", "examples": ["Severe acute respiratory coronavirus 2"]}, "isolate": {"description": "Identifier of the specific isolate.", "type": "string", "examples": ["INSDC: SARS-CoV-2/human/USA/CA-CDPH-001/2020", " GISAID: hCoV-19/USA-CDPH-001/2020"]}, "purpose_of_sampling": {"description": "The reason that the sample was collected.", "type": "string", "examples": ["Diagnostic testing"]}, "anatomical_material": {"description": "A substance obtained from an anatomical part of an organism e.g. tissue, blood.", "type": "string", "examples": ["Blood"]}, "anatomical_part": {"description": "An anatomical part of an organism e.g. oropharynx. ", "type": "string", "examples": ["Nasopharynx"]}, "body_product": {"description": "A substance excreted/secreted from an organism e.g. feces, urine, sweat.", "type": "string", "examples": ["Feces"]}, "environmental_material": {"description": "A substance obtained from the natural or man-made environment e.g. soil, water, sewage, door handle, bed handrail, face mask.", "type": "string", "examples": ["Face mask"]}, "environmental_site": {"description": "An environmental location may describe a site in the natural or built environment e.g. hospital, wet market, bat cave.", "type": "string", "examples": ["Hospital room"]}, "collection_device": {"description": "The instrument or container used to collect the sample e.g. swab.", "type": "string", "examples": ["Swab"]}, "collection_method": {"description": "The process used to collect the sample e.g. phlebotomy, necropsy.", "type": "string", "examples": ["Bronchoalveolar lavage (BAL)"]}, "collection_protocol": {"description": "The name and version of a particular protocol used for sampling.", "type": "string", "examples": ["BCRonaSamplingProtocol 1.2"]}, "specimen_processing": {"description": "Any processing applied to the sample during or after receiving the sample. ", "type": "string", "examples": ["Virus passage"]}, "lab_host": {"description": "Name and description of the laboratory host used to propagate the source organism or material from which the sample was obtained.", "type": "string", "examples": ["Vero E6 cell line"]}, "passage_number": {"description": "Number of passages.", "type": "integer", "examples": ["3"]}, "passage_method": {"description": "Description of how organism was passaged.", "type": "string", "examples": [""]}, "biomaterial_extracted": {"description": "The biomaterial extracted from samples for the purpose of sequencing.", "type": "string", "examples": ["RNA (total)"]}, "host_common_name": {"description": "The commonly used name of the host.", "type": "string", "examples": ["Human"]}, "host_scientific_name": {"description": "The taxonomic, or scientific name of the host.", "type": "string", "examples": ["Homo sapiens"]}, "host_health_state": {"description": "Health status of the host at the time of sample collection.", "type": "string", "examples": ["Sick"]}, "host_health_status_details": {"description": "Further details pertaining to the health or disease status of the host at time of collection.", "type": "string", "examples": ["Hospitalized (ICU)"]}, "host_disease": {"description": "The name of the disease experienced by the host.", "type": "string", "examples": ["COVID-19"]}, "host_age": {"description": "Age of host at the time of sampling.", "type": "string", "examples": ["79", " 40-49"]}, "host_gender": {"description": "The gender of the host at the time of sample collection.", "type": "string", "examples": ["Male"]}, "host_origin_geo_loc_country": {"description": "The country of residence of the host.", "type": "string", "examples": ["United Kingdom"]}, "host_subject_id": {"description": "A unique identifier by which each host can be referred to e.g. #131", "type": "string", "examples": ["BCxy123"]}, "symptom_onset_date": {"description": "The date on which the symptoms began or were first noted.", "type": "string", "format": "date", "examples": ["2020-03-16"]}, "signs_and_symptoms": {"description": "A perceived change in function or sensation, (loss, disturbance or appearance) indicative of a disease, reported by a patient.", "type": "string", "examples": ["Cough, Fever, Chills"]}, "location_of_exposure_geo_loc_name_country": {"description": "The country where the host was likely exposed to the causative agent of the illness.", "type": "string", "examples": ["Canada"]}, "travel_history": {"description": "Travel outside the country in last six months.", "type": "string", "examples": ["Canada, Vancouver", " USA, Seattle", " Italy, Milan"]}, "exposure_event": {"description": "Event leading to exposure.", "type": "string", "examples": ["Mass gathering (convention)"]}, "library_id": {"description": "The user-specified identifier for the library prepared for sequencing.", "type": "string", "examples": ["XYZ_123345"]}, "sequencing_instrument": {"description": "The model of the sequencing instrument used.", "type": "string", "examples": ["MinIon"]}, "sequencing_protocol_name": {"description": "The name and version number of the sequencing protocol used.", "type": "string", "examples": ["1D_DNA_MinION, ARTIC Network Protocol V3"]}, "sequencing_protocol_source": {"description": "The name of the organization/authors of the protocol.", "type": "string", "examples": ["ARTIC Network"]}, "sequencing_kit_number": {"description": "The manufacturer's kit number.", "type": "string", "examples": ["AB456XYZ789"]}, "amplicon_pcr_primers_filename": {"description": "The filename of the file containing amplicon PCR primer names and sequences.", "type": "string", "examples": ["ncov_primers_2020.txt"]}, "raw_sequence_data_processing": {"description": "The names of the software and version number used for raw data processing such as removing barcodes, adapter trimming, filtering etc.", "type": "string", "examples": ["Porechop v. 0.2.3"]}, "sequencing_depth_average": {"description": "The total number of sequenced base pairs divided by the expected number of base pairs in the genome.", "type": "number", "examples": ["80"]}, "assembly_name": {"description": "Name and version of the assembly provided by the submitter.", "type": "string", "examples": ["ncov123assembly.fasta"]}, "assembly_method": {"description": "The name and version number of the assembler used.", "type": "string", "examples": ["Canu 2.0"]}, "assembly_coverage_breadth": {"description": "The percentage of the reference genome covered by the sequenced data, to a prescribed depth.", "type": "number", "examples": ["0.95"]}, "assembly_coverage_depth": {"description": "The average number of reads representing a given nucleotide in the reconstructed sequence.", "type": "number", "examples": ["400"]}, "r1_fastq_filename": {"description": "The user-specified filename of the r1 FASTQ file.", "type": "string", "examples": ["ABC123_S1_L001_R1_001.fastq.gz"]}, "r2_fastq_filename": {"description": "The user-specified filename of the r2 FASTQ file.", "type": "string", "examples": ["ABC123_S1_L001_R2_001.fastq.gz"]}, "fast5_filename": {"description": "The user-specified filename of the FAST5 file.", "type": "string", "examples": ["batch1a_sequences.fast5"]}, "fasta_filename": {"description": "The user-specified filename of the FASTA file.", "type": "string", "examples": ["batch1a_sequences.fasta"]}, "number_base_pairs": {"description": "The number of total base pairs generated by the sequencing process.", "type": "integer", "examples": ["387566"]}, "consensus_genome_length": {"description": "Size of the assembled genome described as the number of base pairs.", "type": "integer", "examples": ["38677"]}, "mean_contig_length": {"description": "The mean contig length is the count of base pairs in the average size contig of the sequence assembly.", "type": "integer", "examples": ["12689"]}, "n50": {"description": "The minimum contig length needed to cover 50% of the genome.", "type": "integer", "examples": ["10500"]}, "ns_per_100_kbp": {"description": "The number of N symbols present in the consensus fasta sequence, per 100kbp of sequence.", "type": "integer", "examples": ["300"]}, "reference_genome_accession": {"description": "A persistent, unique identifier of a genome database entry.", "type": "string", "examples": ["NC_045512.2"]}, "consensus_sequence_id": {"description": "The identifier used to specify the consensus sequence.", "type": "string", "examples": ["consensus_1"]}, "consensus_sequence_method": {"description": "The name and version number of the software used to produce the consensus sequence.", "type": "string", "examples": ["iVar 1.2.1"]}, "consensus_sequence_filename": {"description": "The user-specified filename of the consensus sequence.", "type": "string", "examples": ["ProvConsensusSeq.fasta"]}, "annotation_feature_table_filename": {"description": "The filename of the file containing genome features such as gene names and corresponding CDS.", "type": "string", "examples": ["BCCoronaAnnotationFeatures"]}, "bioinformatics_protocol": {"description": "The name and version number of the bioinformatics protocol used.", "type": "string", "examples": ["https://www.protocols.io/groups/cphln-sarscov2-sequencing-consortium/members"]}, "gene_name_1": {"description": "The name of the gene used in the diagnostic RT-PCR test.", "type": "string", "examples": ["envelope small membrane protein (SARS-CoV-2)"]}, "diagnostic_pcr_protocol_1": {"description": "The name and version number of the protocol used for diagnostic marker amplification.", "type": "string", "examples": ["AllTheTestingPCRingEGene v. 2"]}, "diagnostic_pcr_ct_value_1": {"description": "The Ct value result from a diagnostic SARS-CoV-2 RT-PCR test.", "type": "integer", "examples": ["21"]}, "gene_name_2": {"description": "The name of the gene used in the diagnostic RT-PCR test.", "type": "string", "examples": ["RNA-directed RNA Polymerase (RdRP)"]}, "diagnostic_pcr_protocol_2": {"description": "The name and version number of the protocol used for diagnostic marker amplification.", "type": "string", "examples": ["AllTheTestingPCRingRdRpGene v. 3"]}, "diagnostic_pcr_ct_value_2": {"description": "The Ct value result from a diagnostic SARS-CoV-2 RT-PCR test.", "type": "integer", "examples": ["36"]}, "authors": {"description": "Names of individuals contributing to the processes of sample collection, sequence generation, analysis, and data submission.", "type": "string", "examples": ["Tejinder Singh, Fei Hu, Johnny Blogs"]}}, "required": ["specimen_collector_sample_id", "sample_collected_by", "sequence_submitted_by", "sample_collection_date", "geo_loc_name_country", "geo_loc_name_state_province_region", "organism", "isolate", "host_scientific_name", "host_disease"]}
+{
+    "$schema": "http://json-schema.org/draft/2019-09/schema#",
+    "type": "object",
+    "properties": {
+        "bioproject_umbrella_accession": {
+            "description": "The INSDC umbrella accession number of the BioProject to which the BioSample belongs.",
+            "type": "string",
+            "pattern": "([a-zA-Z]{5})\\d*",
+            "examples": [
+                "PRJNA623807"
+            ]
+        },
+        "bioproject_accession": {
+            "description": "The INSDC accession number of the BioProject(s) to which the BioSample belongs.",
+            "type": "string",
+            "pattern": "([a-zA-Z]{5})\\d*",
+            "examples": [
+                "PRJNA12345"
+            ]
+        },
+        "biosample_accession": {
+            "description": "The identifier assigned to a BioSample in INSDC archives.",
+            "type": "string",
+            "pattern": "([a-zA-Z]{5})\\d*",
+            "examples": [
+                "SAMN14180202"
+            ]
+        },
+        "sra_accession": {
+            "description": "The Sequence Read Archive (SRA) identifier linking raw read data, methodological metadata and quality control metrics submitted to the INSDC.",
+            "type": "string",
+            "pattern": "([a-zA-Z]{3})\\d*",
+            "examples": [
+                "SRR11177792"
+            ]
+        },
+        "genbank_accession": {
+            "description": "The GenBank identifier assigned to the sequence in the INSDC archives.",
+            "type": "string",
+            "pattern": "([a-zA-Z]{2})\\d*.\\d{1}",
+            "examples": [
+                "MN908947.3"
+            ]
+        },
+        "gisaid_accession": {
+            "description": "The GISAID accession number assigned to the sequence.",
+            "type": "string",
+            "pattern": "([a-zA-Z]{3}_)+\\d*",
+            "examples": [
+                "EPI_ISL_123456"
+            ]
+        },
+        "specimen_collector_sample_id": {
+            "description": "The user-defined name for the sample.",
+            "type": "string",
+            "examples": [
+                "SARS-CoV-2/human/USA/CA-CDPH-001/2020",
+                "hCoV-19/USA-CDPH-001/2020"
+            ]
+        },
+        "sample_collected_by": {
+            "description": "The name of the agency that collected the original sample.",
+            "type": "string",
+            "examples": [
+                "Public Health Agency of Canada",
+                "Centers for Disease Control and Prevention"
+            ]
+        },
+        "sample_collector_contact_email": {
+            "description": "The email address of the contact responsible for follow-up regarding the sample.",
+            "type": "string",
+            "format": "email",
+            "examples": [
+                "johnnyblogs@lab.ca",
+                "RespLab@lab.ca"
+            ]
+        },
+        "sample_collector_contact_address": {
+            "description": "The mailing address of the agency submitting the sample.",
+            "type": "string",
+            "examples": [
+                "655 Lab St, Vancouver, British Columbia, V5N 2A2, Canada"
+            ]
+        },
+        "sequence_submitted_by": {
+            "description": "The name of the agency that generated the sequence.",
+            "type": "string",
+            "examples": [
+                "Public Health Agency of Canada",
+                "Centers for Disease Control and Prevention"
+            ]
+        },
+        "sequence_submitter_contact_email": {
+            "description": "The email address of the contact responsible for follow-up regarding the sequence.",
+            "type": "string",
+            "format": "email",
+            "examples": [
+                "johnnyblogs@lab.ca",
+                "RespLab@lab.ca"
+            ]
+        },
+        "sequence_submitter_contact_address": {
+            "description": "The mailing address of the agency submitting the sequence.",
+            "type": "string",
+            "examples": [
+                "123 Sunnybrooke St, Toronto, Ontario, M4P 1L6, Canada"
+            ]
+        },
+        "sample_collection_date": {
+            "description": "The date on which the sample was collected.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2020-03-16"
+            ]
+        },
+        "sample_received_date": {
+            "description": "The date on which the sample was received.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2020-03-20"
+            ]
+        },
+        "geo_loc_name_country": {
+            "description": "Country of origin of the sample.",
+            "type": "string",
+            "examples": [
+                "South Africa"
+            ]
+        },
+        "geo_loc_name_state_province_region": {
+            "description": "State/province/region of origin of the sample.",
+            "type": "string",
+            "examples": [
+                "Western Cape"
+            ]
+        },
+        "organism": {
+            "description": "Taxonomic name of the organism.",
+            "type": "string",
+            "examples": [
+                "Severe acute respiratory coronavirus 2"
+            ]
+        },
+        "isolate": {
+            "description": "Identifier of the specific isolate.",
+            "type": "string",
+            "examples": [
+                "SARS-CoV-2/human/USA/CA-CDPH-001/2020",
+                "hCoV-19/USA-CDPH-001/2020"
+            ]
+        },
+        "purpose_of_sampling": {
+            "description": "The reason that the sample was collected.",
+            "type": "string",
+            "examples": [
+                "Diagnostic testing"
+            ]
+        },
+        "anatomical_material": {
+            "description": "A substance obtained from an anatomical part of an organism e.g. tissue, blood.",
+            "type": "string",
+            "examples": [
+                "Blood"
+            ]
+        },
+        "anatomical_part": {
+            "description": "An anatomical part of an organism e.g. oropharynx.",
+            "type": "string",
+            "examples": [
+                "Nasopharynx"
+            ]
+        },
+        "body_product": {
+            "description": "A substance excreted/secreted from an organism e.g. feces, urine, sweat.",
+            "type": "string",
+            "examples": [
+                "Feces"
+            ]
+        },
+        "environmental_material": {
+            "description": "A substance obtained from the natural or man-made environment e.g. soil, water, sewage, door handle, bed handrail, face mask.",
+            "type": "string",
+            "examples": [
+                "Face mask"
+            ]
+        },
+        "environmental_site": {
+            "description": "An environmental location may describe a site in the natural or built environment e.g. hospital, wet market, bat cave.",
+            "type": "string",
+            "examples": [
+                "Hospital room"
+            ]
+        },
+        "collection_device": {
+            "description": "The instrument or container used to collect the sample e.g. swab.",
+            "type": "string",
+            "examples": [
+                "Swab"
+            ]
+        },
+        "collection_method": {
+            "description": "The process used to collect the sample e.g. phlebotomy, necropsy.",
+            "type": "string",
+            "examples": [
+                "Bronchoalveolar lavage (BAL)"
+            ]
+        },
+        "collection_protocol": {
+            "description": "The name and version of a particular protocol used for sampling.",
+            "type": "string",
+            "examples": [
+                "BCRonaSamplingProtocol 1.2"
+            ]
+        },
+        "specimen_processing": {
+            "description": "Any processing applied to the sample during or after receiving the sample.",
+            "type": "string",
+            "examples": [
+                "Virus passage"
+            ]
+        },
+        "lab_host": {
+            "description": "Name and description of the laboratory host used to propagate the source organism or material from which the sample was obtained.",
+            "type": "string",
+            "examples": [
+                "Vero E6 cell line"
+            ]
+        },
+        "passage_number": {
+            "description": "Number of passages.",
+            "type": "integer",
+            "examples": [
+                3
+            ]
+        },
+        "passage_method": {
+            "description": "Description of how organism was passaged.",
+            "type": "string",
+            "examples": [
+                ""
+            ]
+        },
+        "biomaterial_extracted": {
+            "description": "The biomaterial extracted from samples for the purpose of sequencing.",
+            "type": "string",
+            "examples": [
+                "RNA (total)"
+            ]
+        },
+        "host_common_name": {
+            "description": "The commonly used name of the host.",
+            "type": "string",
+            "examples": [
+                "Human"
+            ]
+        },
+        "host_scientific_name": {
+            "description": "The taxonomic, or scientific name of the host.",
+            "type": "string",
+            "examples": [
+                "Homo sapiens"
+            ]
+        },
+        "host_health_state": {
+            "description": "Health status of the host at the time of sample collection.",
+            "type": "string",
+            "examples": [
+                "Sick"
+            ]
+        },
+        "host_health_status_details": {
+            "description": "Further details pertaining to the health or disease status of the host at time of collection.",
+            "type": "string",
+            "examples": [
+                "Hospitalized (ICU)"
+            ]
+        },
+        "host_disease": {
+            "description": "The name of the disease experienced by the host.",
+            "type": "string",
+            "examples": [
+                "COVID-19"
+            ]
+        },
+        "host_age": {
+            "description": "Age of host at the time of sampling.",
+            "type": {
+                "anyOf": [
+                    {
+                        "type": "integer"
+                    },
+                    {
+                        "type": "string",
+                        "pattern": "\\d+-\\d+"
+                    }
+                ]
+            },
+            "examples": [
+                79,
+                "40-49"
+            ]
+        },
+        "host_gender": {
+            "description": "The gender of the host at the time of sample collection.",
+            "type": "string",
+            "examples": [
+                "Male"
+            ]
+        },
+        "host_origin_geo_loc_country": {
+            "description": "The country of residence of the host.",
+            "type": "string",
+            "examples": [
+                "United Kingdom"
+            ]
+        },
+        "host_subject_id": {
+            "description": "A unique identifier by which each host can be referred to e.g. #131",
+            "type": "string",
+            "examples": [
+                "BCxy123"
+            ]
+        },
+        "symptom_onset_date": {
+            "description": "The date on which the symptoms began or were first noted.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2020-03-16"
+            ]
+        },
+        "signs_and_symptoms": {
+            "description": "A perceived change in function or sensation, (loss, disturbance or appearance) indicative of a disease, reported by a patient.",
+            "type": "string",
+            "examples": [
+                "Cough, Fever, Chills"
+            ]
+        },
+        "location_of_exposure_geo_loc_name_country": {
+            "description": "The country where the host was likely exposed to the causative agent of the illness.",
+            "type": "string",
+            "examples": [
+                "Canada"
+            ]
+        },
+        "travel_history": {
+            "description": "Travel outside the country in last six months.",
+            "type": "string",
+            "examples": [
+                "Canada, Vancouver",
+                "USA, Seattle",
+                "Italy, Milan"
+            ]
+        },
+        "exposure_event": {
+            "description": "Event leading to exposure.",
+            "type": "string",
+            "examples": [
+                "Mass gathering (convention)"
+            ]
+        },
+        "library_id": {
+            "description": "The user-specified identifier for the library prepared for sequencing.",
+            "type": "string",
+            "examples": [
+                "XYZ_123345"
+            ]
+        },
+        "sequencing_instrument": {
+            "description": "The model of the sequencing instrument used.",
+            "type": "string",
+            "examples": [
+                "MinIon"
+            ]
+        },
+        "sequencing_protocol_name": {
+            "description": "The name and version number of the sequencing protocol used.",
+            "type": "string",
+            "examples": [
+                "1D_DNA_MinION, ARTIC Network Protocol V3"
+            ]
+        },
+        "sequencing_protocol_source": {
+            "description": "The name of the organization/authors of the protocol.",
+            "type": "string",
+            "examples": [
+                "ARTIC Network"
+            ]
+        },
+        "sequencing_kit_number": {
+            "description": "The manufacturer's kit number.",
+            "type": "string",
+            "examples": [
+                "AB456XYZ789"
+            ]
+        },
+        "amplicon_pcr_primers_filename": {
+            "description": "The filename of the file containing amplicon PCR primer names and sequences.",
+            "type": "string",
+            "examples": [
+                "ncov_primers_2020.txt"
+            ]
+        },
+        "raw_sequence_data_processing": {
+            "description": "The names of the software and version number used for raw data processing such as removing barcodes, adapter trimming, filtering etc.",
+            "type": "string",
+            "examples": [
+                "Porechop v. 0.2.3"
+            ]
+        },
+        "sequencing_depth_average": {
+            "description": "The total number of sequenced base pairs divided by the expected number of base pairs in the genome.",
+            "type": "number",
+            "examples": [
+                80.0
+            ]
+        },
+        "assembly_name": {
+            "description": "Name and version of the assembly provided by the submitter.",
+            "type": "string",
+            "examples": [
+                "ncov123assembly.fasta"
+            ]
+        },
+        "assembly_method": {
+            "description": "The name and version number of the assembler used.",
+            "type": "string",
+            "examples": [
+                "Canu 2.0"
+            ]
+        },
+        "assembly_coverage_breadth": {
+            "description": "The percentage of the reference genome covered by the sequenced data, to a prescribed depth.",
+            "type": "number",
+            "examples": [
+                0.95
+            ]
+        },
+        "assembly_coverage_depth": {
+            "description": "The average number of reads representing a given nucleotide in the reconstructed sequence.",
+            "type": "number",
+            "examples": [
+                400.0
+            ]
+        },
+        "r1_fastq_filename": {
+            "description": "The user-specified filename of the r1 FASTQ file.",
+            "type": "string",
+            "examples": [
+                "ABC123_S1_L001_R1_001.fastq.gz"
+            ]
+        },
+        "r2_fastq_filename": {
+            "description": "The user-specified filename of the r2 FASTQ file.",
+            "type": "string",
+            "examples": [
+                "ABC123_S1_L001_R2_001.fastq.gz"
+            ]
+        },
+        "fast5_filename": {
+            "description": "The user-specified filename of the FAST5 file.",
+            "type": "string",
+            "examples": [
+                "batch1a_sequences.fast5"
+            ]
+        },
+        "fasta_filename": {
+            "description": "The user-specified filename of the FASTA file.",
+            "type": "string",
+            "examples": [
+                "batch1a_sequences.fasta"
+            ]
+        },
+        "number_base_pairs": {
+            "description": "The number of total base pairs generated by the sequencing process.",
+            "type": "integer",
+            "examples": [
+                387566
+            ]
+        },
+        "consensus_genome_length": {
+            "description": "Size of the assembled genome described as the number of base pairs.",
+            "type": "integer",
+            "examples": [
+                38677
+            ]
+        },
+        "mean_contig_length": {
+            "description": "The mean contig length is the count of base pairs in the average size contig of the sequence assembly.",
+            "type": "integer",
+            "examples": [
+                12689
+            ]
+        },
+        "n50": {
+            "description": "The minimum contig length needed to cover 50% of the genome.",
+            "type": "integer",
+            "examples": [
+                10500
+            ]
+        },
+        "ns_per_100_kbp": {
+            "description": "The number of N symbols present in the consensus fasta sequence, per 100kbp of sequence.",
+            "type": "integer",
+            "examples": [
+                300
+            ]
+        },
+        "reference_genome_accession": {
+            "description": "A persistent, unique identifier of a genome database entry.",
+            "type": "string",
+            "examples": [
+                "NC_045512.2"
+            ]
+        },
+        "consensus_sequence_id": {
+            "description": "The identifier used to specify the consensus sequence.",
+            "type": "string",
+            "examples": [
+                "consensus_1"
+            ]
+        },
+        "consensus_sequence_method": {
+            "description": "The name and version number of the software used to produce the consensus sequence.",
+            "type": "string",
+            "examples": [
+                "iVar 1.2.1"
+            ]
+        },
+        "consensus_sequence_filename": {
+            "description": "The user-specified filename of the consensus sequence.",
+            "type": "string",
+            "examples": [
+                "ProvConsensusSeq.fasta"
+            ]
+        },
+        "annotation_feature_table_filename": {
+            "description": "The filename of the file containing genome features such as gene names and corresponding CDS.",
+            "type": "string",
+            "examples": [
+                "BCCoronaAnnotationFeatures"
+            ]
+        },
+        "bioinformatics_protocol": {
+            "description": "The name and version number of the bioinformatics protocol used.",
+            "type": "string",
+            "examples": [
+                "https://www.protocols.io/groups/cphln-sarscov2-sequencing-consortium/members"
+            ]
+        },
+        "gene_name_1": {
+            "description": "The name of the gene used in the diagnostic RT-PCR test.",
+            "type": "string",
+            "examples": [
+                "envelope small membrane protein (SARS-CoV-2)"
+            ]
+        },
+        "diagnostic_pcr_protocol_1": {
+            "description": "The name and version number of the protocol used for diagnostic marker amplification.",
+            "type": "string",
+            "examples": [
+                "AllTheTestingPCRingEGene v. 2"
+            ]
+        },
+        "diagnostic_pcr_ct_value_1": {
+            "description": "The Ct value result from a diagnostic SARS-CoV-2 RT-PCR test.",
+            "type": "integer",
+            "examples": [
+                21
+            ]
+        },
+        "gene_name_2": {
+            "description": "The name of the gene used in the diagnostic RT-PCR test.",
+            "type": "string",
+            "examples": [
+                "RNA-directed RNA Polymerase (RdRP)"
+            ]
+        },
+        "diagnostic_pcr_protocol_2": {
+            "description": "The name and version number of the protocol used for diagnostic marker amplification.",
+            "type": "string",
+            "examples": [
+                "AllTheTestingPCRingRdRpGene v. 3"
+            ]
+        },
+        "diagnostic_pcr_ct_value_2": {
+            "description": "The Ct value result from a diagnostic SARS-CoV-2 RT-PCR test.",
+            "type": "integer",
+            "examples": [
+                36
+            ]
+        },
+        "authors": {
+            "description": "Names of individuals contributing to the processes of sample collection, sequence generation, analysis, and data submission.",
+            "type": "string",
+            "examples": [
+                "Tejinder Singh, Fei Hu, Johnny Blogs"
+            ]
+        }
+    },
+    "required": [
+        "specimen_collector_sample_id",
+        "sample_collected_by",
+        "sequence_submitted_by",
+        "sample_collection_date",
+        "geo_loc_name_country",
+        "geo_loc_name_state_province_region",
+        "organism",
+        "isolate",
+        "host_scientific_name",
+        "host_disease"
+    ]
+}
