@@ -38,7 +38,7 @@ supporting materials are freely available in this repository.
 | [PHA4GE SARS-CoV-2 NCBI submission protocol- SRA, BioSample, and BioProject.pdf](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20NCBI%20submission%20protocol-%20SRA%2C%20BioSample%2C%20and%20BioProject.pdf), [SARS-CoV-2 NCBI assembly submission protocol: GenBank.pdf](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20NCBI%20assembly%20submission%20protocol-%20GenBank.pdf) and [PHA4GE SOP for populating NCBI submission templates for SARS-CoV-2 (BioSample, SRA, and GenBank).pdf](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SOP%20for%20populating%20NCBI%20submission%20templates%20for%20SARS-CoV-2%20(BioSample%2C%20SRA%2C%20and%20GenBank).pdf) | Data submission protocol (NCBI) 	| The SARS-CoV-2 submission protocol for NCBI provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
 | [PHA4GE SARS-CoV-2 EBI submission protocol- ENA, BioSample, and BioProject.pdf](), [PHA4GE SARS-CoV-2 EBI assembly submission protocol.pdf]() and [PHA4GE SOP for populating EBI submission templates (ENA).pdf]()	| Data submission protocol (ENA) 	| The SARS-CoV-2 submission protocol for ENA provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
 | [PHA4GE SARS-CoV-2 GISAID Submission Protocol](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20GISAID%20Submission%20Protocol.pdf) 	| Data submission protocol (GISAID)	| The SARS-CoV-2 submission protocol for GISAID provides step-by-step instructions and recommendations aimed at improving interoperability and consistency of submitted data. 	|  	|
-| [PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) 	| JSON structure of PHA4GE specification 	| A JSON structure of the PHA4GE specification has been provided for easier integration into software applications. 	|  	|
+| [PHA4GE SARS-CoV-2 Standardised Terms.csv]() and [PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) 	| JSON structure of PHA4GE specification 	| A JSON structure of the PHA4GE specification has been provided for easier integration into software applications. Originated from the standardised terms csv file.	|  	|
 
 ### Collection template and controlled vocabulary pick lists
 The PHA4GE SARS-CoV-2 Contextual data Collection Template can be used for data management, and consists a 
@@ -110,9 +110,10 @@ limitation, it deviates slightly from the collection template where the "require
 set as required and both the "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields 
 are both set as option. 
 
-The JSON is produced automatically from the csv version of the template using the [this](https://github.com/pha4ge/SARS-CoV-2-Data-Spec-JSON) script.
+The JSON is produced automatically from the [csv version]() of the template using the [this](https://github.com/pha4ge/SARS-CoV-2-Data-Spec-JSON) script.
 
-**Table 2** Terms for SARS-CoV-2 submission template according to the PHA4GE contextual data collection specification  
+**Table 2** Terms for SARS-CoV-2 submission template according to the PHA4GE contextual data collection specification in 
+[PHA4GE SARS-CoV-2 Standardised Terms]()  
 | Column 	| Description 	|
 |:-:	|:-:	|
 | Interface Label 	| Column headers in the submission template 	|
