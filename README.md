@@ -88,12 +88,12 @@ The NCBI data submission process is covered by three separate protocols:
 ### Data submission protocol (ENA) 
 The data submission process is split into three separate protocols. 
 
-* [SOP for populating the three templates for SARS-CoV-2 submission to EBI](dx.doi.org/10.17504/protocols.io.bh5dj826)
-* [SARS-CoV-2 EBI submission protocol for Biosamples and seqeuence read data](dx.doi.org/10.17504/protocols.io.bhwdj7a6)
-* [SARS-CoV-2 EBI submission protocol for genome assemblies](dx.doi.org/10.17504/protocols.io.bhwqj7dw)
+* [SOP for populating the three templates for SARS-CoV-2 submission to EBI](https://dx.doi.org/10.17504/protocols.io.bh5dj826)
+* [SARS-CoV-2 EBI submission protocol for Biosamples and seqeuence read data](https://dx.doi.org/10.17504/protocols.io.bhwdj7a6)
+* [SARS-CoV-2 EBI submission protocol for genome assemblies](https://dx.doi.org/10.17504/protocols.io.bhwqj7dw)
 
 ### Data submission protocol (GISAID)
-[This protocol](dx.doi.org/10.17504/protocols.io.bh98j99w) provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established,  this protocol covers genome submission sample meta to GISAID.
+[This protocol](https://dx.doi.org/10.17504/protocols.io.bh98j99w) provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established,  this protocol covers genome submission sample meta to GISAID.
 
 ### JSON structure of PHA4GE specification
 The versioned specification contextual data collection template in machine-amenable JSON format. Due to JSON format 
