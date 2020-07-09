@@ -96,7 +96,7 @@ The data submission process is split into three separate protocols.
 [This protocol](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20GISAID%20Submission%20Protocol.pdf) 
 provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established,  
 this protocol covers genome submission sample metadata to GISAID. 
-**The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bh98j99w](dx.doi.org/10.17504/protocols.io.bh98j99w).**
+**The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bh98j99w](https://dx.doi.org/10.17504/protocols.io.bh98j99w).**
 
 ### JSON structure of PHA4GE specification
 The versioned specification contextual data collection template in machine-amenable JSON format. Due to JSON format 
@@ -104,7 +104,7 @@ limitation, it deviates slightly from the collection template where the "require
 set as required and both the "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields 
 are both set as option. 
 
-The JSON is produced automatically from the csv version of the template using the [this]() script.
+The JSON is produced automatically from the csv version of the template using the [this](https://github.com/pha4ge/SARS-CoV-2-Data-Spec-JSON) script.
 
 **Table 2** Terms for SARS-CoV-2 submission template according to the PHA4GE contextual data collection specification  
 | Column 	| Description 	|
