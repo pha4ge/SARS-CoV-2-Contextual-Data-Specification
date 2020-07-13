@@ -5,7 +5,7 @@
         "bioproject_umbrella_accession": {
             "description": "The INSDC umbrella accession number of the BioProject to which the BioSample belongs.",
             "type": "string",
-            "pattern": "([a-zA-Z]{5})\\d*",
+            "pattern": "^PRJ(N|E|D)([a-zA-Z]?)[0-9]+*",
             "examples": [
                 "PRJNA623807"
             ]
@@ -13,7 +13,7 @@
         "bioproject_accession": {
             "description": "The INSDC accession number of the BioProject(s) to which the BioSample belongs.",
             "type": "string",
-            "pattern": "([a-zA-Z]{5})\\d*",
+            "pattern": "^PRJ(N|E|D)([a-zA-Z]?)[0-9]+*",
             "examples": [
                 "PRJNA12345"
             ]
@@ -21,7 +21,7 @@
         "biosample_accession": {
             "description": "The identifier assigned to a BioSample in INSDC archives.",
             "type": "string",
-            "pattern": "([a-zA-Z]{5})\\d*",
+            "pattern": "^SAM(D|N|E([AG]?))[0-9]+",
             "examples": [
                 "SAMN14180202"
             ]
@@ -29,7 +29,7 @@
         "sra_accession": {
             "description": "The Sequence Read Archive (SRA) identifier linking raw read data, methodological metadata and quality control metrics submitted to the INSDC.",
             "type": "string",
-            "pattern": "([a-zA-Z]{3})\\d*",
+            "pattern": "^(SRR|ERR)[0-9]+",
             "examples": [
                 "SRR11177792"
             ]
@@ -37,7 +37,7 @@
         "genbank_accession": {
             "description": "The GenBank identifier assigned to the sequence in the INSDC archives.",
             "type": "string",
-            "pattern": "([a-zA-Z]{2})\\d*.\\d{1}",
+            "pattern": "^([a-zA-Z]{2})\\d*.\\d{1}",
             "examples": [
                 "MN908947.3"
             ]
@@ -45,7 +45,7 @@
         "gisaid_accession": {
             "description": "The GISAID accession number assigned to the sequence.",
             "type": "string",
-            "pattern": "([a-zA-Z]{3}_)+\\d*",
+            "pattern": "^EPI_ISL_\\d*",
             "examples": [
                 "EPI_ISL_123456"
             ]
@@ -286,17 +286,15 @@
         },
         "host_age": {
             "description": "Age of host at the time of sampling.",
-            "type": {
-                "anyOf": [
-                    {
-                        "type": "integer"
-                    },
-                    {
-                        "type": "string",
-                        "pattern": "\\d+-\\d+"
-                    }
-                ]
-            },
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string",
+                    "pattern": "\\d+-\\d+"
+                }
+            ],
             "examples": [
                 79,
                 "40-49"
