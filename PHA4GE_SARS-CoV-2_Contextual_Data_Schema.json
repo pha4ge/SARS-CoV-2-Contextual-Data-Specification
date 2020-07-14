@@ -27,9 +27,9 @@
             ]
         },
         "sra_accession": {
-            "description": "The Sequence Read Archive (SRA) identifier linking raw read data, methodological metadata and quality control metrics submitted to the INSDC.",
+            "description": "The Sequence Read Archive (SRA), European Nucleotide Archive (ENA) or DDBJ Sequence Read Archive (DRA) identifier linking raw read data, methodological metadata and quality control metrics submitted to the INSDC.",
             "type": "string",
-            "pattern": "^(SRR|ERR)[0-9]+",
+            "pattern": "^(SRR|ERR|DRR)[0-9]+",
             "examples": [
                 "SRR11177792"
             ]
