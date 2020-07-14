@@ -1,5 +1,7 @@
 # SARS-CoV-2 Contextual Data Specification - Collection template and associated materials for SARS-CoV-2 metadata
 
+[![DOI](https://zenodo.org/badge/271182285.svg)](https://zenodo.org/badge/latestdoi/271182285)
+
 ## Overview
 The Public Health Alliance for Genomic Epidemiology ([PHA4GE](https://pha4ge.org)) is a global coalition that is 
 actively working to establish consensus standards, document and share best practices, improve the availability of 
