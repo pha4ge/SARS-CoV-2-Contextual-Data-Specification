@@ -35,7 +35,7 @@
             ]
         },
         "genbank_accession": {
-            "description": "The GenBank identifier assigned to the sequence in the INSDC archives.",
+            "description": "The GenBank/ENA/DDBJ identifier assigned to the sequence in the INSDC archives.",
             "type": "string",
             "pattern": "^([a-zA-Z]{2})\\d*.\\d{1}",
             "examples": [
