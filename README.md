@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/271182285.svg)](https://zenodo.org/badge/latestdoi/271182285)
 
-[Preprint](https://www.preprints.org/manuscript/202008.0220/v1)
+Pre-print available [here](https://www.preprints.org/manuscript/202008.0220/v1).
 
 ## Overview
 The Public Health Alliance for Genomic Epidemiology ([PHA4GE](https://pha4ge.org)) is a global coalition that is 
