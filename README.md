@@ -4,6 +4,8 @@
 
 Pre-print available [here](https://www.preprints.org/manuscript/202008.0220/v1) (10.20944/preprints202008.0220.v1).
 
+License: CC-BY 4.0 International
+
 ## Overview
 The Public Health Alliance for Genomic Epidemiology ([PHA4GE](https://pha4ge.org)) is a global coalition that is 
 actively working to establish consensus standards, document and share best practices, improve the availability of 
