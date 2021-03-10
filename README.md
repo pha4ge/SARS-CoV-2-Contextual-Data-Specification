@@ -66,7 +66,7 @@ the reference guide aims to facilitate the use of the collection template. It co
 guidance/instructions, and examples of structured data.
 
 ### Collection template SOP
-A [Standard Operating Procedure (SOP)](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20Contextual%20Data%20SOP.docx) containing instructions for using the collection template. 
+A [Standard Operating Procedure (SOP)](PHA4GE%20Contextual%20Data%20SOP.docx) containing instructions for using the collection template. 
 
 The template SOP provides users with step-by-step instructions for populating the template, looking up standardized 
 terms, and how best to structure sample descriptions. The SOP also highlights a number of ethical, practical, and 
@@ -77,7 +77,7 @@ Minimum information checklists are community standards that describe attributes 
 There are several existing standards that are useful for structuring SARS-CoV-2 contextual data. 
 The PHA4GE SARS-CoV-2 specification implements these standards, and maps to standardized fields where applicable. 
 Mapping of PHA4GE fields to the Sample Application Standard, MIxS v 5.0, and the MIGS Virus Host-associated package can 
-be found in the [reference guide](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx). 
+be found in the [reference guide](PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx). 
 
 
 ### ENA, NCBI and GISAID submission requirements to PHA4GE field mappings
@@ -125,13 +125,13 @@ limitation, it deviates slightly from the collection template where the "require
 set as required and both the "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields 
 are both set as option. 
 
-The [JSON](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) 
-is produced automatically from the [csv version](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv) 
+The [JSON](PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) 
+is produced automatically from the [csv version](PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv) 
 of the template using the the script available from [SARS-CoV-2-Data-Spec-JSON](https://github.com/pha4ge/SARS-CoV-2-Data-Spec-JSON) 
 repository.
 
 **Table 1** Terms for SARS-CoV-2 submission template according to the PHA4GE contextual data collection specification in 
-[PHA4GE SARS-CoV-2 Standardised Terms](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv)  
+[PHA4GE SARS-CoV-2 Standardised Terms](PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv)  
 | Column 	| Description 	|
 |:-:	|:-:	|
 | Interface Label 	| Column headers in the submission template 	|
