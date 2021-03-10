@@ -6,6 +6,22 @@ Pre-print available [here](https://www.preprints.org/manuscript/202008.0220/v1) 
 
 License: CC-BY 4.0 International
 
+
+## Table of Contents
+  * [Overview](#overview)
+  * [SARS-CoV-2 metadata specification](#sars-cov-2-metadata-specification)
+  * [Content description](#content-description)
+    + [Collection template and controlled vocabulary pick lists](#collection-template-and-controlled-vocabulary-pick-lists)
+    + [Reference guide](#reference-guide)
+    + [Collection template SOP](#collection-template-sop)
+    + [PHA4GE fields to metadata standards mapping](#pha4ge-fields-to-metadata-standards-mapping)
+    + [ENA, NCBI and GISAID submission requirements to PHA4GE field mappings](#ena--ncbi-and-gisaid-submission-requirements-to-pha4ge-field-mappings)
+    + [Data submission protocol (NCBI)](#data-submission-protocol--ncbi-)
+    + [Data submission protocol (ENA)](#data-submission-protocol--ena-)
+    + [Data submission protocol (GISAID)](#data-submission-protocol--gisaid-)
+    + [JSON structure of PHA4GE specification](#json-structure-of-pha4ge-specification)
+  * [Contacts](#contacts)
+
 ## Overview
 The Public Health Alliance for Genomic Epidemiology ([PHA4GE](https://pha4ge.org)) is a global coalition that is 
 actively working to establish consensus standards, document and share best practices, improve the availability of 
@@ -34,7 +50,7 @@ supporting materials are freely available in this repository.
 ## Content description
 
 ### Collection template and controlled vocabulary pick lists
-The [PHA4GE SARS-CoV-2 Contextual data Collection Template](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx) 
+The [PHA4GE SARS-CoV-2 Contextual data Collection Template](PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx) 
 can be used for data management, and consists of a spreadsheet-based (.xlsx) collection template, a reference guide, and a 
 controlled vocabulary list. This information does not have to be shared, but sharing with public repositories is 
 encouraged when permitted. 
@@ -45,7 +61,7 @@ bioinformatics and quality control metrics, etc. The collection template contain
 ontology-mapped controlled vocabulary are offered to better standardize data values. 
 
 ### Reference guide
-Available in the The [PHA4GE SARS-CoV-2 Contextual data Collection Template](https://github.com/pha4ge/SARS-CoV-2-Contextual-Data-Specification/blob/master/PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx),
+Available in the The [PHA4GE SARS-CoV-2 Contextual data Collection Template](PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx),
 the reference guide aims to facilitate the use of the collection template. It contains field definitions, further 
 guidance/instructions, and examples of structured data.
 
