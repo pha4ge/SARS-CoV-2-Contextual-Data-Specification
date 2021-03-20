@@ -2,8 +2,15 @@
     "$schema": "http://json-schema.org/draft/2019-09/schema#",
     "type": "object",
     "properties": {
+        "specimen_collector_sample_id": {
+            "description": "The user-defined name for the sample.",
+            "type": "string",
+            "examples": [
+                "SARS-CoV-2/human/USA/CA-CDPH-001/2020,hCoV-19/USA-CDPH-001/2020"
+            ]
+        },
         "bioproject_umbrella_accession": {
-            "description": "The INSDC umbrella accession number of the BioProject to which the BioSample belongs.",
+            "description": "The INSDC umbrella accession number of the BioProject to which the BioSample belongs. ",
             "type": "string",
             "pattern": "^PRJ(N|E|D)([a-zA-Z]?)[0-9]+*",
             "examples": [
@@ -11,7 +18,7 @@
             ]
         },
         "bioproject_accession": {
-            "description": "The INSDC accession number of the BioProject(s) to which the BioSample belongs.",
+            "description": "The INSDC accession number of the BioProject(s) to which the BioSample belongs. ",
             "type": "string",
             "pattern": "^PRJ(N|E|D)([a-zA-Z]?)[0-9]+*",
             "examples": [
@@ -34,7 +41,7 @@
                 "SRR11177792"
             ]
         },
-        "genbank_accession": {
+        "genbank_ena_ddbj_accession": {
             "description": "The GenBank/ENA/DDBJ identifier assigned to the sequence in the INSDC archives.",
             "type": "string",
             "pattern": "^([a-zA-Z]{2})\\d*.\\d{1}",
@@ -50,20 +57,25 @@
                 "EPI_ISL_123456"
             ]
         },
-        "specimen_collector_sample_id": {
-            "description": "The user-defined name for the sample.",
+        "gisaid_virus_name": {
+            "description": "The user-defined GISAID virus name assigned to the sequence.",
             "type": "string",
             "examples": [
-                "SARS-CoV-2/human/USA/CA-CDPH-001/2020",
-                "hCoV-19/USA-CDPH-001/2020"
+                "hCoV-19/Canada/prov_rona_99/2020"
+            ]
+        },
+        "host_specimen_voucher": {
+            "description": "Identifier for the physical specimen.",
+            "type": "string",
+            "examples": [
+                "URI: http://portal.vertnet.org/o/fmnh/mammals?id=33e55cfe-330b-40d9-aaae-8d042cba7542 INSDC triplet: UAM:Mamm:52179"
             ]
         },
         "sample_collected_by": {
             "description": "The name of the agency that collected the original sample.",
             "type": "string",
             "examples": [
-                "Public Health Agency of Canada",
-                "Centers for Disease Control and Prevention"
+                "Public Health Agency of Canada"
             ]
         },
         "sample_collector_contact_email": {
@@ -71,8 +83,7 @@
             "type": "string",
             "format": "email",
             "examples": [
-                "johnnyblogs@lab.ca",
-                "RespLab@lab.ca"
+                "johnnyblogs@lab.ca, RespLab@lab.ca"
             ]
         },
         "sample_collector_contact_address": {
@@ -86,8 +97,7 @@
             "description": "The name of the agency that generated the sequence.",
             "type": "string",
             "examples": [
-                "Public Health Agency of Canada",
-                "Centers for Disease Control and Prevention"
+                "Public Health Agency of Canada, Centers for Disease Control and Prevention"
             ]
         },
         "sequence_submitter_contact_email": {
@@ -95,8 +105,7 @@
             "type": "string",
             "format": "email",
             "examples": [
-                "johnnyblogs@lab.ca",
-                "RespLab@lab.ca"
+                "johnnyblogs@lab.ca, RespLab@lab.ca"
             ]
         },
         "sequence_submitter_contact_address": {
@@ -129,11 +138,39 @@
                 "South Africa"
             ]
         },
-        "geo_loc_name_state_province_region": {
-            "description": "State/province/region of origin of the sample.",
+        "geo_loc_name_state_province_territory": {
+            "description": "The state/province/territory of origin of the sample.",
             "type": "string",
             "examples": [
                 "Western Cape"
+            ]
+        },
+        "geo_loc_name_county_region": {
+            "description": "The county/region of origin of the sample.",
+            "type": "string",
+            "examples": [
+                "Derbyshire"
+            ]
+        },
+        "geo_loc_name_city": {
+            "description": "The city of origin of the sample.",
+            "type": "string",
+            "examples": [
+                "Vancouver"
+            ]
+        },
+        "geo_loc_latitude": {
+            "description": "The latitude coordinates of the geographical location of sample collection.",
+            "type": "string",
+            "examples": [
+                "38.98 N"
+            ]
+        },
+        "geo_loc_longitude": {
+            "description": "The longitude coordinates of the geographical location of sample collection.",
+            "type": "string",
+            "examples": [
+                "77.11 W"
             ]
         },
         "organism": {
@@ -147,8 +184,14 @@
             "description": "Identifier of the specific isolate.",
             "type": "string",
             "examples": [
-                "SARS-CoV-2/human/USA/CA-CDPH-001/2020",
-                "hCoV-19/USA-CDPH-001/2020"
+                "SARS-CoV-2/human/USA/CA-CDPH-001/2020,hCoV-19/USA-CDPH-001/2020"
+            ]
+        },
+        "culture_collection": {
+            "description": "The name of the source collection and unique culture identifier. ",
+            "type": "string",
+            "examples": [
+                "/culture_collection=\"ATCC:26370\""
             ]
         },
         "purpose_of_sampling": {
@@ -156,6 +199,27 @@
             "type": "string",
             "examples": [
                 "Diagnostic testing"
+            ]
+        },
+        "purpose_of_sampling_details": {
+            "description": "Further details pertaining to the reason the sample was collected.",
+            "type": "string",
+            "examples": [
+                "Screening of bat specimens in museum collections."
+            ]
+        },
+        "sample_plan_name": {
+            "description": "The name of the sample plan implemented for sample collection.",
+            "type": "string",
+            "examples": [
+                "CanCOGeN Sampling Strategy 1.0"
+            ]
+        },
+        "sample_collected_in_quarantine": {
+            "description": "Whether the sample was collected from an individual in quarantine.",
+            "type": "string",
+            "examples": [
+                "Yes"
             ]
         },
         "anatomical_material": {
@@ -249,6 +313,20 @@
                 "RNA (total)"
             ]
         },
+        "data_abstraction_details": {
+            "description": "A description of how any data elements were altered to preserve patient privacy.",
+            "type": "string",
+            "examples": [
+                ""
+            ]
+        },
+        "geo_loc_name_state_province_region": {
+            "description": "State/province/region of origin of the sample.",
+            "type": "string",
+            "examples": [
+                "Western Cape"
+            ]
+        },
         "host_common_name": {
             "description": "The commonly used name of the host.",
             "type": "string",
@@ -267,7 +345,7 @@
             "description": "Health status of the host at the time of sample collection.",
             "type": "string",
             "examples": [
-                "Sick"
+                "Asymptomatic"
             ]
         },
         "host_health_status_details": {
@@ -284,6 +362,13 @@
                 "COVID-19"
             ]
         },
+        "host_disease_outcome": {
+            "description": "Disease outcome in the host.",
+            "type": "string",
+            "examples": [
+                "Recovered"
+            ]
+        },
         "host_age": {
             "description": "Age of host at the time of sampling.",
             "anyOf": [
@@ -296,22 +381,50 @@
                 }
             ],
             "examples": [
-                79,
-                "40-49"
+                79
+            ]
+        },
+        "host_age_unit": {
+            "description": "The units used to measure the host's age.",
+            "type": "string",
+            "examples": [
+                "years"
+            ]
+        },
+        "host_age_bin": {
+            "description": "The age category of the host at the time of sampling.",
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string",
+                    "pattern": "\\d+-\\d+"
+                }
+            ],
+            "examples": [
+                "10-15"
             ]
         },
         "host_gender": {
             "description": "The gender of the host at the time of sample collection.",
             "type": "string",
             "examples": [
-                "Male"
+                "male"
             ]
         },
-        "host_origin_geo_loc_country": {
-            "description": "The country of residence of the host.",
+        "host_residence_geo_loc_name_country": {
+            "description": "The country where the host resides.",
             "type": "string",
             "examples": [
-                "United Kingdom"
+                "Canada"
+            ]
+        },
+        "host_ethnicity": {
+            "description": "The self-identified ethnicity(ies) of the host.",
+            "type": "string",
+            "examples": [
+                "European"
             ]
         },
         "host_subject_id": {
@@ -336,6 +449,57 @@
                 "Cough, Fever, Chills"
             ]
         },
+        "pre_existing_conditions_and_risk_factors": {
+            "description": "Patient pre-existing conditions and risk factors.",
+            "type": "string",
+            "examples": [
+                "\""
+            ]
+        },
+        "complications": {
+            "description": "Patient medical complications that are believed to have occurred as a result of host disease.",
+            "type": "string",
+            "examples": [
+                "Acute Respiratory Failure"
+            ]
+        },
+        "host_vaccination_status": {
+            "description": "The vaccination status of the host (fully vaccinated, partially vaccinated, or not vaccinated).",
+            "type": "string",
+            "examples": [
+                "Fully Vaccinated"
+            ]
+        },
+        "vaccine_name": {
+            "description": "The name of the vaccine.",
+            "type": "string",
+            "examples": [
+                "BNT162b2, Pfizer-BioNTech"
+            ]
+        },
+        "number_of_vaccine_doses_received": {
+            "description": "The number of doses of the vaccine recived by the host.",
+            "type": "integer",
+            "examples": [
+                2
+            ]
+        },
+        "first_dose_vaccination_date": {
+            "description": "The date the host was first vaccinated.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2021-02-26"
+            ]
+        },
+        "last_dose_vacicnation_date": {
+            "description": "The date the host received their last dose of vaccine.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2021-04-09"
+            ]
+        },
         "location_of_exposure_geo_loc_name_country": {
             "description": "The country where the host was likely exposed to the causative agent of the illness.",
             "type": "string",
@@ -343,13 +507,48 @@
                 "Canada"
             ]
         },
-        "travel_history": {
-            "description": "Travel outside the country in last six months.",
+        "destination_of_most_recent_travel_city": {
+            "description": "The name of the city that was the destination of most recent travel.",
             "type": "string",
             "examples": [
-                "Canada, Vancouver",
-                "USA, Seattle",
-                "Italy, Milan"
+                "New York City"
+            ]
+        },
+        "destination_of_most_recent_travel__state_province_territory": {
+            "description": "The name of the province that was the destination of most recent travel.",
+            "type": "string",
+            "examples": [
+                "California"
+            ]
+        },
+        "destination_of_most_recent_travel_country": {
+            "description": "The name of the country that was the destination of most recent travel.",
+            "type": "string",
+            "examples": [
+                "United Kingdom"
+            ]
+        },
+        "most_recent_travel_departure_date": {
+            "description": "The date of a person's most recent departure from their primary residence (at that time) on a journey to one or more other locations.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2020-03-16"
+            ]
+        },
+        "most_recent_travel_return_date": {
+            "description": "The date of a person's most recent return to some residence from a journey originating at that residence.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2020-04-26"
+            ]
+        },
+        "travel_history": {
+            "description": "Travel history in last six months.",
+            "type": "string",
+            "examples": [
+                "Canada, Vancouver, USA, Seattle, Italy, Milan"
             ]
         },
         "exposure_event": {
@@ -359,11 +558,126 @@
                 "Mass gathering (convention)"
             ]
         },
+        "exposure_contact_level": {
+            "description": "The exposure transmission contact type.",
+            "type": "string",
+            "examples": [
+                "Direct"
+            ]
+        },
+        "host_role": {
+            "description": "The role of the host in relation to the exposure setting.",
+            "type": "string",
+            "examples": [
+                "Patient"
+            ]
+        },
+        "exposure_setting": {
+            "description": "The setting leading to exposure.",
+            "type": "string",
+            "examples": [
+                "Healthcare Setting"
+            ]
+        },
+        "exposure_details": {
+            "description": "Additional host exposure information.",
+            "type": "string",
+            "examples": [
+                "Host role - Other: Bus Driver"
+            ]
+        },
+        "prior_sars_cov_2_infection": {
+            "description": "Whether there was prior SARS-CoV-2 infection.",
+            "type": "string",
+            "examples": [
+                "Yes"
+            ]
+        },
+        "prior_sars_cov_2_infection_isolate": {
+            "description": "The identifier of the isolate found in the prior SARS-CoV-2 infection.",
+            "type": "string",
+            "examples": [
+                "SARS-CoV-2/human/USA/CA-CDPH-001/2020"
+            ]
+        },
+        "prior_sars_cov_2_infection_date": {
+            "description": "The date of diagnosis of the prior SARS-CoV-2 infection.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2021-01-23"
+            ]
+        },
+        "prior_sars_cov_2_antiviral_treatment": {
+            "description": "Whether there was prior SARS-CoV-2 treatment with an antiviral agent.",
+            "type": "string",
+            "examples": [
+                "No prior antiviral treatment"
+            ]
+        },
+        "prior_sars_cov_2_antiviral_treatment_agent": {
+            "description": "The name of the antiviral treatment agent administered during the prior SARS-CoV-2 infection.",
+            "type": "string",
+            "examples": [
+                "Remdesivir"
+            ]
+        },
+        "prior_sars_cov_2_antiviral_treatment_date": {
+            "description": "The date treatment was first administered during the prior SARS-CoV-2 infection.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2021-01-28"
+            ]
+        },
+        "purpose_of_sequencing": {
+            "description": "The reason that the sample was sequenced.",
+            "type": "string",
+            "examples": [
+                ""
+            ]
+        },
+        "purpose_of_sequencing_details": {
+            "description": "The description of why the sample was sequenced providing specific details.",
+            "type": "string",
+            "examples": [
+                "Screened for S gene target failure (S dropout)"
+            ]
+        },
+        "sequencing_date": {
+            "description": "The date the sample was sequenced.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "2020-06-22"
+            ]
+        },
         "library_id": {
             "description": "The user-specified identifier for the library prepared for sequencing.",
             "type": "string",
             "examples": [
                 "XYZ_123345"
+            ]
+        },
+        "amplicon_size": {
+            "description": "The length of the amplicon generated by PCR amplification.",
+            "type": "string",
+            "examples": [
+                "300bp"
+            ]
+        },
+        "library_preparation_kit": {
+            "description": "The name of the DNA library preparation kit used to generate the library being sequenced.",
+            "type": "string",
+            "examples": [
+                "Nextera XT"
+            ]
+        },
+        "flow_cell_barcode": {
+            "description": "The barcode of the flow cell used for sequencing.",
+            "type": "string",
+            "examples": [
+                "FAB06069"
             ]
         },
         "sequencing_instrument": {
@@ -380,11 +694,11 @@
                 "1D_DNA_MinION, ARTIC Network Protocol V3"
             ]
         },
-        "sequencing_protocol_source": {
-            "description": "The name of the organization/authors of the protocol.",
+        "sequencing_protocol": {
+            "description": "The protocol used to generate the sequence.",
             "type": "string",
             "examples": [
-                "ARTIC Network"
+                "Genomes were generated through amplicon sequencing of 1200 bp amplicons with Freed schema primers. Libraries were created using Illumina DNA Prep kits, and sequence data was produced using Miseq Micro v2 (500 cycles) sequencing kits."
             ]
         },
         "sequencing_kit_number": {
@@ -394,53 +708,81 @@
                 "AB456XYZ789"
             ]
         },
-        "amplicon_pcr_primers_filename": {
-            "description": "The filename of the file containing amplicon PCR primer names and sequences.",
+        "amplicon_pcr_primer_scheme": {
+            "description": "The specifications of the primers (primer sequences, binding positions, fragment size generated etc) used to generate the amplicons to be sequenced.",
             "type": "string",
             "examples": [
-                "ncov_primers_2020.txt"
+                "https://github.com/joshquick/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv"
             ]
         },
-        "raw_sequence_data_processing": {
-            "description": "The names of the software and version number used for raw data processing such as removing barcodes, adapter trimming, filtering etc.",
+        "raw_sequence_data_processing_method": {
+            "description": "The method used for raw data processing such as removing barcodes, adapter trimming, filtering etc.",
             "type": "string",
             "examples": [
-                "Porechop v. 0.2.3"
+                "Porechop 0.2.3,Porechop 0.2.3"
             ]
         },
-        "sequencing_depth_average": {
-            "description": "The total number of sequenced base pairs divided by the expected number of base pairs in the genome.",
-            "type": "number",
+        "dehosting_method": {
+            "description": "The method used to remove host reads from the pathogen sequence.",
+            "type": "string",
             "examples": [
-                80.0
+                "Nanostripper"
             ]
         },
-        "assembly_name": {
-            "description": "Name and version of the assembly provided by the submitter.",
+        "consensus_sequence_name": {
+            "description": "The name of the consensus sequence.",
+            "type": "string",
+            "examples": [
+                "ncov123assembly3"
+            ]
+        },
+        "consensus_sequence_filename": {
+            "description": "The name of the consensus sequence file.",
             "type": "string",
             "examples": [
                 "ncov123assembly.fasta"
             ]
         },
-        "assembly_method": {
-            "description": "The name and version number of the assembler used.",
+        "consensus_sequence_filepath": {
+            "description": "The filepath of the consesnsus sequence file.",
             "type": "string",
             "examples": [
-                "Canu 2.0"
+                "/User/Documents/RespLab/Data/ncov123assembly.fasta"
             ]
         },
-        "assembly_coverage_breadth": {
+        "consensus_sequence_software_name": {
+            "description": "The name of software used to generate the consensus sequence.",
+            "type": "string",
+            "examples": [
+                "Ivar"
+            ]
+        },
+        "consensus_sequence_software_version": {
+            "description": "The version of the software used to generate the consensus sequence.",
+            "type": "string",
+            "examples": [
+                "1.3"
+            ]
+        },
+        "breadth_of_coverage_value": {
             "description": "The percentage of the reference genome covered by the sequenced data, to a prescribed depth.",
             "type": "number",
             "examples": [
                 0.95
             ]
         },
-        "assembly_coverage_depth": {
+        "depth_of_coverage_value": {
             "description": "The average number of reads representing a given nucleotide in the reconstructed sequence.",
             "type": "number",
             "examples": [
-                400.0
+                400
+            ]
+        },
+        "depth_of_coverage_threshold": {
+            "description": "The threshold used as a cut-off for the depth of coverage.",
+            "type": "number",
+            "examples": [
+                100
             ]
         },
         "r1_fastq_filename": {
@@ -457,6 +799,20 @@
                 "ABC123_S1_L001_R2_001.fastq.gz"
             ]
         },
+        "r1_fastq_filepath": {
+            "description": "The filepath of the r1 FASTQ file.",
+            "type": "string",
+            "examples": [
+                "/User/Documents/RespLab/Data/ABC123_S1_L001_R1_001.fastq.gz"
+            ]
+        },
+        "r2_fastq_filepath": {
+            "description": "The filepath of the r2 FASTQ file.",
+            "type": "string",
+            "examples": [
+                "/User/Documents/RespLab/Data/ABC123_S1_L001_R2_001.fastq.gz"
+            ]
+        },
         "fast5_filename": {
             "description": "The user-specified filename of the FAST5 file.",
             "type": "string",
@@ -464,14 +820,14 @@
                 "batch1a_sequences.fast5"
             ]
         },
-        "fasta_filename": {
-            "description": "The user-specified filename of the FASTA file.",
+        "fast5_filepath": {
+            "description": "The filepath of the FAST5 file.",
             "type": "string",
             "examples": [
-                "batch1a_sequences.fasta"
+                "/User/Documents/RespLab/Data/rona123assembly.fast5"
             ]
         },
-        "number_base_pairs": {
+        "number_of_base_pairs_sequenced": {
             "description": "The number of total base pairs generated by the sequencing process.",
             "type": "integer",
             "examples": [
@@ -485,60 +841,11 @@
                 38677
             ]
         },
-        "mean_contig_length": {
-            "description": "The mean contig length is the count of base pairs in the average size contig of the sequence assembly.",
-            "type": "integer",
-            "examples": [
-                12689
-            ]
-        },
-        "n50": {
-            "description": "The minimum contig length needed to cover 50% of the genome.",
-            "type": "integer",
-            "examples": [
-                10500
-            ]
-        },
-        "ns_per_100_kbp": {
-            "description": "The number of N symbols present in the consensus fasta sequence, per 100kbp of sequence.",
-            "type": "integer",
-            "examples": [
-                300
-            ]
-        },
         "reference_genome_accession": {
             "description": "A persistent, unique identifier of a genome database entry.",
             "type": "string",
             "examples": [
                 "NC_045512.2"
-            ]
-        },
-        "consensus_sequence_id": {
-            "description": "The identifier used to specify the consensus sequence.",
-            "type": "string",
-            "examples": [
-                "consensus_1"
-            ]
-        },
-        "consensus_sequence_method": {
-            "description": "The name and version number of the software used to produce the consensus sequence.",
-            "type": "string",
-            "examples": [
-                "iVar 1.2.1"
-            ]
-        },
-        "consensus_sequence_filename": {
-            "description": "The user-specified filename of the consensus sequence.",
-            "type": "string",
-            "examples": [
-                "ProvConsensusSeq.fasta"
-            ]
-        },
-        "annotation_feature_table_filename": {
-            "description": "The filename of the file containing genome features such as gene names and corresponding CDS.",
-            "type": "string",
-            "examples": [
-                "BCCoronaAnnotationFeatures"
             ]
         },
         "bioinformatics_protocol": {
@@ -548,18 +855,53 @@
                 "https://www.protocols.io/groups/cphln-sarscov2-sequencing-consortium/members"
             ]
         },
+        "lineage_clade_name": {
+            "description": "The name of the lineage or clade.",
+            "type": "string",
+            "examples": [
+                "B.1.1.7"
+            ]
+        },
+        "lineage_clade_analysis_software_name": {
+            "description": "The name of the software used to determine the lineage/clade.",
+            "type": "string",
+            "examples": [
+                "Pangolin"
+            ]
+        },
+        "lineage_clade_analysis_software_version": {
+            "description": "The version of the software used to determine the lineage/clade.",
+            "type": "string",
+            "examples": [
+                "2.1.10"
+            ]
+        },
+        "variant_designation": {
+            "description": "The variant classification of the lineage/clade i.e. variant, variant of concern.",
+            "type": "string",
+            "examples": [
+                "Variant of Concern"
+            ]
+        },
+        "variant_evidence": {
+            "description": "The evidence used to make the variant determination.",
+            "type": "string",
+            "examples": [
+                "lineage-defining mutations: ORF1ab (K1655N), Spike (K417N, E484K, N501Y, D614G, A701V), N (T205I), E (P71L)"
+            ]
+        },
         "gene_name_1": {
             "description": "The name of the gene used in the diagnostic RT-PCR test.",
             "type": "string",
             "examples": [
-                "envelope small membrane protein (SARS-CoV-2)"
+                "E (orf4)"
             ]
         },
         "diagnostic_pcr_protocol_1": {
             "description": "The name and version number of the protocol used for diagnostic marker amplification.",
             "type": "string",
             "examples": [
-                "AllTheTestingPCRingEGene v. 2"
+                "PCREGene 2.0"
             ]
         },
         "diagnostic_pcr_ct_value_1": {
@@ -573,18 +915,18 @@
             "description": "The name of the gene used in the diagnostic RT-PCR test.",
             "type": "string",
             "examples": [
-                "RNA-directed RNA Polymerase (RdRP)"
+                "nsp12 (RdRP)"
             ]
         },
         "diagnostic_pcr_protocol_2": {
             "description": "The name and version number of the protocol used for diagnostic marker amplification.",
             "type": "string",
             "examples": [
-                "AllTheTestingPCRingRdRpGene v. 3"
+                "PCRRdRpGene 3.0"
             ]
         },
         "diagnostic_pcr_ct_value_2": {
-            "description": "The Ct value result from a diagnostic SARS-CoV-2 RT-PCR test.",
+            "description": "The cycle threshold (CT) value result from a diagnostic SARS-CoV-2 RT-PCR test.",
             "type": "integer",
             "examples": [
                 36
@@ -604,10 +946,20 @@
         "sequence_submitted_by",
         "sample_collection_date",
         "geo_loc_name_country",
+        "geo_loc_name_state_province_territory",
+        "organism",
+        "isolate",
+        "specimen_collector_sample_id",
+        "sequence_submitted_by",
+        "sample_collection_date",
+        "geo_loc_name_country",
         "geo_loc_name_state_province_region",
         "organism",
         "isolate",
         "host_scientific_name",
-        "host_disease"
+        "host_disease",
+        "sequencing_instrument",
+        "consensus_sequence_software_name",
+        "consensus_sequence_software_version"
     ]
 }
