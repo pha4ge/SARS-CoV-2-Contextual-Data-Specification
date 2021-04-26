@@ -21,7 +21,6 @@ License: CC-BY 4.0 International
     * [GISAID](#gisaid)
 * [JSON Specification Generation](#json-specification-generation)
 * [Contacts](#contacts)
-TODO
 ## PHA4GE overview
 
 The Public Health Alliance for Genomic Epidemiology ([PHA4GE](https://pha4ge.org)) is a global coalition that is actively working to establish consensus standards, document and share best practices, improve the availability of critical bioinformatic tools and resources, and advocate for greater openness, interoperability, accessibility and reproducibility in public health microbial bioinformatics.
