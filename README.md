@@ -6,129 +6,103 @@ Pre-print available [here](https://www.preprints.org/manuscript/202008.0220/v1) 
 
 License: CC-BY 4.0 International
 
-
 ## Table of Contents
-  * [Overview](#overview)
-  * [SARS-CoV-2 metadata specification](#sars-cov-2-metadata-specification)
-  * [Content description](#content-description)
-    + [Collection template and controlled vocabulary pick lists](#collection-template-and-controlled-vocabulary-pick-lists)
-    + [Reference guide](#reference-guide)
-    + [Collection template SOP](#collection-template-sop)
-    + [PHA4GE fields to metadata standards mapping](#pha4ge-fields-to-metadata-standards-mapping)
-    + [ENA, NCBI and GISAID submission requirements to PHA4GE field mappings](#ena--ncbi-and-gisaid-submission-requirements-to-pha4ge-field-mappings)
-    + [Data submission protocol (NCBI)](#data-submission-protocol--ncbi-)
-    + [Data submission protocol (ENA)](#data-submission-protocol--ena-)
-    + [Data submission protocol (GISAID)](#data-submission-protocol--gisaid-)
-    + [JSON structure of PHA4GE specification](#json-structure-of-pha4ge-specification)
-  * [Contacts](#contacts)
+* [PHA4GE overview](#pha4ge-overview)
+* [SARS-CoV-2 contextual data specification overview](#sars-cov-2-contextual-data-specification-overview)
+* [Content description](#content-description)
++ [SARS-CoV-2 contextual data specification package](#sars-cov-2-contextual-data-specification-package)
+    - [Spreadsheet-based (.xlsx) collection template](#spreadsheet-based--xlsx--collection-template)
+    - [The specification contextual data collection template in machine-amenable JSON format](#the-specification-contextual-data-collection-template-in-machine-amenable-json-format)
++ [Standard operating procedure](#standard-operating-procedure)
++ [Supporting materials](#supporting-materials)
+    - [Submission protocols](#submission-protocols)
+    * [NCBI](#ncbi)
+    * [ENA](#ena)
+    * [GISAID](#gisaid)
+* [JSON Specification Generation](#json-specification-generation)
+* [Contacts](#contacts)
+TODO
+## PHA4GE overview
 
-## Overview
-The Public Health Alliance for Genomic Epidemiology ([PHA4GE](https://pha4ge.org)) is a global coalition that is 
-actively working to establish consensus standards, document and share best practices, improve the availability of 
-critical bioinformatic tools and resources, and advocate for greater openness, interoperability, accessibility and 
-reproducibility in public health microbial bioinformatics. 
+The Public Health Alliance for Genomic Epidemiology ([PHA4GE](https://pha4ge.org)) is a global coalition that is actively working to establish consensus standards, document and share best practices, improve the availability of critical bioinformatic tools and resources, and advocate for greater openness, interoperability, accessibility and reproducibility in public health microbial bioinformatics.
 
-In the face of the current SARS-CoV-2 pandemic, [PHA4GE](https://pha4ge.org) has identified a clear and present need 
-for a fit-for-purpose, open source SARS-CoV-2 contextual data standard. As such, we have developed an extension to the 
-[INSDC](http://www.insdc.org/) pathogen package, providing a SARS-CoV-2 contextual data specification based on 
-harmonisable, publicly available, community standards.
+In the face of the current SARS-CoV-2 pandemic, [PHA4GE](https://pha4ge.org) has identified a clear and present need for a fit-for-purpose, open source SARS-CoV-2 contextual data standard. As such, we have developed a SARS-CoV-2 contextual data specification based on harmonizable, publicly available, community standards.
 
+## SARS-CoV-2 contextual data specification overview
 
-## SARS-CoV-2 metadata specification
-Public health genomics contextual data includes sample metadata, lab/clinical/epidemiological data, and methods 
-information. Contextual data enables the interpretation of the sequence data, informs decision making for public health 
-responses, and facilitates scientific understanding of infectious disease. 
+Public health genomics contextual data includes sample metadata, lab/clinical/epidemiological data, and analysis methods information. Contextual data enables the interpretation of the sequence data, informs decision making for public health responses, and facilitates scientific understanding of infectious disease. Structured and consistent contextual data can also be more easily processed, aggregated, and reused by both humans and computers for different types of analyses.
 
-Contextual data that are structured and consistent can be more easily understood and processed by both humans and 
-computers, and can be more easily aggregated and reused for different types of analyses. Therefore, this specification 
-is implementable via a contextual data template package: containing collection template, reference guide, controlled 
-vocabulary and mapping to existing standards, as well as an array of protocols and tools to support the harmonisation and 
-submission of sequence data and contextual information to public repositories. The specification and all of the 
-supporting materials are freely available in this repository.
-
+The SARS-CoV-2 contextual data specification includes a metadata collection template, reference guide, controlled vocabulary, and mapping to existing standards. We also provide a suite of protocols for submitting sequence data and contextual data to public repositories, enabling global interoperability of the data. The specification and all of the supporting materials are freely available and detailed below.
 
 ## Content description
 
-### Collection template and controlled vocabulary pick lists
-The [PHA4GE SARS-CoV-2 Contextual data Collection Template](PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx) 
-can be used for data management, and consists of a spreadsheet-based (.xlsx) collection template, a reference guide, and a 
-controlled vocabulary list. This information does not have to be shared, but sharing with public repositories is 
-encouraged when permitted. 
+### SARS-CoV-2 contextual data specification package
 
-Fields are grouped according to whether they describe sampling, host information (symptoms, exposures etc), sequencing, 
-bioinformatics and quality control metrics, etc. The collection template contains "required" (colour-coded yellow), 
-"strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields. In many fields, picklists of 
-ontology-mapped controlled vocabulary are offered to better standardize data values. 
+#### Spreadsheet-based (.xlsx) collection template
 
-### Reference guide
-Available in the The [PHA4GE SARS-CoV-2 Contextual data Collection Template](PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx),
-the reference guide aims to facilitate the use of the collection template. It contains field definitions, further 
-guidance/instructions, and examples of structured data.
+It contains the following items:
 
-### Collection template SOP
-A [Standard Operating Procedure (SOP)](PHA4GE%20Contextual%20Data%20SOP.docx) containing instructions for using the collection template. 
+1. **a template for populating the complete set of contextual data;**
 
-The template SOP provides users with step-by-step instructions for populating the template, looking up standardized 
-terms, and how best to structure sample descriptions. The SOP also highlights a number of ethical, practical, and 
-privacy considerations for data sharing.
+The collection template contains "required" (colour-coded yellow), "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields. 
 
-### PHA4GE fields to metadata standards mapping 
-Minimum information checklists are community standards that describe attributes of genomes in a standardized way. 
-There are several existing standards that are useful for structuring SARS-CoV-2 contextual data. 
-The PHA4GE SARS-CoV-2 specification implements these standards, and maps to standardized fields where applicable. 
-Mapping of PHA4GE fields to the Sample Application Standard, MIxS v 5.0, and the MIGS Virus Host-associated package can 
-be found in the [reference guide](PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx). 
+2. **guidance for populating the template;**
+
+The reference guide aims to facilitate the use of the collection template. It contains field definitions, further guidance/instructions, and examples of structured data. Mapping of PHA4GE fields to existing metadata standards such as the Sample Application Standard, MIxS v 5.0, and the MIGS Virus Host-associated package can be found in the reference guide.
+
+3. **ontology-mapped controlled vocabulary for the picklists.**
+
+#### The specification contextual data collection template in machine-amenable JSON format
+
+Due to **JSON** format limitation, it deviates slightly from the collection template where the "required" (colour-coded yellow) fields are set as required and both the "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields are both set as optional.
 
 
-### ENA, NCBI and GISAID submission requirements to PHA4GE field mappings
-Mapping of the The PHA4GE SARS-CoV-2 Contextual data Collection Template fields to standards and public repository 
-submission requirements (NCBI, ENA and GISAID).
+### Standard operating procedure
 
-### Data submission protocol (NCBI)
-The NCBI data submission process is covered by three separate protocols:
-* [PHA4GE SARS-CoV-2 NCBI submission protocol: SRA, BioSample, and BioProject](http://dx.doi.org/10.17504/protocols.io.bf7bjrin)
-    * Step-by-step instructions for establishing a new NCBI laboratory submission account and for creating and linking a new BioProject to an existing umbrella effort.
-    * Submit SARS-CoV-2 raw data to SRA (Sequence Read Archive) and metadata to BioSample. 
-    * **The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bf7bjrin](http://dx.doi.org/10.17504/protocols.io.bf7bjrin).**
-* [PHA4GE SARS-CoV-2 NCBI assembly submission protocol: GenBank](http://dx.doi.org/10.17504/protocols.io.bg2tjyen)
-    * Submit SARS-CoV-2 consensus sequences to NCBI GenBank, linking to existing BioProject, BioSamples, and raw data. 
-    * *Required:* established BioProject and BioSamples
-    * **The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bg2tjyen](http://dx.doi.org/10.17504/protocols.io.bg2tjyen).**
-* [PHA4GE SOP for populating NCBI submission templates for SARS-CoV-2 (BioSample, SRA, and GenBank)](http://dx.doi.org/10.17504/protocols.io.bf89jrz6)
-    * Consult the PHA4GE contextual data specification included on this page **FIRST**, before starting your submission process or populating the templates.
-    * This protocol serves and an extra reference to help map the NCBI template fields to the PHA4GE metadata specification, however, the primary PHA4GE guidance should be followed first to ensure the correct controlled vocabulary terms are used to populate the fields. 
-    * Guidance included in this protocol: 
-        * BioSample metadata template (modified for PHA4GE)
-        * SRA metadata template
-        * GenBank source modifier template (modified for PHA4GE)
-    * **The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bf89jrz6](http://dx.doi.org/10.17504/protocols.io.bf89jrz6)**
+A **Standard Operating Procedure (SOP)** containing instructions for using the collection template.
+This SOP provides users with step-by-step instructions for populating the template, looking up standardized terms, and how best to structure sample descriptions. Also included are a number of ethical, practical, and privacy considerations for data sharing. The SOP is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.btpznmp6](https://dx.doi.org/10.17504/protocols.io.btpznmp6).
 
-### Data submission protocol (ENA) 
-The data submission process is split into three separate protocols. 
 
-* [PHA4GE SOP for populating the three templates for SARS-CoV-2 submission to EBI](https://dx.doi.org/10.17504/protocols.io.bh5dj826)
-    * **The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bh5dj826](https://dx.doi.org/10.17504/protocols.io.bh5dj826).**
-* [PHA4GE SARS-CoV-2 EBI submission protocol for Biosamples and seqeuence read data](https://dx.doi.org/10.17504/protocols.io.bhwdj7a6)
-    * **The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bhwdj7a6](https://dx.doi.org/10.17504/protocols.io.bhwdj7a6).**
-* [PHA4GE SARS-CoV-2 EBI submission protocol for genome assemblies](https://dx.doi.org/10.17504/protocols.io.bhwqj7dw)
-    * **The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bhwqj7dw](https://dx.doi.org/10.17504/protocols.io.bhwqj7dw).**
+### Supporting materials
 
-### Data submission protocol (GISAID)
-[This protocol](https://dx.doi.org/10.17504/protocols.io.bh98j99w) 
-provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established,  
-this protocol covers genome submission sample metadata to GISAID. 
-**The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bh98j99w](https://dx.doi.org/10.17504/protocols.io.bh98j99w).**
+#### Submission protocols
 
-### JSON structure of PHA4GE specification
-The versioned specification contextual data collection template in machine-amenable JSON format. Due to JSON format 
-limitation, it deviates slightly from the collection template where the "required" (colour-coded yellow) fields are 
-set as required and both the "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields 
-are both set as option. 
+##### NCBI
 
-The [JSON](PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) 
-is produced automatically from the [csv version](PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv) 
-of the template using the the script available from [SARS-CoV-2-Data-Spec-JSON](https://github.com/pha4ge/SARS-CoV-2-Data-Spec-JSON) 
-repository.
+The entire collection os submission protocols is available as a workflow at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsypnfvn](http://dx.doi.org/10.17504/protocols.io.bsypnfvn). This workflow provides an overview on the metadata specification recommend for SARS-CoV-2 sequence data and a series of protocols outlining the steps for NCBI submission.
+
+Three separate protocols are included:
+
+1. **Overview of NCBI's submission process and the metadata required**
+Provides an overview of the submission process and includes a brief training video. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsbpnamn](https://dx.doi.org/10.17504/protocols.io.bsbpnamn).
+
+2. **SARS-CoV-2 NCBI submission protocol: SRA, BioSample, and BioProject**
+Step-by-step instructions for establishing a new NCBI laboratory submission account and for creating and linking a new BioProject to an existing umbrella effort. SARS-CoV-2 raw data submission to SRA (Sequence Read Archive) and metadata to BioSample. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsypnfvn](https://dx.doi.org/10.17504/protocols.io.bsypnfvn).
+
+3. **SARS-CoV-2 NCBI consensus submission protocol: GenBank**
+Required: established BioProject and BioSamples. Submit SARS-CoV-2 assemblies to NCBI GenBank, linking to existing BioProject, BioSamples, and raw data. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bid7ka9n](https://dx.doi.org/10.17504/protocols.io.bid7ka9n).
+
+##### ENA
+
+The entire collection os submission protocols is available as a workflow at protocols.io under the DOI []().
+
+Three separate protocols are included:
+
+1. **SOP for populating EBI submission templates**
+The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bh5dj826](https://dx.doi.org/10.17504/protocols.io.bh5dj826).
+
+2. **SARS-CoV-2 EBI submission protocol: ENA, BioSample, and BioProject**
+The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bhwdj7a6](https://dx.doi.org/10.17504/protocols.io.bhwdj7a6).
+
+3. **SARS-CoV2 EBI assembly submission protocol**
+The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bhwqj7dw](https://dx.doi.org/10.17504/protocols.io.bhwqj7dw).
+
+##### GISAID
+
+This protocol provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established, this protocol covers genome submission sample metadata to GISAID. The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bh98j99w](https://dx.doi.org/10.17504/protocols.io.bh98j99w).
+
+## JSON Specification Generation
+The [JSON](PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) is produced automatically from the [csv version](PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv) of the template using the the script available from [SARS-CoV-2-Data-Spec-JSON](https://github.com/pha4ge/SARS-CoV-2-Data-Spec-JSON) repository.
 
 **Table 1** Terms for SARS-CoV-2 submission template according to the PHA4GE contextual data collection specification in 
 [PHA4GE SARS-CoV-2 Standardised Terms](PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv)  
@@ -143,5 +117,3 @@ repository.
 
 ## Contacts 
 For more information and/or assistance, contact `datastructures@pha4ge.org` or the issue page of this repository.
-
-
