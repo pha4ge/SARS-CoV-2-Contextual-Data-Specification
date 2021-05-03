@@ -39,7 +39,7 @@ The SARS-CoV-2 contextual data specification includes a metadata collection temp
 
 #### Spreadsheet-based (.xlsx) collection template
 
-It contains the following items:
+It contains the following items (tabs in the spreadsheet):
 
 1. **a template for populating the complete set of contextual data;**
 
@@ -50,6 +50,8 @@ The collection template contains "required" (colour-coded yellow), "strongly rec
 The reference guide aims to facilitate the use of the collection template. It contains field definitions, further guidance/instructions, and examples of structured data. Mapping of PHA4GE fields to existing metadata standards such as the Sample Application Standard, MIxS v 5.0, and the MIGS Virus Host-associated package can be found in the reference guide.
 
 3. **ontology-mapped controlled vocabulary for the picklists.**
+
+Lists of controlled vocabulary, agreed upon by PHA4GE, are provided here for populating the template.
 
 #### The specification contextual data collection template in machine-amenable JSON format
 
@@ -68,22 +70,23 @@ This SOP provides users with step-by-step instructions for populating the templa
 
 ##### NCBI
 
-The entire collection os submission protocols is available as a workflow at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsypnfvn](http://dx.doi.org/10.17504/protocols.io.bsypnfvn). This workflow provides an overview on the metadata specification recommend for SARS-CoV-2 sequence data and a series of protocols outlining the steps for NCBI submission.
+The entire collection of submission protocols is available as a workflow at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsypnfvn](http://dx.doi.org/10.17504/protocols.io.bsypnfvn). This workflow includes the following individual protocols:
 
-Three separate protocols are included:
+1. **PHA4GE contextual metadata SOP**
+This SOP provides users with step-by-step instructions for populating the collection template. The SOP is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.btpznmp6](https://dx.doi.org/10.17504/protocols.io.btpznmp6)
 
-1. **Overview of NCBI's submission process and the metadata required**
+2. **Overview of NCBI's submission process and the metadata required**
 Provides an overview of the submission process and includes a brief training video. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsbpnamn](https://dx.doi.org/10.17504/protocols.io.bsbpnamn).
 
-2. **SARS-CoV-2 NCBI submission protocol: SRA, BioSample, and BioProject**
-Step-by-step instructions for establishing a new NCBI laboratory submission account and for creating and linking a new BioProject to an existing umbrella effort. SARS-CoV-2 raw data submission to SRA (Sequence Read Archive) and metadata to BioSample. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsypnfvn](https://dx.doi.org/10.17504/protocols.io.bsypnfvn).
+3. **SARS-CoV-2 NCBI submission protocol: SRA, BioSample, and BioProject**
+Step-by-step instructions for establishing a new NCBI laboratory submission account, creating and linking a new BioProject to an existing umbrella effort, and submitting raw sequence data with assocated metadata to SRA and BioSample. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsypnfvn](https://dx.doi.org/10.17504/protocols.io.bsypnfvn).
 
-3. **SARS-CoV-2 NCBI consensus submission protocol: GenBank**
-Required: established BioProject and BioSamples. Submit SARS-CoV-2 assemblies to NCBI GenBank, linking to existing BioProject, BioSamples, and raw data. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bid7ka9n](https://dx.doi.org/10.17504/protocols.io.bid7ka9n).
+4. **SARS-CoV-2 NCBI consensus submission protocol: GenBank**
+Step-by-step instructions for submitting SARS-CoV-2 consensus sequencing to NCBI GenBank and linking to existing BioProject, BioSamples, and raw data. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bid7ka9n](https://dx.doi.org/10.17504/protocols.io.bid7ka9n).
 
 ##### ENA
 
-The entire collection os submission protocols is available as a workflow at protocols.io under the DOI []().
+The entire collection os submission protocols is available as a workflow at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.buqnnvve](https://dx.doi.org/10.17504/protocols.io.buqnnvve).
 
 Three separate protocols are included:
 
@@ -98,7 +101,7 @@ The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/pro
 
 ##### GISAID
 
-This protocol provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established, this protocol covers genome submission sample metadata to GISAID. The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bh98j99w](https://dx.doi.org/10.17504/protocols.io.bh98j99w).
+This protocol provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established, this protocol covers genome submission sample metadata to GISAID. The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bumknu4w](https://dx.doi.org/10.17504/protocols.io.bumknu4w).
 
 ## JSON Specification Generation
 The [JSON](PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) is produced automatically from the [csv version](PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv) of the template using the the script available from [SARS-CoV-2-Data-Spec-JSON](https://github.com/pha4ge/SARS-CoV-2-Data-Spec-JSON) repository.
