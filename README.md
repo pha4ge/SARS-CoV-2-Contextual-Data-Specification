@@ -1,14 +1,12 @@
 # SARS-CoV-2 Contextual Data Specification - Collection template and associated materials for SARS-CoV-2 metadata
 
 [![DOI](https://zenodo.org/badge/271182285.svg)](https://zenodo.org/badge/latestdoi/271182285) 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/pha4ge/SARS-CoV-2-Contextual-Data-Specification)
 ![Pre-print DOI](https://img.shields.io/badge/preprints-10.20944%2Fpreprints202008.0220.v1-yellow)
-
-Pre-print available [here](https://www.preprints.org/manuscript/202008.0220/v1) (10.20944/preprints202008.0220.v1).
-
-License: CC-BY 4.0 International
+![License](https://img.shields.io/badge/license-CC--BY%204.0%20International-lightgrey)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/pha4ge/SARS-CoV-2-Contextual-Data-Specification)
 
 ## Table of Contents
+
 * [PHA4GE overview](#pha4ge-overview)
 * [SARS-CoV-2 contextual data specification overview](#sars-cov-2-contextual-data-specification-overview)
 * [Content description](#content-description)
@@ -23,6 +21,9 @@ License: CC-BY 4.0 International
     * [GISAID](#gisaid)
 * [JSON Specification Generation](#json-specification-generation)
 * [Contacts](#contacts)
+* [Citation](#citation)
+* [License](#license)
+
 ## PHA4GE overview
 
 The Public Health Alliance for Genomic Epidemiology ([PHA4GE](https://pha4ge.org)) is a global coalition that is actively working to establish consensus standards, document and share best practices, improve the availability of critical bioinformatic tools and resources, and advocate for greater openness, interoperability, accessibility and reproducibility in public health microbial bioinformatics.
@@ -120,4 +121,13 @@ The [JSON](PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) is produced automatica
 | Guidance 	| Detailed description for the expected interface label value. 	|
 
 ## Contacts 
+
 For more information and/or assistance, contact `datastructures@pha4ge.org` or the issue page of this repository.
+
+## Citation
+
+Griffiths, E.J.; Timme, R.E.; Page, A.J.; Alikhan, N.; Fornika, D.; Maguire, F.; Mendes, C.I.; Tausch, S.H.; Black, A.; Connor, T.R.; Tyson, G.H.; Aanensen, D.M.; Alcock, B.; Campos, J.; Christoffels, A.; Gonçalves da Silva, A.; Hodcroft, E.; Hsiao, W.W.; Katz, L.S.; Nicholls, S.M.; Oluniyi, P.E.; Olawoye, I.B.; Raphenya, A.R.; Vasconcelos, A.T.R.; Witney, A.A.; MacCannell, D.R. **The PHA4GE SARS-CoV-2 Contextual Data Specification for Open Genomic Epidemiology.** _Preprints_ 2020, 2020080220 (doi: [10.20944/preprints202008.0220.v1](https://www.preprints.org/manuscript/202008.0220/v1)).
+
+## License 
+
+[CC-BY 4.0 International](LISENCE.md)
