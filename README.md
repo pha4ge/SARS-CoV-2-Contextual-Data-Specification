@@ -15,10 +15,11 @@
     - [The specification contextual data collection template in machine-amenable JSON format](#the-specification-contextual-data-collection-template-in-machine-amenable-json-format)
 + [Standard operating procedure](#standard-operating-procedure)
 + [Supporting materials](#supporting-materials)
+    - [PHA4GE to sequence repository field mappings](#PHA4GE-to-sequence-repository-field-mappings)
     - [Submission protocols](#submission-protocols)
-    * [NCBI](#ncbi)
-    * [ENA](#ena)
-    * [GISAID](#gisaid)
+        * [NCBI](#ncbi)
+        * [ENA](#ena)
+        * [GISAID](#gisaid)
 * [JSON Specification Generation](#json-specification-generation)
 * [Contacts](#contacts)
 * [Citation](#citation)
@@ -40,7 +41,7 @@ The SARS-CoV-2 contextual data specification includes a metadata collection temp
 
 ### SARS-CoV-2 contextual data specification package
 
-#### Spreadsheet-based (.xlsx) collection template
+#### [Spreadsheet-based (.xlsx) collection template](PHA4GE%20SARS-CoV-2%20Contextual%20Data%20Template.xlsx)
 
 It contains the following items (tabs in the spreadsheet):
 
@@ -56,7 +57,7 @@ The reference guide aims to facilitate the use of the collection template. It co
 
 Lists of controlled vocabulary, agreed upon by PHA4GE, are provided here for populating the template.
 
-#### The specification contextual data collection template in machine-amenable JSON format
+#### [The specification contextual data collection template in machine-amenable JSON format](PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json)
 
 Due to **JSON** format limitation, it deviates slightly from the collection template where the "required" (colour-coded yellow) fields are set as required and both the "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields are both set as optional.
 
@@ -69,7 +70,13 @@ This SOP provides users with step-by-step instructions for populating the templa
 
 ### Supporting materials
 
+#### [PHA4GE to sequence repository field mappings](PHA4GE%20to%20Sequence%20Repository%20Field%20Mappings.xlsx)
+
+A **mapping file** indicating which PHA4GE fields correspond to which fields within the different repository submission forms is provided to facilitate data transformations for submissions. 
+
 #### Submission protocols
+
+Submission protocols are available for the following data repositories: 
 
 ##### NCBI
 
