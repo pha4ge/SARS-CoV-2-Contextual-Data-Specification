@@ -1,6 +1,6 @@
 # SARS-CoV-2 Contextual Data Specification - Collection template and associated materials for SARS-CoV-2 metadata
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4743829.svg)](https://doi.org/10.5281/zenodo.4743829)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5083356.svg)](https://doi.org/10.5281/zenodo.5083356)
 ![Pre-print DOI](https://img.shields.io/badge/preprints-10.20944%2Fpreprints202008.0220.v1-yellow)
 ![License](https://img.shields.io/badge/license-CC--BY%204.0%20International-lightgrey)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/pha4ge/SARS-CoV-2-Contextual-Data-Specification)
