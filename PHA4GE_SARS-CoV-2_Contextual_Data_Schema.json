@@ -941,25 +941,19 @@
         }
     },
     "required": [
-        "specimen_collector_sample_id",
-        "sample_collected_by",
-        "sequence_submitted_by",
-        "sample_collection_date",
-        "geo_loc_name_country",
-        "geo_loc_name_state_province_territory",
-        "organism",
-        "isolate",
-        "specimen_collector_sample_id",
-        "sequence_submitted_by",
-        "sample_collection_date",
+        "consensus_sequence_software_name",
+        "consensus_sequence_software_version",
         "geo_loc_name_country",
         "geo_loc_name_state_province_region",
-        "organism",
-        "isolate",
-        "host_scientific_name",
+        "geo_loc_name_state_province_territory",
         "host_disease",
+        "host_scientific_name",
+        "isolate",
+        "organism",
+        "sample_collected_by",
+        "sample_collection_date",
+        "sequence_submitted_by",
         "sequencing_instrument",
-        "consensus_sequence_software_name",
-        "consensus_sequence_software_version"
+        "specimen_collector_sample_id"
     ]
 }
