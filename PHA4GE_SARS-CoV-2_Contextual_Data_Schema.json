@@ -8,7 +8,6 @@
     "isolate",
     "sample_collection_date",
     "host_disease",
-    "geo_loc_name_state_province_region",
     "consensus_sequence_software_name",
     "geo_loc_name_state_province_territory",
     "specimen_collector_sample_id",
@@ -2148,11 +2147,6 @@
       "examples": [
         "SARS-CoV-2/human/USA/CA-CDPH-001/2020,hCoV-19/USA-CDPH-001/2020"
       ]
-    },
-    "geo_loc_name_state_province_region": {
-      "type": "string",
-      "description": "State/province/region of origin of the sample.",
-      "examples": ["Western Cape"]
     },
     "host_health_state": {
       "type": {
