@@ -1,2437 +1,2796 @@
 {
-  "$schema": "http://json-schema.org/draft/2019-09/schema#",
-  "required": [
-    "sequence_submitted_by",
-    "sample_collected_by",
-    "sequencing_instrument",
-    "host_scientific_name",
-    "isolate",
-    "sample_collection_date",
-    "host_disease",
-    "geo_loc_name_state_province_region",
-    "consensus_sequence_software_name",
-    "geo_loc_name_state_province_territory",
-    "specimen_collector_sample_id",
-    "consensus_sequence_software_version",
-    "organism",
-    "geo_loc_name_country"
-  ],
-  "type": "object",
-  "properties": {
-    "sample_collector_contact_email": {
-      "examples": ["johnnyblogs@lab.ca, RespLab@lab.ca"],
-      "type": "string",
-      "description": "The email address of the contact responsible for follow-up regarding the sample.",
-      "format": "email"
-    },
-    "depth_of_coverage_value": {
-      "type": "number",
-      "description": "The average number of reads representing a given nucleotide in the reconstructed sequence.",
-      "examples": [400.0]
-    },
-    "exposure_details": {
-      "type": "string",
-      "description": "Additional host exposure information.",
-      "examples": ["Host role - Other: Bus Driver"]
-    },
-    "breadth_of_coverage_value": {
-      "type": "number",
-      "description": "The percentage of the reference genome covered by the sequenced data, to a prescribed depth.",
-      "examples": [0.95]
-    },
-    "most_recent_travel_departure_date": {
-      "examples": ["16/03/2020"],
-      "type": "string",
-      "description": "The date of a person's most recent departure from their primary residence (at that time) on a journey to one or more other locations.",
-      "format": "date"
-    },
-    "sequencing_protocol": {
-      "type": "string",
-      "description": "The protocol used to generate the sequence.",
-      "examples": [
-        "Genomes were generated through amplicon sequencing of 1200 bp amplicons with Freed schema primers. Libraries were created using Illumina DNA Prep kits, and sequence data was produced using Miseq Micro v2 (500 cycles) sequencing kits."
-      ]
-    },
-    "host_age_bin": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The age category of the host at the time of sampling.",
-      "examples": ["0 - 9"]
-    },
-    "anatomical_material": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "A substance obtained from an anatomical part of an organism e.g. tissue, blood.",
-      "examples": ["Blood"]
-    },
-    "sample_collection_date": {
-      "examples": ["16/03/2020"],
-      "type": "string",
-      "description": "The date on which the sample was collected.",
-      "format": "date"
-    },
-    "diagnostic_pcr_ct_value_2": {
-      "type": "integer",
-      "description": "The cycle threshold (CT) value result from a diagnostic SARS-CoV-2 RT-PCR test.",
-      "examples": [36]
-    },
-    "number_of_vaccine_doses_received": {
-      "type": "integer",
-      "description": "The number of doses of the vaccine recived by the host.",
-      "examples": [2]
-    },
-    "lab_host": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Name and description of the laboratory host used to propagate the source organism or material from which the sample was obtained.",
-      "examples": ["Vero E6 cell line"]
-    },
-    "anatomical_part": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "An anatomical part of an organism e.g. oropharynx.",
-      "examples": ["Nasopharynx"]
-    },
-    "sequencing_date": {
-      "examples": ["22/06/2020"],
-      "type": "string",
-      "description": "The date the sample was sequenced.",
-      "format": "date"
-    },
-    "passage_number": {
-      "type": "integer",
-      "description": "Number of passages.",
-      "examples": [3]
-    },
-    "ns_per_100_kbp": {
-      "type": "integer",
-      "description": "The number of N symbols present in the consensus fasta sequence, per 100kbp of sequence.",
-      "examples": [300]
-    },
-    "biosample_accession": {
-      "pattern": "^SAM(D|N|E([AG]?))[0-9]+",
-      "type": "string",
-      "description": "The identifier assigned to a BioSample in INSDC archives.",
-      "examples": ["SAMN14180202"]
-    },
-    "last_dose_vacicnation_date": {
-      "examples": ["09/04/2021"],
-      "type": "string",
-      "description": "The date the host received their last dose of vaccine.",
-      "format": "date"
-    },
-    "bioinformatics_protocol": {
-      "type": "string",
-      "description": "The name and version number of the bioinformatics protocol used.",
-      "examples": [
-        "https://www.protocols.io/groups/cphln-sarscov2-sequencing-consortium/members"
-      ]
-    },
-    "prior_sars_cov_2_antiviral_treatment": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Whether there was prior SARS-CoV-2 treatment with an antiviral agent.",
-      "examples": ["No prior antiviral treatment"]
-    },
-    "gene_name_2": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The name of the gene used in the diagnostic RT-PCR test.",
-      "examples": ["nsp12 (RdRP)"]
-    },
-    "body_product": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "A substance excreted/secreted from an organism e.g. feces, urine, sweat.",
-      "examples": ["Feces"]
-    },
-    "host_age": {
-      "anyOf": [
-        { "type": "integer" },
-        { "pattern": "\\d+-\\d+", "type": "string" }
-      ],
-      "description": "Age of host at the time of sampling.",
-      "examples": [79]
-    },
-    "host_ethnicity": {
-      "type": "string",
-      "description": "The self-identified ethnicity(ies) of the host.",
-      "examples": ["European"]
-    },
-    "geo_loc_name_country": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Country of origin of the sample.",
-      "examples": ["South Africa"]
-    },
-    "collection_device": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The instrument or container used to collect the sample e.g. swab.",
-      "examples": ["Swab"]
-    },
-    "purpose_of_sequencing": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The reason that the sample was sequenced.",
-      "examples": ["Research"]
-    },
-    "raw_sequence_data_processing_method": {
-      "type": "string",
-      "description": "The method used for raw data processing such as removing barcodes, adapter trimming, filtering etc.",
-      "examples": ["Porechop 0.2.3,Porechop 0.2.3"]
-    },
-    "sequence_submitter_contact_address": {
-      "type": "string",
-      "description": "The mailing address of the agency submitting the sequence.",
-      "examples": ["123 Sunnybrooke St, Toronto, Ontario, M4P 1L6, Canada"]
-    },
-    "specimen_processing": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Any processing applied to the sample during or after receiving the sample.",
-      "examples": ["Virus passage"]
-    },
-    "bioproject_umbrella_accession": {
-      "pattern": "^PRJ(N|E|D)([a-zA-Z]?)[0-9]+*",
-      "type": "string",
-      "description": "The INSDC umbrella accession number of the BioProject to which the BioSample belongs. ",
-      "examples": ["PRJNA623807"]
-    },
-    "flow_cell_barcode": {
-      "type": "string",
-      "description": "The barcode of the flow cell used for sequencing.",
-      "examples": ["FAB06069"]
-    },
-    "r1_fastq_filename": {
-      "type": "string",
-      "description": "The user-specified filename of the r1 FASTQ file.",
-      "examples": ["ABC123_S1_L001_R1_001.fastq.gz"]
-    },
-    "destination_of_most_recent_travel_city": {
-      "type": "string",
-      "description": "The name of the city that was the destination of most recent travel.",
-      "examples": ["New York City"]
-    },
-    "r1_fastq_filepath": {
-      "type": "string",
-      "description": "The filepath of the r1 FASTQ file.",
-      "examples": [
-        "/User/Documents/RespLab/Data/ABC123_S1_L001_R1_001.fastq.gz"
-      ]
-    },
-    "library_id": {
-      "type": "string",
-      "description": "The user-specified identifier for the library prepared for sequencing.",
-      "examples": ["XYZ_123345"]
-    },
-    "host_vaccination_status": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The vaccination status of the host (fully vaccinated, partially vaccinated, or not vaccinated).",
-      "examples": ["Fully Vaccinated"]
-    },
-    "geo_loc_longitude": {
-      "type": "string",
-      "description": "The longitude coordinates of the geographical location of sample collection.",
-      "examples": ["77.11 W"]
-    },
-    "genbank_ena_ddbj_accession": {
-      "pattern": "^([a-zA-Z]{2})\\d*.\\d{1}",
-      "type": "string",
-      "description": "The GenBank/ENA/DDBJ identifier assigned to the sequence in the INSDC archives.",
-      "examples": ["MN908947.3"]
-    },
-    "bioproject_accession": {
-      "pattern": "^PRJ(N|E|D)([a-zA-Z]?)[0-9]+*",
-      "type": "string",
-      "description": "The INSDC accession number of the BioProject(s) to which the BioSample belongs. ",
-      "examples": ["PRJNA12345"]
-    },
-    "lineage_clade_analysis_software_name": {
-      "type": "string",
-      "description": "The name of the software used to determine the lineage/clade.",
-      "examples": ["Pangolin"]
-    },
-    "location_of_exposure_geo_loc_name_country": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The country where the host was likely exposed to the causative agent of the illness.",
-      "examples": ["Canada"]
-    },
-    "sample_plan_name": {
-      "type": "string",
-      "description": "The name of the sample plan implemented for sample collection.",
-      "examples": ["CanCOGeN Sampling Strategy 1.0"]
-    },
-    "prior_sars_cov_2_antiviral_treatment_date": {
-      "examples": ["28/01/2021"],
-      "type": "string",
-      "description": "The date treatment was first administered during the prior SARS-CoV-2 infection.",
-      "format": "date"
-    },
-    "library_preparation_kit": {
-      "type": "string",
-      "description": "The name of the DNA library preparation kit used to generate the library being sequenced.",
-      "examples": ["Nextera XT"]
-    },
-    "fast5_filename": {
-      "type": "string",
-      "description": "The user-specified filename of the FAST5 file.",
-      "examples": ["batch1a_sequences.fast5"]
-    },
-    "host_disease_outcome": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Disease outcome in the host.",
-      "examples": ["Recovered"]
-    },
-    "diagnostic_pcr_ct_value_1": {
-      "type": "integer",
-      "description": "The Ct value result from a diagnostic SARS-CoV-2 RT-PCR test.",
-      "examples": [21]
-    },
-    "collection_method": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The process used to collect the sample e.g. phlebotomy, necropsy.",
-      "examples": ["Bronchoalveolar lavage (BAL)"]
-    },
-    "geo_loc_name_county_region": {
-      "type": "string",
-      "description": "The county/region of origin of the sample.",
-      "examples": ["Derbyshire"]
-    },
-    "consensus_genome_length": {
-      "type": "integer",
-      "description": "Size of the assembled genome described as the number of base pairs.",
-      "examples": [38677]
-    },
-    "r2_fastq_filepath": {
-      "type": "string",
-      "description": "The filepath of the r2 FASTQ file.",
-      "examples": [
-        "/User/Documents/RespLab/Data/ABC123_S1_L001_R2_001.fastq.gz"
-      ]
-    },
-    "sample_received_date": {
-      "examples": ["20/03/2020"],
-      "type": "string",
-      "description": "The date on which the sample was received.",
-      "format": "date"
-    },
-    "host_common_name": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The commonly used name of the host.",
-      "examples": ["Human"]
-    },
-    "geo_loc_name_state_province_territory": {
-      "type": "string",
-      "description": "The state/province/territory of origin of the sample.",
-      "examples": ["Western Cape"]
-    },
-    "lineage_clade_analysis_software_version": {
-      "type": "string",
-      "description": "The version of the software used to determine the lineage/clade.",
-      "examples": ["2.1.10"]
-    },
-    "host_subject_id": {
-      "type": "string",
-      "description": "A unique identifier by which each host can be referred to e.g. #131",
-      "examples": ["BCxy123"]
-    },
-    "sra_accession": {
-      "pattern": "^(SRR|ERR|DRR)[0-9]+",
-      "type": "string",
-      "description": "The Sequence Read Archive (SRA), European Nucleotide Archive (ENA) or DDBJ Sequence Read Archive (DRA) identifier linking raw read data, methodological metadata and quality control metrics submitted to the INSDC.",
-      "examples": ["SRR11177792"]
-    },
-    "authors": {
-      "type": "string",
-      "description": "Names of individuals contributing to the processes of sample collection, sequence generation, analysis, and data submission.",
-      "examples": ["Tejinder Singh, Fei Hu, Johnny Blogs"]
-    },
-    "host_role": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The role of the host in relation to the exposure setting.",
-      "examples": ["Patient"]
-    },
-    "consensus_sequence_name": {
-      "type": "string",
-      "description": "The name of the consensus sequence.",
-      "examples": ["ncov123assembly3"]
-    },
-    "gisaid_accession": {
-      "pattern": "^EPI_ISL_\\d*",
-      "type": "string",
-      "description": "The GISAID accession number assigned to the sequence.",
-      "examples": ["EPI_ISL_123456"]
-    },
-    "destination_of_most_recent_travel__state_province_territory": {
-      "type": "string",
-      "description": "The name of the province that was the destination of most recent travel.",
-      "examples": ["California"]
-    },
-    "consensus_sequence_filepath": {
-      "type": "string",
-      "description": "The filepath of the consesnsus sequence file.",
-      "examples": ["/User/Documents/RespLab/Data/ncov123assembly.fasta"]
-    },
-    "number_of_base_pairs_sequenced": {
-      "type": "integer",
-      "description": "The number of total base pairs generated by the sequencing process.",
-      "examples": [387566]
-    },
-    "destination_of_most_recent_travel_country": {
-      "type": "string",
-      "description": "The name of the country that was the destination of most recent travel.",
-      "examples": ["United Kingdom"]
-    },
-    "fast5_filepath": {
-      "type": "string",
-      "description": "The filepath of the FAST5 file.",
-      "examples": ["/User/Documents/RespLab/Data/rona123assembly.fast5"]
-    },
-    "culture_collection": {
-      "type": "string",
-      "description": "The name of the source collection and unique culture identifier. ",
-      "examples": ["/culture_collection=\"ATCC:26370\""]
-    },
-    "amplicon_size": {
-      "type": "string",
-      "description": "The length of the amplicon generated by PCR amplification.",
-      "examples": ["300bp"]
-    },
-    "sample_collector_contact_address": {
-      "type": "string",
-      "description": "The mailing address of the agency submitting the sample.",
-      "examples": ["655 Lab St, Vancouver, British Columbia, V5N 2A2, Canada"]
-    },
-    "collection_protocol": {
-      "type": "string",
-      "description": "The name and version of a particular protocol used for sampling.",
-      "examples": ["BCRonaSamplingProtocol 1.2"]
-    },
-    "variant_evidence": {
-      "type": "string",
-      "description": "The evidence used to make the variant determination.",
-      "examples": [
-        "lineage-defining mutations: ORF1ab (K1655N), Spike (K417N, E484K, N501Y, D614G, A701V), N (T205I), E (P71L)"
-      ]
-    },
-    "most_recent_travel_return_date": {
-      "examples": ["26/04/2020"],
-      "type": "string",
-      "description": "The date of a person's most recent return to some residence from a journey originating at that residence.",
-      "format": "date"
-    },
-    "exposure_contact_level": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The exposure transmission contact type.",
-      "examples": ["Direct"]
-    },
-    "prior_sars_cov_2_infection": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Whether there was prior SARS-CoV-2 infection.",
-      "examples": ["Yes"]
-    },
-    "gisaid_virus_name": {
-      "type": "string",
-      "description": "The user-defined GISAID virus name assigned to the sequence.",
-      "examples": ["hCoV-19/Canada/prov_rona_99/2020"]
-    },
-    "specimen_collector_sample_id": {
-      "type": "string",
-      "description": "The user-defined name for the sample.",
-      "examples": [
-        "SARS-CoV-2/human/USA/CA-CDPH-001/2020,hCoV-19/USA-CDPH-001/2020"
-      ]
-    },
-    "host_scientific_name": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The taxonomic, or scientific name of the host.",
-      "examples": ["Homo sapiens"]
-    },
-    "host_disease": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The name of the disease experienced by the host.",
-      "examples": ["COVID-19"]
-    },
-    "passage_method": {
-      "type": "string",
-      "description": "Description of how organism was passaged.",
-      "examples": [""]
-    },
-    "symptom_onset_date": {
-      "examples": ["16/03/2020"],
-      "type": "string",
-      "description": "The date on which the symptoms began or were first noted.",
-      "format": "date"
-    },
-    "r2_fastq_filename": {
-      "type": "string",
-      "description": "The user-specified filename of the r2 FASTQ file.",
-      "examples": ["ABC123_S1_L001_R2_001.fastq.gz"]
-    },
-    "prior_sars_cov_2_infection_date": {
-      "examples": ["23/01/2021"],
-      "type": "string",
-      "description": "The date of diagnosis of the prior SARS-CoV-2 infection.",
-      "format": "date"
-    },
-    "exposure_event": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Event leading to exposure.",
-      "examples": ["Mass gathering (convention)"]
-    },
-    "sequencing_kit_number": {
-      "type": "string",
-      "description": "The manufacturer's kit number.",
-      "examples": ["AB456XYZ789"]
-    },
-    "purpose_of_sampling_details": {
-      "type": "string",
-      "description": "Further details pertaining to the reason the sample was collected.",
-      "examples": ["Screening of bat specimens in museum collections."]
-    },
-    "host_gender": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The gender of the host at the time of sample collection.",
-      "examples": ["male"]
-    },
-    "prior_sars_cov_2_antiviral_treatment_agent": {
-      "type": "string",
-      "description": "The name of the antiviral treatment agent administered during the prior SARS-CoV-2 infection.",
-      "examples": ["Remdesivir"]
-    },
-    "diagnostic_pcr_protocol_2": {
-      "type": "string",
-      "description": "The name and version number of the protocol used for diagnostic marker amplification.",
-      "examples": ["PCRRdRpGene 3.0"]
-    },
-    "diagnostic_pcr_protocol_1": {
-      "type": "string",
-      "description": "The name and version number of the protocol used for diagnostic marker amplification.",
-      "examples": ["PCREGene 2.0"]
-    },
-    "host_specimen_voucher": {
-      "type": "string",
-      "description": "Identifier for the physical specimen.",
-      "examples": [
-        "URI: http://portal.vertnet.org/o/fmnh/mammals?id=33e55cfe-330b-40d9-aaae-8d042cba7542 INSDC triplet: UAM:Mamm:52179"
-      ]
-    },
-    "exposure_setting": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The setting leading to exposure.",
-      "examples": ["Healthcare Setting"]
-    },
-    "lineage_clade_name": {
-      "type": "string",
-      "description": "The name of the lineage or clade.",
-      "examples": ["B.1.1.7"]
-    },
-    "gene_name_1": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The name of the gene used in the diagnostic RT-PCR test.",
-      "examples": ["E (orf4)"]
-    },
-    "consensus_sequence_software_name": {
-      "type": "string",
-      "description": "The name of software used to generate the consensus sequence.",
-      "examples": ["Ivar"]
-    },
-    "reference_genome_accession": {
-      "type": "string",
-      "description": "A persistent, unique identifier of a genome database entry.",
-      "examples": ["NC_045512.2"]
-    },
-    "host_residence_geo_loc_name_country": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The country where the host resides.",
-      "examples": ["Canada"]
-    },
-    "travel_history": {
-      "type": "string",
-      "description": "Travel history in last six months.",
-      "examples": ["Canada, Vancouver, USA, Seattle, Italy, Milan"]
-    },
-    "consensus_sequence_software_version": {
-      "type": "string",
-      "description": "The version of the software used to generate the consensus sequence.",
-      "examples": ["1.3"]
-    },
-    "complications": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Patient medical complications that are believed to have occurred as a result of host disease.",
-      "examples": ["Acute Respiratory Failure"]
-    },
-    "geo_loc_name_city": {
-      "type": "string",
-      "description": "The city of origin of the sample.",
-      "examples": ["Vancouver"]
-    },
-    "consensus_sequence_filename": {
-      "type": "string",
-      "description": "The name of the consensus sequence file.",
-      "examples": ["ncov123assembly.fasta"]
-    },
-    "biomaterial_extracted": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The biomaterial extracted from samples for the purpose of sequencing.",
-      "examples": ["RNA (total)"]
-    },
-    "host_age_unit": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The units used to measure the host's age.",
-      "examples": ["years"]
-    },
-    "geo_loc_latitude": {
-      "type": "string",
-      "description": "The latitude coordinates of the geographical location of sample collection.",
-      "examples": ["38.98 N"]
-    },
-    "environmental_material": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "A substance obtained from the natural or man-made environment e.g. soil, water, sewage, door handle, bed handrail, face mask.",
-      "examples": ["Face mask"]
-    },
-    "sequence_submitter_contact_email": {
-      "examples": ["johnnyblogs@lab.ca, RespLab@lab.ca"],
-      "type": "string",
-      "description": "The email address of the contact responsible for follow-up regarding the sequence.",
-      "format": "email"
-    },
-    "environmental_site": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "An environmental location may describe a site in the natural or built environment e.g. hospital, wet market, bat cave.",
-      "examples": ["Hospital room"]
-    },
-    "pre_existing_conditions_and_risk_factors": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Patient pre-existing conditions and risk factors.",
-      "examples": ["Anemia"]
-    },
-    "first_dose_vaccination_date": {
-      "examples": ["26/02/2021"],
-      "type": "string",
-      "description": "The date the host was first vaccinated.",
-      "format": "date"
-    },
-    "variant_designation": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The variant classification of the lineage/clade i.e. variant, variant of concern.",
-      "examples": ["Variant of Concern"]
-    },
-    "sample_collected_in_quarantine": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Whether the sample was collected from an individual in quarantine.",
-      "examples": ["Yes"]
-    },
-    "sample_collected_by": {
-      "type": "string",
-      "description": "The name of the agency that collected the original sample.",
-      "examples": [
-        "Public Health Agency of Canada, Centers for Disease Control and Prevention"
-      ]
-    },
-    "sequencing_instrument": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The model of the sequencing instrument used.",
-      "examples": ["MinIon"]
-    },
-    "host_health_status_details": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Further details pertaining to the health or disease status of the host at time of collection.",
-      "examples": ["Hospitalized (ICU)"]
-    },
-    "isolate": {
-      "type": "string",
-      "description": "Identifier of the specific isolate.",
-      "examples": [
-        "SARS-CoV-2/human/USA/CA-CDPH-001/2020,hCoV-19/USA-CDPH-001/2020"
-      ]
-    },
-    "geo_loc_name_state_province_region": {
-      "type": "string",
-      "description": "State/province/region of origin of the sample.",
-      "examples": ["Western Cape"]
-    },
-    "host_health_state": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Health status of the host at the time of sample collection.",
-      "examples": ["Asymptomatic"]
-    },
-    "signs_and_symptoms": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "A perceived change in function or sensation, (loss, disturbance or appearance) indicative of a disease, reported by a patient.",
-      "examples": ["Cough, Fever, Chills"]
-    },
-    "dehosting_method": {
-      "type": "string",
-      "description": "The method used to remove host reads from the pathogen sequence.",
-      "examples": ["Nanostripper"]
-    },
-    "amplicon_pcr_primer_scheme": {
-      "type": "string",
-      "description": "The specifications of the primers (primer sequences, binding positions, fragment size generated etc) used to generate the amplicons to be sequenced.",
-      "examples": [
-        "https://github.com/joshquick/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv"
-      ]
-    },
-    "vaccine_name": {
-      "type": "string",
-      "description": "The name of the vaccine.",
-      "examples": ["BNT162b2, Pfizer-BioNTech"]
-    },
-    "data_abstraction_details": {
-      "type": "string",
-      "description": "A description of how any data elements were altered to preserve patient privacy.",
-      "examples": [""]
-    },
-    "depth_of_coverage_threshold": {
-      "type": "number",
-      "description": "The threshold used as a cut-off for the depth of coverage.",
-      "examples": [100.0]
-    },
-    "purpose_of_sequencing_details": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The description of why the sample was sequenced providing specific details.",
-      "examples": ["Screened for S gene target failure (S dropout)"]
-    },
-    "sequence_submitted_by": {
-      "type": "string",
-      "description": "The name of the agency that generated the sequence.",
-      "examples": [
-        "Public Health Agency of Canada, Centers for Disease Control and Prevention"
-      ]
-    },
-    "sequencing_protocol_name": {
-      "type": "string",
-      "description": "The name and version number of the sequencing protocol used.",
-      "examples": ["1D_DNA_MinION, ARTIC Network Protocol V3"]
-    },
-    "prior_sars_cov_2_infection_isolate": {
-      "type": "string",
-      "description": "The identifier of the isolate found in the prior SARS-CoV-2 infection.",
-      "examples": ["SARS-CoV-2/human/USA/CA-CDPH-001/2020"]
-    },
-    "organism": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "Taxonomic name of the organism.",
-      "examples": ["Severe acute respiratory coronavirus 2"]
-    },
-    "purpose_of_sampling": {
-      "type": {
-        "enum": [
-          "E gene (orf4)",
-          "M gene (orf5)",
-          "N gene (orf9)",
-          "Spike gene (orf2)",
-          "orf1ab (rep)",
-          "   orf1a (pp1a)",
-          "      nsp11",
-          "   nsp1 ",
-          "   nsp2 ",
-          "   nsp3 ",
-          "   nsp4 ",
-          "   nsp5 ",
-          "   nsp6 ",
-          "   nsp7 ",
-          "   nsp8 ",
-          "   nsp9 ",
-          "   nsp10 ",
-          "   RdRp gene (nsp12)",
-          "   hel gene (nsp13)",
-          "   exoN gene (nsp14)",
-          "   nsp15",
-          "   nsp16",
-          "orf3a",
-          "orf3b",
-          "orf6 (ns6)",
-          "orf7a",
-          "orf7b (ns7b)",
-          "orf8 (ns8)",
-          "orf9b",
-          "orf9c",
-          "orf10",
-          "orf14",
-          "SARS-COV-2 5' UTR",
-          "Not Applicable",
-          "Not Collected",
-          "Not Provided",
-          "Missing",
-          "Restricted Access"
-        ],
-        "type": "string"
-      },
-      "description": "The reason that the sample was collected.",
-      "examples": ["Diagnostic testing"]
-    }
-  }
+    "$schema": "http://json-schema.org/draft/2019-09/schema#",
+    "type": "object",
+    "properties": {
+        "specimen_collector_sample_id": {
+            "description": "The user-defined name for the sample.",
+            "type": "string",
+            "examples": [
+                "SARS-CoV-2/human/USA/CA-CDPH-001/2020,hCoV-19/USA-CDPH-001/2020"
+            ]
+        },
+        "bioproject_umbrella_accession": {
+            "description": "The INSDC umbrella accession number of the BioProject to which the BioSample belongs. ",
+            "type": "string",
+            "pattern": "^PRJ(N|E|D)([a-zA-Z]?)[0-9]+*",
+            "examples": [
+                "PRJNA623807"
+            ]
+        },
+        "bioproject_accession": {
+            "description": "The INSDC accession number of the BioProject(s) to which the BioSample belongs. ",
+            "type": "string",
+            "pattern": "^PRJ(N|E|D)([a-zA-Z]?)[0-9]+*",
+            "examples": [
+                "PRJNA12345"
+            ]
+        },
+        "biosample_accession": {
+            "description": "The identifier assigned to a BioSample in INSDC archives.",
+            "type": "string",
+            "pattern": "^SAM(D|N|E([AG]?))[0-9]+",
+            "examples": [
+                "SAMN14180202"
+            ]
+        },
+        "sra_accession": {
+            "description": "The Sequence Read Archive (SRA), European Nucleotide Archive (ENA) or DDBJ Sequence Read Archive (DRA) identifier linking raw read data, methodological metadata and quality control metrics submitted to the INSDC.",
+            "type": "string",
+            "pattern": "^(SRR|ERR|DRR)[0-9]+",
+            "examples": [
+                "SRR11177792"
+            ]
+        },
+        "genbank_ena_ddbj_accession": {
+            "description": "The GenBank/ENA/DDBJ identifier assigned to the sequence in the INSDC archives.",
+            "type": "string",
+            "pattern": "^([a-zA-Z]{2})\\d*.\\d{1}",
+            "examples": [
+                "MN908947.3"
+            ]
+        },
+        "gisaid_accession": {
+            "description": "The GISAID accession number assigned to the sequence.",
+            "type": "string",
+            "pattern": "^EPI_ISL_\\d*",
+            "examples": [
+                "EPI_ISL_123456"
+            ]
+        },
+        "gisaid_virus_name": {
+            "description": "The user-defined GISAID virus name assigned to the sequence.",
+            "type": "string",
+            "examples": [
+                "hCoV-19/Canada/prov_rona_99/2020"
+            ]
+        },
+        "host_specimen_voucher": {
+            "description": "Identifier for the physical specimen.",
+            "type": "string",
+            "examples": [
+                "URI: http://portal.vertnet.org/o/fmnh/mammals?id=33e55cfe-330b-40d9-aaae-8d042cba7542 INSDC triplet: UAM:Mamm:52179"
+            ]
+        },
+        "sample_collected_by": {
+            "description": "The name of the agency that collected the original sample.",
+            "type": "string",
+            "examples": [
+                "Public Health Agency of Canada, Centers for Disease Control and Prevention"
+            ]
+        },
+        "sample_collector_contact_email": {
+            "description": "The email address of the contact responsible for follow-up regarding the sample.",
+            "type": "string",
+            "format": "email",
+            "examples": [
+                "johnnyblogs@lab.ca, RespLab@lab.ca"
+            ]
+        },
+        "sample_collector_contact_address": {
+            "description": "The mailing address of the agency submitting the sample.",
+            "type": "string",
+            "examples": [
+                "655 Lab St, Vancouver, British Columbia, V5N 2A2, Canada"
+            ]
+        },
+        "sequence_submitted_by": {
+            "description": "The name of the agency that generated the sequence.",
+            "type": "string",
+            "examples": [
+                "Public Health Agency of Canada, Centers for Disease Control and Prevention"
+            ]
+        },
+        "sequence_submitter_contact_email": {
+            "description": "The email address of the contact responsible for follow-up regarding the sequence.",
+            "type": "string",
+            "format": "email",
+            "examples": [
+                "johnnyblogs@lab.ca, RespLab@lab.ca"
+            ]
+        },
+        "sequence_submitter_contact_address": {
+            "description": "The mailing address of the agency submitting the sequence.",
+            "type": "string",
+            "examples": [
+                "123 Sunnybrooke St, Toronto, Ontario, M4P 1L6, Canada"
+            ]
+        },
+        "sample_collection_date": {
+            "description": "The date on which the sample was collected.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "16/03/2020"
+            ]
+        },
+        "sample_received_date": {
+            "description": "The date on which the sample was received.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "20/03/2020"
+            ]
+        },
+        "geo_loc_name_country": {
+            "description": "Country of origin of the sample.",
+            "type": "string",
+            "Enums": [
+                "Afghanistan",
+                "Albania",
+                "Algeria",
+                "American Samoa",
+                "Andorra",
+                "Angola",
+                "Anguilla",
+                "Antarctica",
+                "Antigua and Barbuda",
+                "Argentina",
+                "Armenia",
+                "Aruba",
+                "Ashmore and Cartier Islands",
+                "Australia",
+                "Austria",
+                "Azerbaijan",
+                "Bahamas",
+                "Bahrain",
+                "Baker Island",
+                "Bangladesh",
+                "Barbados",
+                "Bassas da India",
+                "Belarus",
+                "Belgium",
+                "Belize",
+                "Benin",
+                "Bermuda",
+                "Bhutan",
+                "Bolivia",
+                "Borneo",
+                "Bosnia and Herzegovina",
+                "Botswana",
+                "Bouvet Island",
+                "Brazil",
+                "British Virgin Islands",
+                "Brunei",
+                "Bulgaria",
+                "Burkina Faso",
+                "Burundi",
+                "Cambodia",
+                "Cameroon",
+                "Canada",
+                "Cape Verde",
+                "Cayman Islands",
+                "Central African Republic",
+                "Chad",
+                "Chile",
+                "China",
+                "Christmas Island",
+                "Clipperton Island",
+                "Cocos Islands",
+                "Colombia",
+                "Comoros",
+                "Cook Islands",
+                "Coral Sea Islands",
+                "Costa Rica",
+                "Cote d'Ivoire",
+                "Croatia",
+                "Cuba",
+                "Curacao",
+                "Cyprus",
+                "Czech Republic",
+                "Democratic Republic of the Congo",
+                "Denmark",
+                "Djibouti",
+                "Dominica",
+                "Dominican Republic",
+                "Ecuador",
+                "Egypt",
+                "El Salvador",
+                "Equatorial Guinea",
+                "Eritrea",
+                "Estonia",
+                "Eswatini",
+                "Ethiopia",
+                "Europa Island",
+                "Falkland Islands (Islas Malvinas)",
+                "Faroe Islands",
+                "Fiji",
+                "Finland",
+                "France",
+                "French Guiana",
+                "French Polynesia",
+                "French Southern and Antarctic Lands",
+                "Gabon",
+                "Gambia",
+                "Gaza Strip",
+                "Georgia",
+                "Germany",
+                "Ghana",
+                "Gibraltar",
+                "Glorioso Islands",
+                "Greece",
+                "Greenland",
+                "Grenada",
+                "Guadeloupe",
+                "Guam",
+                "Guatemala",
+                "Guernsey",
+                "Guinea",
+                "Guinea-Bissau",
+                "Guyana",
+                "Haiti",
+                "Heard Island and McDonald Islands",
+                "Honduras",
+                "Hong Kong",
+                "Howland Island",
+                "Hungary",
+                "Iceland",
+                "India",
+                "Indonesia",
+                "Iran",
+                "Iraq",
+                "Ireland",
+                "Isle of Man",
+                "Israel",
+                "Italy",
+                "Jamaica",
+                "Jan Mayen",
+                "Japan",
+                "Jarvis Island",
+                "Jersey",
+                "Johnston Atoll",
+                "Jordan",
+                "Juan de Nova Island",
+                "Kazakhstan",
+                "Kenya",
+                "Kerguelen Archipelago",
+                "Kingman Reef",
+                "Kiribati",
+                "Kosovo",
+                "Kuwait",
+                "Kyrgyzstan",
+                "Laos",
+                "Latvia",
+                "Lebanon",
+                "Lesotho",
+                "Liberia",
+                "Libya",
+                "Liechtenstein",
+                "Line Islands",
+                "Lithuania",
+                "Luxembourg",
+                "Macau",
+                "Madagascar",
+                "Malawi",
+                "Malaysia",
+                "Maldives",
+                "Mali",
+                "Malta",
+                "Marshall Islands",
+                "Martinique",
+                "Mauritania",
+                "Mauritius",
+                "Mayotte",
+                "Mexico",
+                "Micronesia",
+                "Midway Islands",
+                "Moldova",
+                "Monaco",
+                "Mongolia",
+                "Montenegro",
+                "Montserrat",
+                "Morocco",
+                "Mozambique",
+                "Myanmar",
+                "Namibia",
+                "Nauru",
+                "Navassa Island",
+                "Nepal",
+                "Netherlands",
+                "New Caledonia",
+                "New Zealand",
+                "Nicaragua",
+                "Niger",
+                "Nigeria",
+                "Niue",
+                "Norfolk Island",
+                "North Korea",
+                "North Macedonia",
+                "North Sea",
+                "Northern Mariana Islands",
+                "Norway",
+                "Oman",
+                "Pakistan",
+                "Palau",
+                "Panama",
+                "Papua New Guinea",
+                "Paracel Islands",
+                "Paraguay",
+                "Peru",
+                "Philippines",
+                "Pitcairn Islands",
+                "Poland",
+                "Portugal",
+                "Puerto Rico",
+                "Qatar",
+                "Republic of the Congo",
+                "Reunion",
+                "Romania",
+                "Ross Sea",
+                "Russia",
+                "Rwanda",
+                "Saint Helena",
+                "Saint Kitts and Nevis",
+                "Saint Lucia",
+                "Saint Pierre and Miquelon",
+                "Saint Vincent and the Grenadines",
+                "Samoa",
+                "San Marino",
+                "Sao Tome and Principe",
+                "Saudi Arabia",
+                "Senegal",
+                "Serbia",
+                "Seychelles",
+                "Sierra Leone",
+                "Singapore",
+                "Sint Maarten",
+                "Slovakia",
+                "Slovenia",
+                "Solomon Islands",
+                "Somalia",
+                "South Africa",
+                "South Georgia and the South Sandwich Islands",
+                "South Korea",
+                "South Sudan",
+                "Spain",
+                "Spratly Islands",
+                "Sri Lanka",
+                "State of Palestine",
+                "Sudan",
+                "Suriname",
+                "Svalbard",
+                "Swaziland",
+                "Sweden",
+                "Switzerland",
+                "Syria",
+                "Taiwan",
+                "Tajikistan",
+                "Tanzania",
+                "Thailand",
+                "Timor-Leste",
+                "Togo",
+                "Tokelau",
+                "Tonga",
+                "Trinidad and Tobago",
+                "Tromelin Island",
+                "Tunisia",
+                "Turkey",
+                "Turkmenistan",
+                "Turks and Caicos Islands",
+                "Tuvalu",
+                "USA",
+                "Uganda",
+                "Ukraine",
+                "United Arab Emirates",
+                "United Kingdom",
+                "Uruguay",
+                "Uzbekistan",
+                "Vanuatu",
+                "Venezuela",
+                "Viet Nam",
+                "Virgin Islands",
+                "Wake Island",
+                "Wallis and Futuna",
+                "West Bank",
+                "Western Sahara",
+                "Yemen",
+                "Zambia",
+                "Zimbabwe",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "South Africa"
+            ]
+        },
+        "geo_loc_name_state_province_territory": {
+            "description": "The state/province/territory of origin of the sample.",
+            "type": "string",
+            "examples": [
+                "Western Cape"
+            ]
+        },
+        "geo_loc_name_county_region": {
+            "description": "The county/region of origin of the sample.",
+            "type": "string",
+            "examples": [
+                "Derbyshire"
+            ]
+        },
+        "geo_loc_name_city": {
+            "description": "The city of origin of the sample.",
+            "type": "string",
+            "examples": [
+                "Vancouver"
+            ]
+        },
+        "geo_loc_latitude": {
+            "description": "The latitude coordinates of the geographical location of sample collection.",
+            "type": "string",
+            "examples": [
+                "38.98 N"
+            ]
+        },
+        "geo_loc_longitude": {
+            "description": "The longitude coordinates of the geographical location of sample collection.",
+            "type": "string",
+            "examples": [
+                "77.11 W"
+            ]
+        },
+        "organism": {
+            "description": "Taxonomic name of the organism.",
+            "type": "string",
+            "Enums": [
+                "Severe acute respiratory syndrome coronavirus 2"
+            ],
+            "examples": [
+                "Severe acute respiratory coronavirus 2"
+            ]
+        },
+        "isolate": {
+            "description": "Identifier of the specific isolate.",
+            "type": "string",
+            "examples": [
+                "SARS-CoV-2/human/USA/CA-CDPH-001/2020,hCoV-19/USA-CDPH-001/2020"
+            ]
+        },
+        "culture_collection": {
+            "description": "The name of the source collection and unique culture identifier. ",
+            "type": "string",
+            "examples": [
+                "/culture_collection=\"ATCC:26370\""
+            ]
+        },
+        "purpose_of_sampling": {
+            "description": "The reason that the sample was collected.",
+            "type": "string",
+            "Enums": [
+                "Cluster/Outbreak Investigation",
+                "Diagnostic Testing",
+                "Research",
+                "Protocol Testing",
+                "Surveillance",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Diagnostic testing"
+            ]
+        },
+        "purpose_of_sampling_details": {
+            "description": "Further details pertaining to the reason the sample was collected.",
+            "type": "string",
+            "examples": [
+                "Screening of bat specimens in museum collections."
+            ]
+        },
+        "sample_plan_name": {
+            "description": "The name of the sample plan implemented for sample collection.",
+            "type": "string",
+            "examples": [
+                "CanCOGeN Sampling Strategy 1.0"
+            ]
+        },
+        "sample_collected_in_quarantine": {
+            "description": "Whether the sample was collected from an individual in quarantine.",
+            "type": "string",
+            "Enums": [
+                "Yes",
+                "No",
+                "Unknown",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Yes"
+            ]
+        },
+        "anatomical_material": {
+            "description": "A substance obtained from an anatomical part of an organism e.g. tissue, blood.",
+            "type": "string",
+            "Enums": [
+                "Blood",
+                "Fluid",
+                "Fluid (Cerebrospinal (CSF))",
+                "Fluid (Pericardial)",
+                "Fluid (Pleural)",
+                "Fluid (Vaginal)",
+                "Fluid (Amniotic)",
+                "Saliva",
+                "Tissue",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Blood"
+            ]
+        },
+        "anatomical_part": {
+            "description": "An anatomical part of an organism e.g. oropharynx.",
+            "type": "string",
+            "Enums": [
+                "Anus",
+                "Duodenum",
+                "Eye",
+                "Intestine",
+                "Lower respiratory tract",
+                "Bronchus",
+                "Lung",
+                "Bronchiole",
+                "Alveolar sac",
+                "Pleural sac",
+                "Pleural cavity",
+                "Trachea",
+                "Rectum",
+                "Skin",
+                "Stomach",
+                "Upper respiratory tract",
+                "Anterior Nares",
+                "Esophagus",
+                "Ethmoid sinus",
+                "Nasal Cavity",
+                "Middle Nasal Turbinate",
+                "Inferior Nasal Turbinate",
+                "Nasopharynx (NP)",
+                "Oropharynx (OP)",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Nasopharynx"
+            ]
+        },
+        "body_product": {
+            "description": "A substance excreted/secreted from an organism e.g. feces, urine, sweat.",
+            "type": "string",
+            "Enums": [
+                "Breast Milk",
+                "Feces",
+                "Mucus",
+                "Semen",
+                "Sputum",
+                "Sweat",
+                "Tear",
+                "Urine",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Feces"
+            ]
+        },
+        "environmental_material": {
+            "description": "A substance obtained from the natural or man-made environment e.g. soil, water, sewage, door handle, bed handrail, face mask.",
+            "type": "string",
+            "Enums": [
+                "Air vent",
+                "Banknote",
+                "Bed rail",
+                "Building Floor",
+                "Cloth",
+                "Control Panel",
+                "Door",
+                "Door Handle",
+                "Face Mask",
+                "Face Shield",
+                "Food",
+                "Food Packaging",
+                "Glass",
+                "Handrail",
+                "Hospital Gown",
+                "Light Switch",
+                "Locker",
+                "N95 Mask",
+                "Nurse Call Button",
+                "Paper",
+                "Particulate Matter",
+                "Plastic",
+                "PPE Gown",
+                "Sewage",
+                "Sink",
+                "Soil",
+                "Stainless Steel",
+                "Tissue Paper",
+                "Toilet Bowl",
+                "Water",
+                "Wastewater",
+                "Window",
+                "Wood",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Face mask"
+            ]
+        },
+        "environmental_site": {
+            "description": "An environmental location may describe a site in the natural or built environment e.g. hospital, wet market, bat cave.",
+            "type": "string",
+            "Enums": [
+                "Acute care facility",
+                "Animal house",
+                "Bathroom",
+                "Clinical assessment centre",
+                "Conference venue",
+                "Corridor",
+                "Daycare",
+                "Emergency room (ER)",
+                "Family practice clinic",
+                "Group home",
+                "Homeless shelter",
+                "Hospital",
+                "Intensive Care Unit (ICU)",
+                "Long Term Care Facility",
+                "Patient room",
+                "Prison",
+                "Production Facility",
+                "School",
+                "Sewage Plant",
+                "Subway train",
+                "Wet market",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Hospital room"
+            ]
+        },
+        "collection_device": {
+            "description": "The instrument or container used to collect the sample e.g. swab.",
+            "type": "string",
+            "Enums": [
+                "Air filter",
+                "Blood Collection Tube",
+                "Bronchoscope",
+                "Collection Container",
+                "Collection Cup",
+                "Fibrobronchoscope Brush",
+                "Filter",
+                "Fine Needle",
+                "Microcapillary tube",
+                "Micropipette",
+                "Needle",
+                "Serum Collection Tube",
+                "Sputum Collection Tube",
+                "Suction Catheter",
+                "Swab",
+                "Urine Collection Tube",
+                "Virus Transport Medium",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Swab"
+            ]
+        },
+        "collection_method": {
+            "description": "The process used to collect the sample e.g. phlebotomy, necropsy.",
+            "type": "string",
+            "Enums": [
+                "Amniocentesis",
+                "Aspiration",
+                "Suprapubic Aspiration",
+                "Tracheal Aspiration",
+                "Vacuum Aspiration",
+                "Biopsy",
+                "Needle Biopsy",
+                "Filtration",
+                "Air Filtration",
+                "Lavage",
+                "Bronchoalveolar Lavage (BAL)",
+                "Gastric Lavage",
+                "Lumbar Puncture",
+                "Necropsy",
+                "Phlebotomy",
+                "Rinsing",
+                "Saline gargle (mouth rinse and gargle)",
+                "Scraping",
+                "Swabbing",
+                "Finger Prick",
+                "Wash",
+                "Washout Tear Collection",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Bronchoalveolar lavage (BAL)"
+            ]
+        },
+        "collection_protocol": {
+            "description": "The name and version of a particular protocol used for sampling.",
+            "type": "string",
+            "examples": [
+                "BCRonaSamplingProtocol 1.2"
+            ]
+        },
+        "specimen_processing": {
+            "description": "Any processing applied to the sample during or after receiving the sample.",
+            "type": "string",
+            "Enums": [
+                "Virus Passage",
+                "RNA Re-Extraction (Post RT-PCR)",
+                "Specimens Pooled",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Virus passage"
+            ]
+        },
+        "lab_host": {
+            "description": "Name and description of the laboratory host used to propagate the source organism or material from which the sample was obtained.",
+            "type": "string",
+            "Enums": [
+                "293/ACE2 Cell Line",
+                "Caco2 Cell Line",
+                "Calu3 Cell Line",
+                "EFK3B Cell Line",
+                "HEK293T Cell Line",
+                "HRCE Cell Line",
+                "Huh7 Cell Line",
+                "LLCMk2 Cell Line",
+                "MDBK Cell Line",
+                "NHBE Cell Line",
+                "PK-15 Cell Line",
+                "RK-13 Cell Line",
+                "U251 Cell Line",
+                "Vero Cell Line",
+                "Vero E6 Cell Line",
+                "Vero E6/TMPRSS2 Cell Line",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Vero E6 cell line"
+            ]
+        },
+        "passage_number": {
+            "description": "Number of passages.",
+            "type": "integer",
+            "examples": [
+                3
+            ]
+        },
+        "passage_method": {
+            "description": "Description of how organism was passaged.",
+            "type": "string",
+            "examples": [
+                ""
+            ]
+        },
+        "biomaterial_extracted": {
+            "description": "The biomaterial extracted from samples for the purpose of sequencing.",
+            "type": "string",
+            "Enums": [
+                "mRNA (cDNA)",
+                "RNA (Total)",
+                "RNA (Poly-A)",
+                "RNA (Ribo-Depleted)",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "RNA (total)"
+            ]
+        },
+        "data_abstraction_details": {
+            "description": "A description of how any data elements were altered to preserve patient privacy.",
+            "type": "string",
+            "examples": [
+                ""
+            ]
+        },
+        "geo_loc_name_state_province_region": {
+            "description": "State/province/region of origin of the sample.",
+            "type": "string",
+            "examples": [
+                "Western Cape"
+            ]
+        },
+        "host_common_name": {
+            "description": "The commonly used name of the host.",
+            "type": "string",
+            "Enums": [
+                "Human",
+                "Bat",
+                "Cat",
+                "Chicken",
+                "Civet",
+                "Cow",
+                "Dog",
+                "Lion",
+                "Mink",
+                "Pangolin",
+                "Pig",
+                "Pigeon",
+                "Tiger",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Human"
+            ]
+        },
+        "host_scientific_name": {
+            "description": "The taxonomic, or scientific name of the host.",
+            "type": "string",
+            "Enums": [
+                "Bos taurus",
+                "Canis lupus familiaris",
+                "Chiroptera",
+                "Columbidae",
+                "Felis catus",
+                "Gallus gallus",
+                "Homo sapiens",
+                "Manis",
+                "Manis javanica",
+                "Panthera leo",
+                "Panthera tigris",
+                "Rhinolophidae",
+                "Rhinolophus affinis",
+                "Sus scrofa domesticus",
+                "Viverridae",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Homo sapiens"
+            ]
+        },
+        "host_health_state": {
+            "description": "Health status of the host at the time of sample collection.",
+            "type": "string",
+            "Enums": [
+                "Asymptomatic",
+                "Deceased",
+                "Healthy",
+                "Recovered",
+                "Symptomatic",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Asymptomatic"
+            ]
+        },
+        "host_health_status_details": {
+            "description": "Further details pertaining to the health or disease status of the host at time of collection.",
+            "type": "string",
+            "Enums": [
+                "Hospitalized",
+                "Hospitalized (Non-ICU)",
+                "Hospitalized (ICU)",
+                "Mechanical Ventilation",
+                "Medically Isolated",
+                "Medically Isolated (Negative Pressure)",
+                "Self-quarantining",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Hospitalized (ICU)"
+            ]
+        },
+        "host_disease": {
+            "description": "The name of the disease experienced by the host.",
+            "type": "string",
+            "Enums": [
+                "COVID-19",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "COVID-19"
+            ]
+        },
+        "host_disease_outcome": {
+            "description": "Disease outcome in the host.",
+            "type": "string",
+            "Enums": [
+                "Deceased",
+                "Deteriorating",
+                "Recovered",
+                "Stable",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Recovered"
+            ]
+        },
+        "host_age": {
+            "description": "Age of host at the time of sampling.",
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string",
+                    "pattern": "\\d+-\\d+"
+                }
+            ],
+            "examples": [
+                79
+            ]
+        },
+        "host_age_unit": {
+            "description": "The units used to measure the host's age.",
+            "type": "string",
+            "Enums": [
+                "months",
+                "years",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "years"
+            ]
+        },
+        "host_age_bin": {
+            "description": "The age category of the host at the time of sampling.",
+            "type": "string",
+            "Enums": [
+                "0 - 9",
+                "10 - 19     .",
+                "20 - 29",
+                "30 - 39",
+                "40 - 49",
+                "50 - 59",
+                "60 - 69",
+                "70 - 79",
+                "80 - 89",
+                "90 - 99",
+                "100+",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "0 - 9"
+            ]
+        },
+        "host_gender": {
+            "description": "The gender of the host at the time of sample collection.",
+            "type": "string",
+            "Enums": [
+                "Female",
+                "Male",
+                "Non-binary Gender",
+                "Transgender (Male to Female)",
+                "Transgender (Female to Male)",
+                "Undeclared",
+                "Unknown",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "male"
+            ]
+        },
+        "host_residence_geo_loc_name_country": {
+            "description": "The country where the host resides.",
+            "type": "string",
+            "Enums": [
+                "Afghanistan",
+                "Albania",
+                "Algeria",
+                "American Samoa",
+                "Andorra",
+                "Angola",
+                "Anguilla",
+                "Antarctica",
+                "Antigua and Barbuda",
+                "Argentina",
+                "Armenia",
+                "Aruba",
+                "Ashmore and Cartier Islands",
+                "Australia",
+                "Austria",
+                "Azerbaijan",
+                "Bahamas",
+                "Bahrain",
+                "Baker Island",
+                "Bangladesh",
+                "Barbados",
+                "Bassas da India",
+                "Belarus",
+                "Belgium",
+                "Belize",
+                "Benin",
+                "Bermuda",
+                "Bhutan",
+                "Bolivia",
+                "Borneo",
+                "Bosnia and Herzegovina",
+                "Botswana",
+                "Bouvet Island",
+                "Brazil",
+                "British Virgin Islands",
+                "Brunei",
+                "Bulgaria",
+                "Burkina Faso",
+                "Burundi",
+                "Cambodia",
+                "Cameroon",
+                "Canada",
+                "Cape Verde",
+                "Cayman Islands",
+                "Central African Republic",
+                "Chad",
+                "Chile",
+                "China",
+                "Christmas Island",
+                "Clipperton Island",
+                "Cocos Islands",
+                "Colombia",
+                "Comoros",
+                "Cook Islands",
+                "Coral Sea Islands",
+                "Costa Rica",
+                "Cote d'Ivoire",
+                "Croatia",
+                "Cuba",
+                "Curacao",
+                "Cyprus",
+                "Czech Republic",
+                "Democratic Republic of the Congo",
+                "Denmark",
+                "Djibouti",
+                "Dominica",
+                "Dominican Republic",
+                "Ecuador",
+                "Egypt",
+                "El Salvador",
+                "Equatorial Guinea",
+                "Eritrea",
+                "Estonia",
+                "Eswatini",
+                "Ethiopia",
+                "Europa Island",
+                "Falkland Islands (Islas Malvinas)",
+                "Faroe Islands",
+                "Fiji",
+                "Finland",
+                "France",
+                "French Guiana",
+                "French Polynesia",
+                "French Southern and Antarctic Lands",
+                "Gabon",
+                "Gambia",
+                "Gaza Strip",
+                "Georgia",
+                "Germany",
+                "Ghana",
+                "Gibraltar",
+                "Glorioso Islands",
+                "Greece",
+                "Greenland",
+                "Grenada",
+                "Guadeloupe",
+                "Guam",
+                "Guatemala",
+                "Guernsey",
+                "Guinea",
+                "Guinea-Bissau",
+                "Guyana",
+                "Haiti",
+                "Heard Island and McDonald Islands",
+                "Honduras",
+                "Hong Kong",
+                "Howland Island",
+                "Hungary",
+                "Iceland",
+                "India",
+                "Indonesia",
+                "Iran",
+                "Iraq",
+                "Ireland",
+                "Isle of Man",
+                "Israel",
+                "Italy",
+                "Jamaica",
+                "Jan Mayen",
+                "Japan",
+                "Jarvis Island",
+                "Jersey",
+                "Johnston Atoll",
+                "Jordan",
+                "Juan de Nova Island",
+                "Kazakhstan",
+                "Kenya",
+                "Kerguelen Archipelago",
+                "Kingman Reef",
+                "Kiribati",
+                "Kosovo",
+                "Kuwait",
+                "Kyrgyzstan",
+                "Laos",
+                "Latvia",
+                "Lebanon",
+                "Lesotho",
+                "Liberia",
+                "Libya",
+                "Liechtenstein",
+                "Line Islands",
+                "Lithuania",
+                "Luxembourg",
+                "Macau",
+                "Madagascar",
+                "Malawi",
+                "Malaysia",
+                "Maldives",
+                "Mali",
+                "Malta",
+                "Marshall Islands",
+                "Martinique",
+                "Mauritania",
+                "Mauritius",
+                "Mayotte",
+                "Mexico",
+                "Micronesia",
+                "Midway Islands",
+                "Moldova",
+                "Monaco",
+                "Mongolia",
+                "Montenegro",
+                "Montserrat",
+                "Morocco",
+                "Mozambique",
+                "Myanmar",
+                "Namibia",
+                "Nauru",
+                "Navassa Island",
+                "Nepal",
+                "Netherlands",
+                "New Caledonia",
+                "New Zealand",
+                "Nicaragua",
+                "Niger",
+                "Nigeria",
+                "Niue",
+                "Norfolk Island",
+                "North Korea",
+                "North Macedonia",
+                "North Sea",
+                "Northern Mariana Islands",
+                "Norway",
+                "Oman",
+                "Pakistan",
+                "Palau",
+                "Panama",
+                "Papua New Guinea",
+                "Paracel Islands",
+                "Paraguay",
+                "Peru",
+                "Philippines",
+                "Pitcairn Islands",
+                "Poland",
+                "Portugal",
+                "Puerto Rico",
+                "Qatar",
+                "Republic of the Congo",
+                "Reunion",
+                "Romania",
+                "Ross Sea",
+                "Russia",
+                "Rwanda",
+                "Saint Helena",
+                "Saint Kitts and Nevis",
+                "Saint Lucia",
+                "Saint Pierre and Miquelon",
+                "Saint Vincent and the Grenadines",
+                "Samoa",
+                "San Marino",
+                "Sao Tome and Principe",
+                "Saudi Arabia",
+                "Senegal",
+                "Serbia",
+                "Seychelles",
+                "Sierra Leone",
+                "Singapore",
+                "Sint Maarten",
+                "Slovakia",
+                "Slovenia",
+                "Solomon Islands",
+                "Somalia",
+                "South Africa",
+                "South Georgia and the South Sandwich Islands",
+                "South Korea",
+                "South Sudan",
+                "Spain",
+                "Spratly Islands",
+                "Sri Lanka",
+                "State of Palestine",
+                "Sudan",
+                "Suriname",
+                "Svalbard",
+                "Swaziland",
+                "Sweden",
+                "Switzerland",
+                "Syria",
+                "Taiwan",
+                "Tajikistan",
+                "Tanzania",
+                "Thailand",
+                "Timor-Leste",
+                "Togo",
+                "Tokelau",
+                "Tonga",
+                "Trinidad and Tobago",
+                "Tromelin Island",
+                "Tunisia",
+                "Turkey",
+                "Turkmenistan",
+                "Turks and Caicos Islands",
+                "Tuvalu",
+                "USA",
+                "Uganda",
+                "Ukraine",
+                "United Arab Emirates",
+                "United Kingdom",
+                "Uruguay",
+                "Uzbekistan",
+                "Vanuatu",
+                "Venezuela",
+                "Viet Nam",
+                "Virgin Islands",
+                "Wake Island",
+                "Wallis and Futuna",
+                "West Bank",
+                "Western Sahara",
+                "Yemen",
+                "Zambia",
+                "Zimbabwe",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Canada"
+            ]
+        },
+        "host_ethnicity": {
+            "description": "The self-identified ethnicity(ies) of the host.",
+            "type": "string",
+            "examples": [
+                "European"
+            ]
+        },
+        "host_subject_id": {
+            "description": "A unique identifier by which each host can be referred to e.g. #131",
+            "type": "string",
+            "examples": [
+                "BCxy123"
+            ]
+        },
+        "symptom_onset_date": {
+            "description": "The date on which the symptoms began or were first noted.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "16/03/2020"
+            ]
+        },
+        "signs_and_symptoms": {
+            "description": "A perceived change in function or sensation, (loss, disturbance or appearance) indicative of a disease, reported by a patient.",
+            "type": "string",
+            "Enums": [
+                "Abnormal lung auscultation",
+                "Ageusia (complete loss of taste)",
+                "Parageusia (distorted sense of taste)",
+                "Hypogeusia (reduced sense of taste)",
+                "Abnormality of the sense of smell",
+                "Anosmia (lost sense of smell)",
+                "Hyposmia (reduced sense of smell)",
+                "Acute Respiratory Distress Syndrome",
+                "Altered mental status",
+                "Arrhythmia",
+                "Cognitive impairment",
+                "Coma",
+                "Confusion",
+                "Delirium (sudden severe confusion)",
+                "Inability to arouse (inability to stay awake)",
+                "Irritability",
+                "Loss of speech",
+                "Asthenia (generalized weakness)",
+                "Chest tightness or pressure",
+                "Rigors (fever shakes)",
+                "Chills (sudden cold sensation)",
+                "Conjunctival injection",
+                "Conjunctivitis (pink eye)",
+                "Coryza",
+                "Cough",
+                "Nonproductive cough (dry cough)",
+                "Productive cough (wet cough)",
+                "Cyanosis (blueish skin discolouration)",
+                "Acrocyanosis",
+                "Circumoral cyanosis (bluish around mouth)",
+                "Cyanotic face (bluish face)",
+                "Central Cyanosis",
+                "Cyanotic lips (bluish lips)",
+                "Peripheral Cyanosis",
+                "Dyspnea (breathing difficulty)",
+                "Diarrhea (watery stool)",
+                "Dry gangrene",
+                "Encephalitis (brain inflammation)",
+                "Encephalopathy",
+                "Fatigue (tiredness)",
+                "Fever",
+                "Fever (>=38C)",
+                "Glossitis (inflammation of the tongue)",
+                "Ground Glass Opacities (GGO)",
+                "Headache",
+                "Hemoptysis (coughing up blood)",
+                "Hypocapnia",
+                "Hypotension (low blood pressure)",
+                "Hypoxemia (low blood oxygen)",
+                "Silent hypoxemia",
+                "Internal hemorrhage (internal bleeding)",
+                "Loss of Fine Movements",
+                "Low appetite",
+                "Malaise (general discomfort/unease)",
+                "Meningismus/nuchal rigidity",
+                "Muscle weakness",
+                "Nasal obstruction (stuffy nose)",
+                "Nausea",
+                "nose bleed",
+                "otitis",
+                "Pain",
+                "Abdominal pain",
+                "Arthralgia (painful joints)",
+                "Chest pain",
+                "Pleuritic chest pain",
+                "Myalgia (muscle pain)",
+                "Pharyngitis (sore throat)",
+                "Pharyngeal exudate",
+                "Pleural effusion",
+                "Pneumonia",
+                "Prostration",
+                "Pseudo-chilblains",
+                "Pseudo-chilblains on fingers (covid fingers)",
+                "Pseudo-chilblains on toes (covid toes)",
+                "Rash",
+                "Rhinorrhea (runny nose)",
+                "Seizure",
+                "Motor seizure",
+                "Shivering (involuntary muscle twitching)",
+                "Slurred speech",
+                "Sneezing",
+                "Sputum Production",
+                "Stroke",
+                "Swollen Lymph Nodes",
+                "Tachypnea (accelerated respiratory rate)",
+                "Vertigo (dizziness)",
+                "Vomiting (throwing up)",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Cough, Fever, Chills"
+            ]
+        },
+        "pre_existing_conditions_and_risk_factors": {
+            "description": "Patient pre-existing conditions and risk factors.",
+            "type": "string",
+            "Enums": [
+                "Age 60+",
+                "Anemia",
+                "Anorexia",
+                "Birthing labor",
+                "Bone marrow failure",
+                "Cancer",
+                "Breast cancer",
+                "Colorectal cancer",
+                "Hematologic malignancy",
+                "Lung cancer",
+                "Metastatic disease",
+                "Cancer treatment",
+                "Cancer surgery",
+                "Chemotherapy",
+                "Adjuvant chemotherapy",
+                "Cardiac disorder",
+                "Arrhythmia",
+                "Cardiac disease",
+                "Cardiomyopathy",
+                "Cardiac injury",
+                "Hypertension (high blood pressure)",
+                "Hypotension (low blood pressure)",
+                "Cesarean section",
+                "Chronic cough",
+                "Chronic gastrointestinal disease",
+                "Chronic lung disease",
+                "Corticosteroids",
+                "Diabetes mellitus (diabetes)",
+                "Type I diabetes mellitus (T1D)",
+                "Type II diabetes mellitus (T2D)",
+                "Eczema",
+                "Electrolyte disturbance",
+                "Hypocalcemia",
+                "Hypokalemia",
+                "Hypomagnesemia",
+                "Encephalitis (brain inflammation)",
+                "Epilepsy",
+                "Hemodialysis",
+                "Hemoglobinopathy",
+                "Human immunodeficiency virus (HIV)",
+                "Acquired immunodeficiency syndrome (AIDS)",
+                "HIV and antiretroviral therapy (ART)",
+                "Immunocompromised",
+                "Lupus",
+                "Inflammatory bowel disease (IBD)",
+                "Colitis",
+                "Ulcerative colitis",
+                "Crohn's disease",
+                "Renal disorder",
+                "Renal disease",
+                "Chronic renal disease",
+                "Renal failure",
+                "Liver disease",
+                "Chronic liver disease",
+                "Fatty liver disease (FLD)",
+                "Myalgia (muscle pain)",
+                "Myalgic encephalomyelitis (ME)",
+                "Neurological disorder",
+                "Neuromuscular disorder",
+                "Obesity",
+                "Severe obesity",
+                "Respiratory disorder",
+                "Asthma",
+                "Chronic bronchitis",
+                "Chronic pulmonary disease",
+                "Chronic obstructive pulmonary disease",
+                "Emphysema",
+                "Lung disease",
+                "Chronic lung disease",
+                "Pulmonary fibrosis",
+                "Pneumonia",
+                "Respiratory failure",
+                "Adult respiratory distress syndrome",
+                "Newborn respiratory distress syndrome",
+                "Tuberculosis",
+                "Postpartum (<= 6 weeks)",
+                "Pregnancy",
+                "Rheumatic disease",
+                "Sickle cell disease",
+                "Substance use",
+                "Alcohol abuse",
+                "Drug abuse",
+                "Injection drug abuse",
+                "Smoking",
+                "Vaping",
+                "Tachypnea (accelerated respiratory rate)",
+                "Transplant",
+                "Bone marrow transplant",
+                "Cardiac transplant",
+                "Hematopoietic stem cell transplant (HSCT)",
+                "Kidney transplant",
+                "Liver transplant",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Anemia"
+            ]
+        },
+        "complications": {
+            "description": "Patient medical complications that are believed to have occurred as a result of host disease.",
+            "type": "string",
+            "Enums": [
+                "Abnormal blood oxygen level",
+                "Acute respiratory failure",
+                "Arrhythmia (complication)",
+                "Tachycardia",
+                "Polymorphic ventricular tachycardia (VT)",
+                "Tachyarrhythmia",
+                "Noncardiogenic pulmonary edema",
+                "Acute respiratory distress syndrome (ARDS)",
+                "COVID-19 associated ARDS (CARDS)",
+                "Neurogenic pulmonary edema (NPE)",
+                "Cardiac injury",
+                "Cardiac arrest",
+                "Cardiogenic shock",
+                "Blood clot",
+                "Arterial clot",
+                "Deep vein thrombosis (DVT)",
+                "Pulmonary embolism (PE)",
+                "Cardiomyopathy",
+                "Central nervous system invasion",
+                "Stroke (complication)",
+                "Central Nervous System Vasculitis",
+                "Ischemic stroke",
+                "Acute ischemic stroke",
+                "Coma",
+                "Convulsions",
+                "COVID-19 associated coagulopathy (CAC)",
+                "Cystic fibrosis",
+                "Cytokine release syndrome",
+                "Disseminated intravascular coagulation (DIC)",
+                "Encephalopathy",
+                "Fulminant myocarditis",
+                "Guillain-Barre syndrome",
+                "Internal hemorrhage (complication; internal bleeding)",
+                "Intracerebral haemorrhage",
+                "Kawasaki disease",
+                "Typical Kawasaki disease",
+                "Incomplete Kawasaki disease",
+                "Kidney injury",
+                "Acute kidney injury",
+                "Liver dysfunction",
+                "Liver injury",
+                "Acute liver injury",
+                "Lung injury",
+                "Acute lung injury",
+                "Meningitis",
+                "Migraine",
+                "Miscarriage",
+                "Multisystem inflammatory syndrome in children (MIS-C)",
+                "Muscle injury",
+                "Myalgic encephalomyelitis (ME)",
+                "Myocardial infarction (heart attack)",
+                "Acute myocardial infarction",
+                "Elevation myocardial infarction",
+                "ST-segment elevation myocardial infarction",
+                "Myocardial injury",
+                "Neonatal complications",
+                "Organ failure",
+                "Heart failure",
+                "Liver failure",
+                "Paralysis",
+                "Pneumothorax (collapsed lung)",
+                "Spontaneous pneumothorax",
+                "Spontaneous tension pneymothorax",
+                "Pneumonia (complication)",
+                "COVID-19 pneumonia",
+                "Pregancy complications",
+                "Rhabdomyolysis",
+                "Secondary infection",
+                "Secondary staph infection",
+                "Secondary strep infection",
+                "Seizure (complication)",
+                "Motor seizure",
+                "Sepsis",
+                "Septicemia",
+                "Shock",
+                "Hyperinflammatory shock",
+                "Refractory cardiogenic shock",
+                "Refractory cardiogenic plus vasoplegic shock",
+                "Septic shock",
+                "Vasculitis",
+                "Ventilation induced lung injury (VILI)",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Acute Respiratory Failure"
+            ]
+        },
+        "host_vaccination_status": {
+            "description": "The vaccination status of the host (fully vaccinated, partially vaccinated, or not vaccinated).",
+            "type": "string",
+            "Enums": [
+                "Fully Vaccinated",
+                "Partially Vaccinated",
+                "Not Vaccinated",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Fully Vaccinated"
+            ]
+        },
+        "vaccine_name": {
+            "description": "The name of the vaccine.",
+            "type": "string",
+            "examples": [
+                "BNT162b2, Pfizer-BioNTech"
+            ]
+        },
+        "number_of_vaccine_doses_received": {
+            "description": "The number of doses of the vaccine recived by the host.",
+            "type": "integer",
+            "examples": [
+                2
+            ]
+        },
+        "first_dose_vaccination_date": {
+            "description": "The date the host was first vaccinated.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "26/02/2021"
+            ]
+        },
+        "last_dose_vacicnation_date": {
+            "description": "The date the host received their last dose of vaccine.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "09/04/2021"
+            ]
+        },
+        "location_of_exposure_geo_loc_name_country": {
+            "description": "The country where the host was likely exposed to the causative agent of the illness.",
+            "type": "string",
+            "Enums": [
+                "Afghanistan",
+                "Albania",
+                "Algeria",
+                "American Samoa",
+                "Andorra",
+                "Angola",
+                "Anguilla",
+                "Antarctica",
+                "Antigua and Barbuda",
+                "Argentina",
+                "Armenia",
+                "Aruba",
+                "Ashmore and Cartier Islands",
+                "Australia",
+                "Austria",
+                "Azerbaijan",
+                "Bahamas",
+                "Bahrain",
+                "Baker Island",
+                "Bangladesh",
+                "Barbados",
+                "Bassas da India",
+                "Belarus",
+                "Belgium",
+                "Belize",
+                "Benin",
+                "Bermuda",
+                "Bhutan",
+                "Bolivia",
+                "Borneo",
+                "Bosnia and Herzegovina",
+                "Botswana",
+                "Bouvet Island",
+                "Brazil",
+                "British Virgin Islands",
+                "Brunei",
+                "Bulgaria",
+                "Burkina Faso",
+                "Burundi",
+                "Cambodia",
+                "Cameroon",
+                "Canada",
+                "Cape Verde",
+                "Cayman Islands",
+                "Central African Republic",
+                "Chad",
+                "Chile",
+                "China",
+                "Christmas Island",
+                "Clipperton Island",
+                "Cocos Islands",
+                "Colombia",
+                "Comoros",
+                "Cook Islands",
+                "Coral Sea Islands",
+                "Costa Rica",
+                "Cote d'Ivoire",
+                "Croatia",
+                "Cuba",
+                "Curacao",
+                "Cyprus",
+                "Czech Republic",
+                "Democratic Republic of the Congo",
+                "Denmark",
+                "Djibouti",
+                "Dominica",
+                "Dominican Republic",
+                "Ecuador",
+                "Egypt",
+                "El Salvador",
+                "Equatorial Guinea",
+                "Eritrea",
+                "Estonia",
+                "Eswatini",
+                "Ethiopia",
+                "Europa Island",
+                "Falkland Islands (Islas Malvinas)",
+                "Faroe Islands",
+                "Fiji",
+                "Finland",
+                "France",
+                "French Guiana",
+                "French Polynesia",
+                "French Southern and Antarctic Lands",
+                "Gabon",
+                "Gambia",
+                "Gaza Strip",
+                "Georgia",
+                "Germany",
+                "Ghana",
+                "Gibraltar",
+                "Glorioso Islands",
+                "Greece",
+                "Greenland",
+                "Grenada",
+                "Guadeloupe",
+                "Guam",
+                "Guatemala",
+                "Guernsey",
+                "Guinea",
+                "Guinea-Bissau",
+                "Guyana",
+                "Haiti",
+                "Heard Island and McDonald Islands",
+                "Honduras",
+                "Hong Kong",
+                "Howland Island",
+                "Hungary",
+                "Iceland",
+                "India",
+                "Indonesia",
+                "Iran",
+                "Iraq",
+                "Ireland",
+                "Isle of Man",
+                "Israel",
+                "Italy",
+                "Jamaica",
+                "Jan Mayen",
+                "Japan",
+                "Jarvis Island",
+                "Jersey",
+                "Johnston Atoll",
+                "Jordan",
+                "Juan de Nova Island",
+                "Kazakhstan",
+                "Kenya",
+                "Kerguelen Archipelago",
+                "Kingman Reef",
+                "Kiribati",
+                "Kosovo",
+                "Kuwait",
+                "Kyrgyzstan",
+                "Laos",
+                "Latvia",
+                "Lebanon",
+                "Lesotho",
+                "Liberia",
+                "Libya",
+                "Liechtenstein",
+                "Line Islands",
+                "Lithuania",
+                "Luxembourg",
+                "Macau",
+                "Madagascar",
+                "Malawi",
+                "Malaysia",
+                "Maldives",
+                "Mali",
+                "Malta",
+                "Marshall Islands",
+                "Martinique",
+                "Mauritania",
+                "Mauritius",
+                "Mayotte",
+                "Mexico",
+                "Micronesia",
+                "Midway Islands",
+                "Moldova",
+                "Monaco",
+                "Mongolia",
+                "Montenegro",
+                "Montserrat",
+                "Morocco",
+                "Mozambique",
+                "Myanmar",
+                "Namibia",
+                "Nauru",
+                "Navassa Island",
+                "Nepal",
+                "Netherlands",
+                "New Caledonia",
+                "New Zealand",
+                "Nicaragua",
+                "Niger",
+                "Nigeria",
+                "Niue",
+                "Norfolk Island",
+                "North Korea",
+                "North Macedonia",
+                "North Sea",
+                "Northern Mariana Islands",
+                "Norway",
+                "Oman",
+                "Pakistan",
+                "Palau",
+                "Panama",
+                "Papua New Guinea",
+                "Paracel Islands",
+                "Paraguay",
+                "Peru",
+                "Philippines",
+                "Pitcairn Islands",
+                "Poland",
+                "Portugal",
+                "Puerto Rico",
+                "Qatar",
+                "Republic of the Congo",
+                "Reunion",
+                "Romania",
+                "Ross Sea",
+                "Russia",
+                "Rwanda",
+                "Saint Helena",
+                "Saint Kitts and Nevis",
+                "Saint Lucia",
+                "Saint Pierre and Miquelon",
+                "Saint Vincent and the Grenadines",
+                "Samoa",
+                "San Marino",
+                "Sao Tome and Principe",
+                "Saudi Arabia",
+                "Senegal",
+                "Serbia",
+                "Seychelles",
+                "Sierra Leone",
+                "Singapore",
+                "Sint Maarten",
+                "Slovakia",
+                "Slovenia",
+                "Solomon Islands",
+                "Somalia",
+                "South Africa",
+                "South Georgia and the South Sandwich Islands",
+                "South Korea",
+                "South Sudan",
+                "Spain",
+                "Spratly Islands",
+                "Sri Lanka",
+                "State of Palestine",
+                "Sudan",
+                "Suriname",
+                "Svalbard",
+                "Swaziland",
+                "Sweden",
+                "Switzerland",
+                "Syria",
+                "Taiwan",
+                "Tajikistan",
+                "Tanzania",
+                "Thailand",
+                "Timor-Leste",
+                "Togo",
+                "Tokelau",
+                "Tonga",
+                "Trinidad and Tobago",
+                "Tromelin Island",
+                "Tunisia",
+                "Turkey",
+                "Turkmenistan",
+                "Turks and Caicos Islands",
+                "Tuvalu",
+                "USA",
+                "Uganda",
+                "Ukraine",
+                "United Arab Emirates",
+                "United Kingdom",
+                "Uruguay",
+                "Uzbekistan",
+                "Vanuatu",
+                "Venezuela",
+                "Viet Nam",
+                "Virgin Islands",
+                "Wake Island",
+                "Wallis and Futuna",
+                "West Bank",
+                "Western Sahara",
+                "Yemen",
+                "Zambia",
+                "Zimbabwe",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Canada"
+            ]
+        },
+        "destination_of_most_recent_travel_city": {
+            "description": "The name of the city that was the destination of most recent travel.",
+            "type": "string",
+            "examples": [
+                "New York City"
+            ]
+        },
+        "destination_of_most_recent_travel__state_province_territory": {
+            "description": "The name of the province that was the destination of most recent travel.",
+            "type": "string",
+            "examples": [
+                "California"
+            ]
+        },
+        "destination_of_most_recent_travel_country": {
+            "description": "The name of the country that was the destination of most recent travel.",
+            "type": "string",
+            "examples": [
+                "United Kingdom"
+            ]
+        },
+        "most_recent_travel_departure_date": {
+            "description": "The date of a person's most recent departure from their primary residence (at that time) on a journey to one or more other locations.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "16/03/2020"
+            ]
+        },
+        "most_recent_travel_return_date": {
+            "description": "The date of a person's most recent return to some residence from a journey originating at that residence.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "26/04/2020"
+            ]
+        },
+        "travel_history": {
+            "description": "Travel history in last six months.",
+            "type": "string",
+            "examples": [
+                "Canada, Vancouver, USA, Seattle, Italy, Milan"
+            ]
+        },
+        "exposure_event": {
+            "description": "Event leading to exposure.",
+            "type": "string",
+            "Enums": [
+                "Mass Gathering",
+                "Convention",
+                "Convocation",
+                "Agricultural Event",
+                "Religious Gathering",
+                "Mass",
+                "Social Gathering",
+                "Baby Shower",
+                "Community Event",
+                "Family Gathering",
+                "Family Reunion",
+                "Funeral",
+                "Party",
+                "Potluck",
+                "Wedding",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Mass gathering (convention)"
+            ]
+        },
+        "exposure_contact_level": {
+            "description": "The exposure transmission contact type.",
+            "type": "string",
+            "Enums": [
+                "Direct (human-to-human contact)",
+                "Indirect contact",
+                "Close contact (face-to-face contact)",
+                "Casual contact",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Direct"
+            ]
+        },
+        "host_role": {
+            "description": "The role of the host in relation to the exposure setting.",
+            "type": "string",
+            "Enums": [
+                "Attendee",
+                "Student",
+                "Patient",
+                "Inpatient",
+                "Outpatient",
+                "Passenger",
+                "Resident",
+                "Visitor",
+                "Volunteer",
+                "Work",
+                "Administrator",
+                "First Responder",
+                "Firefighter",
+                "Paramedic",
+                "Police Officer",
+                "Housekeeper",
+                "Kitchen Worker",
+                "Laboratory Worker",
+                "Nurse",
+                "Personal Care Aid",
+                "Pharmacist",
+                "Physician",
+                "Vet",
+                "Social role",
+                "Acquaintance of case",
+                "Relative of case",
+                "Child of case",
+                "Parent of case",
+                "Father of case",
+                "Mother of case",
+                "Spouse of case",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Patient"
+            ]
+        },
+        "exposure_setting": {
+            "description": "The setting leading to exposure.",
+            "type": "string",
+            "Enums": [
+                "Human Exposure",
+                "Contact with Known COVID-19 Case",
+                "Contact with Patient",
+                "Contact with Probable COVID-19 Case",
+                "Contact with Person with Acute Respiratory Illness",
+                "Contact with Person with Fever and/or Cough",
+                "Contact with Person who Recently Travelled",
+                "Occupational, Residency or Patronage Exposure",
+                "Abbatoir",
+                "Animal Rescue",
+                "Childcare",
+                "Daycare",
+                "Nursery",
+                "Community Service Centre",
+                "Correctional Facility",
+                "Dormitory",
+                "Farm",
+                "First Nations Reserve",
+                "Funeral Home",
+                "Group Home",
+                "Healthcare Setting",
+                "Ambulance",
+                "Acute Care Facility",
+                "Clinic",
+                "Community Health Centre",
+                "Hospital",
+                "Emergency Department",
+                "ICU",
+                "Ward",
+                "Household",
+                "Insecure Housing (Homeless)",
+                "Laboratory",
+                "Long-Term Care Facility",
+                "Occupational Exposure",
+                "Worksite",
+                "Office",
+                "Outdoors",
+                "Camp/camping",
+                "Hiking Trail",
+                "Hunting Ground",
+                "Ski Resort",
+                "Petting zoo",
+                "Pharmacy",
+                "Physician's Office",
+                "Place of Worship",
+                "Church",
+                "Mosque",
+                "Temple",
+                "Restaurant",
+                "Retail Store",
+                "School",
+                "Temporary Residence",
+                "Homeless Shelter",
+                "Hotel",
+                "Veterinary Care Clinic",
+                "Travel Exposure",
+                "Travelled",
+                "Travelled on a Cruise Ship",
+                "Travelled on a Plane",
+                "Travelled on Ground Transport",
+                "Travelled outside Province/Territory",
+                "Travelled outside Canada",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Healthcare Setting"
+            ]
+        },
+        "exposure_details": {
+            "description": "Additional host exposure information.",
+            "type": "string",
+            "examples": [
+                "Host role - Other: Bus Driver"
+            ]
+        },
+        "prior_sars_cov_2_infection": {
+            "description": "Whether there was prior SARS-CoV-2 infection.",
+            "type": "string",
+            "Enums": [
+                "Yes",
+                "No",
+                "Unknown",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Yes"
+            ]
+        },
+        "prior_sars_cov_2_infection_isolate": {
+            "description": "The identifier of the isolate found in the prior SARS-CoV-2 infection.",
+            "type": "string",
+            "examples": [
+                "SARS-CoV-2/human/USA/CA-CDPH-001/2020"
+            ]
+        },
+        "prior_sars_cov_2_infection_date": {
+            "description": "The date of diagnosis of the prior SARS-CoV-2 infection.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "23/01/2021"
+            ]
+        },
+        "prior_sars_cov_2_antiviral_treatment": {
+            "description": "Whether there was prior SARS-CoV-2 treatment with an antiviral agent.",
+            "type": "string",
+            "Enums": [
+                "Prior antiviral treatment",
+                "No prior antiviral treatment",
+                "Unknown",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "No prior antiviral treatment"
+            ]
+        },
+        "prior_sars_cov_2_antiviral_treatment_agent": {
+            "description": "The name of the antiviral treatment agent administered during the prior SARS-CoV-2 infection.",
+            "type": "string",
+            "examples": [
+                "Remdesivir"
+            ]
+        },
+        "prior_sars_cov_2_antiviral_treatment_date": {
+            "description": "The date treatment was first administered during the prior SARS-CoV-2 infection.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "28/01/2021"
+            ]
+        },
+        "purpose_of_sequencing": {
+            "description": "The reason that the sample was sequenced.",
+            "type": "string",
+            "Enums": [
+                "Baseline surveillance (random sampling)",
+                "Targeted surveillance (non-random sampling)",
+                "Priority surveillance projects",
+                "Screening for Variants of Concern (VOC)",
+                "Longitudinal surveillance (repeat sampling of individuals)",
+                "Re-infection surveillance",
+                "Vaccine escape surveillance",
+                "Travel-associated surveillance",
+                "Domestic travel surveillance",
+                "International travel surveillance",
+                "Cluster/Outbreak investigation",
+                "Multi-jurisdictional outbreak investigation",
+                "Intra-jurisdictional outbreak investigation",
+                "Research",
+                "Viral passage experiment",
+                "Protocol testing",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "Research"
+            ]
+        },
+        "purpose_of_sequencing_details": {
+            "description": "The description of why the sample was sequenced providing specific details.",
+            "type": "string",
+            "Enums": [
+                "Screened for S gene target failure (S dropout)",
+                "Screened for mink variants",
+                "Screened for B.1.1.7 variant",
+                "Screened for B.1.135 variant",
+                "Screened for P.1 variant",
+                "Screened due to travel history",
+                "Screened due to close contact with infected individual",
+                "Assessing public health control measures",
+                "Determining early introductions and spread",
+                "Investigating airline-related exposures",
+                "Investigating temporary foreign worker",
+                "Investigating remote regions",
+                "Investigating health care workers",
+                "Investigating schools/universities",
+                "Investigating reinfection"
+            ],
+            "examples": [
+                "Screened for S gene target failure (S dropout)"
+            ]
+        },
+        "sequencing_date": {
+            "description": "The date the sample was sequenced.",
+            "type": "string",
+            "format": "date",
+            "examples": [
+                "22/06/2020"
+            ]
+        },
+        "library_id": {
+            "description": "The user-specified identifier for the library prepared for sequencing.",
+            "type": "string",
+            "examples": [
+                "XYZ_123345"
+            ]
+        },
+        "amplicon_size": {
+            "description": "The length of the amplicon generated by PCR amplification.",
+            "type": "string",
+            "examples": [
+                "300bp"
+            ]
+        },
+        "library_preparation_kit": {
+            "description": "The name of the DNA library preparation kit used to generate the library being sequenced.",
+            "type": "string",
+            "examples": [
+                "Nextera XT"
+            ]
+        },
+        "flow_cell_barcode": {
+            "description": "The barcode of the flow cell used for sequencing.",
+            "type": "string",
+            "examples": [
+                "FAB06069"
+            ]
+        },
+        "sequencing_instrument": {
+            "description": "The model of the sequencing instrument used.",
+            "type": "string",
+            "Enums": [
+                "Illumina",
+                "Illumina Genome Analyzer",
+                "Illumina Genome Analyzer II",
+                "Illumina Genome Analyzer IIx",
+                "Illumina HiScanSQ",
+                "Illumina HiSeq",
+                "Illumina HiSeq X",
+                "Illumina HiSeq X Five",
+                "Illumina HiSeq X Ten",
+                "Illumina HiSeq 1000",
+                "Illumina HiSeq 1500",
+                "Illumina HiSeq 2000",
+                "Illumina HiSeq 2500",
+                "Illumina HiSeq 3000",
+                "Illumina HiSeq 4000",
+                "Illumina iSeq",
+                "Illumina iSeq 100",
+                "Illumina NovaSeq",
+                "Illumina NovaSeq 6000",
+                "Illumina MiniSeq",
+                "Illumina MiSeq",
+                "Illumina NextSeq",
+                "Illumina NextSeq 500",
+                "Illumina NextSeq 550",
+                "Pacific Biosciences",
+                "PacBio RS",
+                "PacBio RS II",
+                "PacBio Sequel",
+                "PacBio Sequel II",
+                "Ion Torrent",
+                "Ion Torrent PGM",
+                "Ion Torrent Proton",
+                "Ion Torrent S5 XL",
+                "Ion Torrent S5",
+                "Oxford Nanopore",
+                "GridION",
+                "MinION",
+                "PromethION",
+                "BGI Genomics",
+                "BGISEQ-500",
+                "MGI",
+                "DNBSEQ-T7",
+                "DNBSEQ-G400",
+                "DNBSEQ-G400 FAST",
+                "DNBSEQ-G50",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "MinIon"
+            ]
+        },
+        "sequencing_protocol_name": {
+            "description": "The name and version number of the sequencing protocol used.",
+            "type": "string",
+            "examples": [
+                "1D_DNA_MinION, ARTIC Network Protocol V3"
+            ]
+        },
+        "sequencing_protocol": {
+            "description": "The protocol used to generate the sequence.",
+            "type": "string",
+            "examples": [
+                "Genomes were generated through amplicon sequencing of 1200 bp amplicons with Freed schema primers. Libraries were created using Illumina DNA Prep kits, and sequence data was produced using Miseq Micro v2 (500 cycles) sequencing kits."
+            ]
+        },
+        "sequencing_kit_number": {
+            "description": "The manufacturer's kit number.",
+            "type": "string",
+            "examples": [
+                "AB456XYZ789"
+            ]
+        },
+        "amplicon_pcr_primer_scheme": {
+            "description": "The specifications of the primers (primer sequences, binding positions, fragment size generated etc) used to generate the amplicons to be sequenced.",
+            "type": "string",
+            "examples": [
+                "https://github.com/joshquick/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv"
+            ]
+        },
+        "raw_sequence_data_processing_method": {
+            "description": "The method used for raw data processing such as removing barcodes, adapter trimming, filtering etc.",
+            "type": "string",
+            "examples": [
+                "Porechop 0.2.3,Porechop 0.2.3"
+            ]
+        },
+        "dehosting_method": {
+            "description": "The method used to remove host reads from the pathogen sequence.",
+            "type": "string",
+            "examples": [
+                "Nanostripper"
+            ]
+        },
+        "consensus_sequence_name": {
+            "description": "The name of the consensus sequence.",
+            "type": "string",
+            "examples": [
+                "ncov123assembly3"
+            ]
+        },
+        "consensus_sequence_filename": {
+            "description": "The name of the consensus sequence file.",
+            "type": "string",
+            "examples": [
+                "ncov123assembly.fasta"
+            ]
+        },
+        "consensus_sequence_filepath": {
+            "description": "The filepath of the consesnsus sequence file.",
+            "type": "string",
+            "examples": [
+                "/User/Documents/RespLab/Data/ncov123assembly.fasta"
+            ]
+        },
+        "consensus_sequence_software_name": {
+            "description": "The name of software used to generate the consensus sequence.",
+            "type": "string",
+            "examples": [
+                "Ivar"
+            ]
+        },
+        "consensus_sequence_software_version": {
+            "description": "The version of the software used to generate the consensus sequence.",
+            "type": "string",
+            "examples": [
+                "1.3"
+            ]
+        },
+        "breadth_of_coverage_value": {
+            "description": "The percentage of the reference genome covered by the sequenced data, to a prescribed depth.",
+            "type": "number",
+            "examples": [
+                0.95
+            ]
+        },
+        "depth_of_coverage_value": {
+            "description": "The average number of reads representing a given nucleotide in the reconstructed sequence.",
+            "type": "number",
+            "examples": [
+                400.0
+            ]
+        },
+        "depth_of_coverage_threshold": {
+            "description": "The threshold used as a cut-off for the depth of coverage.",
+            "type": "number",
+            "examples": [
+                100.0
+            ]
+        },
+        "r1_fastq_filename": {
+            "description": "The user-specified filename of the r1 FASTQ file.",
+            "type": "string",
+            "examples": [
+                "ABC123_S1_L001_R1_001.fastq.gz"
+            ]
+        },
+        "r2_fastq_filename": {
+            "description": "The user-specified filename of the r2 FASTQ file.",
+            "type": "string",
+            "examples": [
+                "ABC123_S1_L001_R2_001.fastq.gz"
+            ]
+        },
+        "r1_fastq_filepath": {
+            "description": "The filepath of the r1 FASTQ file.",
+            "type": "string",
+            "examples": [
+                "/User/Documents/RespLab/Data/ABC123_S1_L001_R1_001.fastq.gz"
+            ]
+        },
+        "r2_fastq_filepath": {
+            "description": "The filepath of the r2 FASTQ file.",
+            "type": "string",
+            "examples": [
+                "/User/Documents/RespLab/Data/ABC123_S1_L001_R2_001.fastq.gz"
+            ]
+        },
+        "fast5_filename": {
+            "description": "The user-specified filename of the FAST5 file.",
+            "type": "string",
+            "examples": [
+                "batch1a_sequences.fast5"
+            ]
+        },
+        "fast5_filepath": {
+            "description": "The filepath of the FAST5 file.",
+            "type": "string",
+            "examples": [
+                "/User/Documents/RespLab/Data/rona123assembly.fast5"
+            ]
+        },
+        "number_of_base_pairs_sequenced": {
+            "description": "The number of total base pairs generated by the sequencing process.",
+            "type": "integer",
+            "examples": [
+                387566
+            ]
+        },
+        "consensus_genome_length": {
+            "description": "Size of the assembled genome described as the number of base pairs.",
+            "type": "integer",
+            "examples": [
+                38677
+            ]
+        },
+        "ns_per_100_kbp": {
+            "description": "The number of N symbols present in the consensus fasta sequence, per 100kbp of sequence.",
+            "type": "integer",
+            "examples": [
+                300
+            ]
+        },
+        "reference_genome_accession": {
+            "description": "A persistent, unique identifier of a genome database entry.",
+            "type": "string",
+            "examples": [
+                "NC_045512.2"
+            ]
+        },
+        "bioinformatics_protocol": {
+            "description": "The name and version number of the bioinformatics protocol used.",
+            "type": "string",
+            "examples": [
+                "https://www.protocols.io/groups/cphln-sarscov2-sequencing-consortium/members"
+            ]
+        },
+        "lineage_clade_name": {
+            "description": "The name of the lineage or clade.",
+            "type": "string",
+            "examples": [
+                "B.1.1.7"
+            ]
+        },
+        "lineage_clade_analysis_software_name": {
+            "description": "The name of the software used to determine the lineage/clade.",
+            "type": "string",
+            "examples": [
+                "Pangolin"
+            ]
+        },
+        "lineage_clade_analysis_software_version": {
+            "description": "The version of the software used to determine the lineage/clade.",
+            "type": "string",
+            "examples": [
+                "2.1.10"
+            ]
+        },
+        "variant_designation": {
+            "description": "The variant classification of the lineage/clade i.e. variant, variant of concern.",
+            "type": "string",
+            "Enums": [
+                "Variant of Interest (VOI)",
+                "Variant of Concern (VOC)"
+            ],
+            "examples": [
+                "Variant of Concern"
+            ]
+        },
+        "variant_evidence": {
+            "description": "The evidence used to make the variant determination.",
+            "type": "string",
+            "examples": [
+                "lineage-defining mutations: ORF1ab (K1655N), Spike (K417N, E484K, N501Y, D614G, A701V), N (T205I), E (P71L)"
+            ]
+        },
+        "gene_name_1": {
+            "description": "The name of the gene used in the diagnostic RT-PCR test.",
+            "type": "string",
+            "Enums": [
+                "E gene (orf4)",
+                "M gene (orf5)",
+                "N gene (orf9)",
+                "Spike gene (orf2)",
+                "orf1ab (rep)",
+                "orf1a (pp1a)",
+                "nsp11",
+                "nsp1",
+                "nsp2",
+                "nsp3",
+                "nsp4",
+                "nsp5",
+                "nsp6",
+                "nsp7",
+                "nsp8",
+                "nsp9",
+                "nsp10",
+                "RdRp gene (nsp12)",
+                "hel gene (nsp13)",
+                "exoN gene (nsp14)",
+                "nsp15",
+                "nsp16",
+                "orf3a",
+                "orf3b",
+                "orf6 (ns6)",
+                "orf7a",
+                "orf7b (ns7b)",
+                "orf8 (ns8)",
+                "orf9b",
+                "orf9c",
+                "orf10",
+                "orf14",
+                "SARS-COV-2 5' UTR",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "E (orf4)"
+            ]
+        },
+        "diagnostic_pcr_protocol_1": {
+            "description": "The name and version number of the protocol used for diagnostic marker amplification.",
+            "type": "string",
+            "examples": [
+                "PCREGene 2.0"
+            ]
+        },
+        "diagnostic_pcr_ct_value_1": {
+            "description": "The Ct value result from a diagnostic SARS-CoV-2 RT-PCR test.",
+            "type": "integer",
+            "examples": [
+                21
+            ]
+        },
+        "gene_name_2": {
+            "description": "The name of the gene used in the diagnostic RT-PCR test.",
+            "type": "string",
+            "Enums": [
+                "E gene (orf4)",
+                "M gene (orf5)",
+                "N gene (orf9)",
+                "Spike gene (orf2)",
+                "orf1ab (rep)",
+                "orf1a (pp1a)",
+                "nsp11",
+                "nsp1",
+                "nsp2",
+                "nsp3",
+                "nsp4",
+                "nsp5",
+                "nsp6",
+                "nsp7",
+                "nsp8",
+                "nsp9",
+                "nsp10",
+                "RdRp gene (nsp12)",
+                "hel gene (nsp13)",
+                "exoN gene (nsp14)",
+                "nsp15",
+                "nsp16",
+                "orf3a",
+                "orf3b",
+                "orf6 (ns6)",
+                "orf7a",
+                "orf7b (ns7b)",
+                "orf8 (ns8)",
+                "orf9b",
+                "orf9c",
+                "orf10",
+                "orf14",
+                "SARS-COV-2 5' UTR",
+                "Not Applicable",
+                "Not Collected",
+                "Not Provided",
+                "Missing",
+                "Restricted Access"
+            ],
+            "examples": [
+                "nsp12 (RdRP)"
+            ]
+        },
+        "diagnostic_pcr_protocol_2": {
+            "description": "The name and version number of the protocol used for diagnostic marker amplification.",
+            "type": "string",
+            "examples": [
+                "PCRRdRpGene 3.0"
+            ]
+        },
+        "diagnostic_pcr_ct_value_2": {
+            "description": "The cycle threshold (CT) value result from a diagnostic SARS-CoV-2 RT-PCR test.",
+            "type": "integer",
+            "examples": [
+                36
+            ]
+        },
+        "authors": {
+            "description": "Names of individuals contributing to the processes of sample collection, sequence generation, analysis, and data submission.",
+            "type": "string",
+            "examples": [
+                "Tejinder Singh, Fei Hu, Johnny Blogs"
+            ]
+        }
+    },
+    "required": [
+        "sequence_submitted_by",
+        "geo_loc_name_state_province_region",
+        "consensus_sequence_software_name",
+        "isolate",
+        "sequencing_instrument",
+        "consensus_sequence_software_version",
+        "geo_loc_name_state_province_territory",
+        "geo_loc_name_country",
+        "organism",
+        "host_scientific_name",
+        "host_disease",
+        "sample_collected_by",
+        "specimen_collector_sample_id",
+        "sample_collection_date"
+    ]
 }
