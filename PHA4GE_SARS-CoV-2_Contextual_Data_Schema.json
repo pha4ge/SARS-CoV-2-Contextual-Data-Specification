@@ -849,13 +849,6 @@
                 ""
             ]
         },
-        "geo_loc_name_state_province_region": {
-            "description": "State/province/region of origin of the sample.",
-            "type": "string",
-            "examples": [
-                "Western Cape"
-            ]
-        },
         "host_common_name": {
             "description": "The commonly used name of the host.",
             "type": "string",
@@ -2779,7 +2772,6 @@
     },
     "required": [
         "sequence_submitted_by",
-        "geo_loc_name_state_province_region",
         "consensus_sequence_software_name",
         "isolate",
         "sequencing_instrument",
