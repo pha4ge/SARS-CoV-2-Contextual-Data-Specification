@@ -68,15 +68,19 @@ This SOP provides users with step-by-step instructions for populating the templa
 
 ### Supporting materials
 
-#### [PHA4GE to sequence repository field mappings](PHA4GE%20to%20Sequence%20Repository%20Field%20Mappings.xlsx)
+#### [PHA4GE to WHO and sequence repository field mappings](PHA4GE%20to%20WHO%20and%20Sequence%20Repository%20Field%20Mappings.xlsx)
+
+**WHO recommended contextual data mapping to PHA4GE fields**
+
+PHA4GE fields are mapped to corresponding contextual data elements recommended by the World Health Organization (World Health Organization. Guidance for surveillance of SARS-CoV-2 variants: interim guidance. WHO/2019-nCoV/surveillance/variants2021.1).
+
+**PHA4GE to sequence repository field mappings**
 
 A **mapping file** indicating which PHA4GE fields correspond to which fields within the different repository submission forms is provided to facilitate data transformations for submissions. Field mappings to the following repositories are available in the document:
 
 - GISAID
 - ENA
 - NCBI
-- WHO recommended contextual data mapping to PHA4GE fields
-  - PHA4GE fields are mapped to corresponding contextual data elements recommended by the World Health Organization (World Health Organization. Guidance for surveillance of SARS-CoV-2 variants: interim guidance. WHO/2019-nCoV/surveillance/variants2021.1).
 
 #### Submission protocols
 
