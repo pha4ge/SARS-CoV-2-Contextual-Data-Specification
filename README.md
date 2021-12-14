@@ -7,23 +7,23 @@
 
 ## Table of Contents
 
-* [PHA4GE overview](#pha4ge-overview)
-* [SARS-CoV-2 contextual data specification overview](#sars-cov-2-contextual-data-specification-overview)
-* [Content description](#content-description)
-+ [SARS-CoV-2 contextual data specification package](#sars-cov-2-contextual-data-specification-package)
-    - [Spreadsheet-based (.xlsx) collection template](#spreadsheet-based--xlsx--collection-template)
-    - [The specification contextual data collection template in machine-amenable JSON format](#the-specification-contextual-data-collection-template-in-machine-amenable-json-format)
-+ [Standard operating procedure](#standard-operating-procedure)
-+ [Supporting materials](#supporting-materials)
-    - [PHA4GE to sequence repository field mappings](#PHA4GE-to-sequence-repository-field-mappings)
-    - [Submission protocols](#submission-protocols)
-        * [NCBI](#ncbi)
-        * [ENA](#ena)
-        * [GISAID](#gisaid)
-* [JSON Specification Generation](#json-specification-generation)
-* [Contacts](#contacts)
-* [Citation](#citation)
-* [License](#license)
+- [PHA4GE overview](#pha4ge-overview)
+- [SARS-CoV-2 contextual data specification overview](#sars-cov-2-contextual-data-specification-overview)
+- [Content description](#content-description)
+- [SARS-CoV-2 contextual data specification package](#sars-cov-2-contextual-data-specification-package)
+  - [Spreadsheet-based (.xlsx) collection template](#spreadsheet-based--xlsx--collection-template)
+  - [The specification contextual data collection template in machine-amenable JSON format](#the-specification-contextual-data-collection-template-in-machine-amenable-json-format)
+- [Standard operating procedure](#standard-operating-procedure)
+- [Supporting materials](#supporting-materials)
+  - [PHA4GE to sequence repository field mappings](#PHA4GE-to-sequence-repository-field-mappings)
+  - [Submission protocols](#submission-protocols)
+    - [NCBI](#ncbi)
+    - [ENA](#ena)
+    - [GISAID](#gisaid)
+- [JSON Specification Generation](#json-specification-generation)
+- [Contacts](#contacts)
+- [Citation](#citation)
+- [License](#license)
 
 ## PHA4GE overview
 
@@ -47,13 +47,13 @@ It contains the following items (tabs in the spreadsheet):
 
 1. **a template for populating the complete set of contextual data;**
 
-The collection template contains "required" (colour-coded yellow), "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields. 
+The collection template contains "required" (colour-coded yellow), "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields.
 
-2. **guidance for populating the template;**
+1. **guidance for populating the template;**
 
 The reference guide aims to facilitate the use of the collection template. It contains field definitions, further guidance/instructions, and examples of structured data. Mapping of PHA4GE fields to existing metadata standards such as the Sample Application Standard, MIxS v 5.0, and the MIGS Virus Host-associated package can be found in the reference guide.
 
-3. **ontology-mapped controlled vocabulary for the picklists.**
+1. **ontology-mapped controlled vocabulary for the picklists.**
 
 Lists of controlled vocabulary, agreed upon by PHA4GE, are provided here for populating the template.
 
@@ -61,22 +61,25 @@ Lists of controlled vocabulary, agreed upon by PHA4GE, are provided here for pop
 
 Due to **JSON** format limitation, it deviates slightly from the collection template where the "required" (colour-coded yellow) fields are set as required and both the "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields are both set as optional.
 
-
 ### Standard operating procedure
 
 A **Standard Operating Procedure (SOP)** containing instructions for using the collection template.
 This SOP provides users with step-by-step instructions for populating the template, looking up standardized terms, and how best to structure sample descriptions. Also included are a number of ethical, practical, and privacy considerations for data sharing. The SOP is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.btpznmp6](https://dx.doi.org/10.17504/protocols.io.btpznmp6).
 
-
 ### Supporting materials
 
 #### [PHA4GE to sequence repository field mappings](PHA4GE%20to%20Sequence%20Repository%20Field%20Mappings.xlsx)
 
-A **mapping file** indicating which PHA4GE fields correspond to which fields within the different repository submission forms is provided to facilitate data transformations for submissions. 
+A **mapping file** indicating which PHA4GE fields correspond to which fields within the different repository submission forms is provided to facilitate data transformations for submissions. Field mappings to the following repositories are available in the document:
+
+- GISAID
+- ENA
+- NCBI
+- WHO
 
 #### Submission protocols
 
-Submission protocols are available for the following data repositories: 
+Submission protocols are available for the following data repositories:
 
 ##### NCBI
 
@@ -114,20 +117,22 @@ The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/pro
 This protocol provides the steps needed to establish a new GISAID submission environment for your laboratory. Once established, this protocol covers genome submission sample metadata to GISAID. The protocol is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bumknu4w](https://dx.doi.org/10.17504/protocols.io.bumknu4w).
 
 ## JSON Specification Generation
+
 The [JSON](PHA4GE_SARS-CoV-2_Contextual_Data_Schema.json) is produced automatically from the [csv version](PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv) of the template using the the script available from [SARS-CoV-2-Data-Spec-JSON](https://github.com/pha4ge/SARS-CoV-2-Data-Spec-JSON) repository.
 
-**Table 1** Terms for SARS-CoV-2 submission template according to the PHA4GE contextual data collection specification in 
-[PHA4GE SARS-CoV-2 Standardised Terms](PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv)  
-| Column 	| Description 	|
-|:-:	|:-:	|
-| Interface Label 	| Column headers in the submission template 	|
-| Required/Optional 	| Type of requirement according to PHA4GE's template specification. Limited to the values "Optional", "Recommended" and "Required".  	|
-| Definition 	| Short description for the expected interface label value. 	|
-| Value Type 	| Expected interface label's value type. Expected values: "String", "Int", "Float", "Bioproject_ID", "Biosample_ID", "SRA_ID", "Genbank_ID", "GISAID_ID", "Email", "Date" and "Integer_or_Range". 	|
-| Example 	| Example for the expected interface label value. 	|
-| Guidance 	| Detailed description for the expected interface label value. 	|
+**Table 1** Terms for SARS-CoV-2 submission template according to the PHA4GE contextual data collection specification in [PHA4GE SARS-CoV-2 Standardised Terms](PHA4GE%20SARS-CoV-2%20Standardised%20Terms.csv)
 
-## Contacts 
+| Column | Description |
+|:-:|:-:|
+| Interface Label | Column headers in the submission template |
+| Required/Optional | Type of requirement according to PHA4GE's template specification. Limited to the values "Optional", "Recommended" and "Required".  |
+| Definition | Short description for the expected interface label value. |
+| Ontology | Ontology ID for the label |
+| Value Type | Expected interface label's value type. Expected values: "String", "Int", "Float", "Bioproject_ID", "Biosample_ID", "SRA_ID", "Genbank_ID", "GISAID_ID", "Email", "Date" and "Integer_or_Range". |
+| Example | Example for the expected interface label value. |
+| Guidance | Detailed description for the expected interface label value. |
+
+## Contacts
 
 For more information and/or assistance, contact `datastructures@pha4ge.org` or the issue page of this repository.
 
@@ -135,6 +140,6 @@ For more information and/or assistance, contact `datastructures@pha4ge.org` or t
 
 Griffiths, E.J.; Timme, R.E.; Page, A.J.; Alikhan, N.; Fornika, D.; Maguire, F.; Mendes, C.I.; Tausch, S.H.; Black, A.; Connor, T.R.; Tyson, G.H.; Aanensen, D.M.; Alcock, B.; Campos, J.; Christoffels, A.; Gonçalves da Silva, A.; Hodcroft, E.; Hsiao, W.W.; Katz, L.S.; Nicholls, S.M.; Oluniyi, P.E.; Olawoye, I.B.; Raphenya, A.R.; Vasconcelos, A.T.R.; Witney, A.A.; MacCannell, D.R. **The PHA4GE SARS-CoV-2 Contextual Data Specification for Open Genomic Epidemiology.** _Preprints_ 2020, 2020080220 (doi: [10.20944/preprints202008.0220.v1](https://www.preprints.org/manuscript/202008.0220/v1)).
 
-## License 
+## License
 
 [CC-BY 4.0 International](LISENCE.md)
