@@ -35,7 +35,7 @@ In the face of the current SARS-CoV-2 pandemic, [PHA4GE](https://pha4ge.org) has
 
 Public health genomics contextual data includes sample metadata, lab/clinical/epidemiological data, and analysis methods information. Contextual data enables the interpretation of the sequence data, informs decision making for public health responses, and facilitates scientific understanding of infectious disease. Structured and consistent contextual data can also be more easily processed, aggregated, and reused by both humans and computers for different types of analyses.
 
-The SARS-CoV-2 contextual data specification includes a metadata collection template, reference guide, controlled vocabulary, and mapping to existing standards. We also provide a suite of protocols for submitting sequence data and contextual data to public repositories, enabling global interoperability of the data. The specification and all of the supporting materials are freely available and detailed below.
+The SARS-CoV-2 contextual data specification includes a metadata collection template, reference guides, controlled vocabulary, and mapping to existing standards. We also provide a suite of protocols for submitting sequence data and contextual data to public repositories, enabling global interoperability of the data. The specification and all of the supporting materials are freely available and detailed below.
 
 ## Content description
 
@@ -49,11 +49,11 @@ It contains the following items (tabs in the spreadsheet):
 
 The collection template contains "required" (colour-coded yellow), "strongly recommended" (colour-coded purple) and "optional" (colour-coded white) fields.
 
-1. **guidance for populating the template;**
+2. **guidance for populating the template;**
 
-The reference guide aims to facilitate the use of the collection template. It contains field definitions, further guidance/instructions, and examples of structured data. Mapping of PHA4GE fields to existing metadata standards such as the Sample Application Standard, MIxS v 5.0, and the MIGS Virus Host-associated package can be found in the reference guide.
+The reference guide aims to facilitate the use of the collection template. It contains field definitions, further guidance/instructions, and examples of structured data.
 
-1. **ontology-mapped controlled vocabulary for the picklists.**
+3. **ontology-mapped controlled vocabulary for the picklists.**
 
 Lists of controlled vocabulary, agreed upon by PHA4GE, are provided here for populating the template.
 
@@ -75,7 +75,8 @@ A **mapping file** indicating which PHA4GE fields correspond to which fields wit
 - GISAID
 - ENA
 - NCBI
-- WHO
+- WHO recommended contextual data mapping to PHA4GE fields
+  - PHA4GE fields are mapped to corresponding contextual data elements recommended by the World Health Organization (World Health Organization. Guidance for surveillance of SARS-CoV-2 variants: interim guidance. WHO/2019-nCoV/surveillance/variants2021.1).
 
 #### Submission protocols
 
