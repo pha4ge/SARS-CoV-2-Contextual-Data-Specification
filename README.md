@@ -5,26 +5,6 @@
 ![License](https://img.shields.io/badge/license-CC--BY%204.0%20International-lightgrey)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/pha4ge/SARS-CoV-2-Contextual-Data-Specification)
 
-## Table of Contents
-
-- [PHA4GE overview](#pha4ge-overview)
-- [SARS-CoV-2 contextual data specification overview](#sars-cov-2-contextual-data-specification-overview)
-- [Content description](#content-description)
-- [SARS-CoV-2 contextual data specification package](#sars-cov-2-contextual-data-specification-package)
-  - [Spreadsheet-based (.xlsx) collection template](#spreadsheet-based--xlsx--collection-template)
-  - [The specification contextual data collection template in machine-amenable JSON format](#the-specification-contextual-data-collection-template-in-machine-amenable-json-format)
-- [Standard operating procedure](#standard-operating-procedure)
-- [Supporting materials](#supporting-materials)
-  - [PHA4GE to sequence repository field mappings](#PHA4GE-to-sequence-repository-field-mappings)
-  - [Submission protocols](#submission-protocols)
-    - [NCBI](#ncbi)
-    - [ENA](#ena)
-    - [GISAID](#gisaid)
-- [JSON Specification Generation](#json-specification-generation)
-- [Contacts](#contacts)
-- [Citation](#citation)
-- [License](#license)
-
 ## PHA4GE overview
 
 The Public Health Alliance for Genomic Epidemiology ([PHA4GE](https://pha4ge.org)) is a global coalition that is actively working to establish consensus standards, document and share best practices, improve the availability of critical bioinformatic tools and resources, and advocate for greater openness, interoperability, accessibility and reproducibility in public health microbial bioinformatics.
