@@ -1,9 +1,10 @@
 # SARS-CoV-2 Contextual Data Specification - Collection template and associated materials for SARS-CoV-2 metadata
 
+[![Cite Us](https://zenodo.org/badge/DOI/10.1093/gigascience/giac003.svg)](https://doi.org/10.1093/gigascience/giac003)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3945394.svg)](https://doi.org/10.5281/zenodo.3945394)
-![Pre-print DOI](https://img.shields.io/badge/preprints-10.20944%2Fpreprints202008.0220.v1-yellow)
 ![License](https://img.shields.io/badge/license-CC--BY%204.0%20International-lightgrey)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/pha4ge/SARS-CoV-2-Contextual-Data-Specification)
+![Maintenance](https://img.shields.io/maintenance/yes/2023)
 
 ## PHA4GE overview
 
@@ -123,7 +124,7 @@ For more information and/or assistance, contact `datastructures@pha4ge.org` or t
 
 ## Citation
 
-Griffiths, E.J.; Timme, R.E.; Page, A.J.; Alikhan, N.; Fornika, D.; Maguire, F.; Mendes, C.I.; Tausch, S.H.; Black, A.; Connor, T.R.; Tyson, G.H.; Aanensen, D.M.; Alcock, B.; Campos, J.; Christoffels, A.; Gonçalves da Silva, A.; Hodcroft, E.; Hsiao, W.W.; Katz, L.S.; Nicholls, S.M.; Oluniyi, P.E.; Olawoye, I.B.; Raphenya, A.R.; Vasconcelos, A.T.R.; Witney, A.A.; MacCannell, D.R. **The PHA4GE SARS-CoV-2 Contextual Data Specification for Open Genomic Epidemiology.** _Preprints_ 2020, 2020080220 (doi: [10.20944/preprints202008.0220.v1](https://www.preprints.org/manuscript/202008.0220/v1)).
+Emma J Griffiths, Ruth E Timme, Catarina Inês Mendes, Andrew J Page, Nabil-Fareed Alikhan, Dan Fornika, Finlay Maguire, Josefina Campos, Daniel Park, Idowu B Olawoye, Paul E Oluniyi, Dominique Anderson, Alan Christoffels, Anders Gonçalves da Silva, Rhiannon Cameron, Damion Dooley, Lee S Katz, Allison Black, Ilene Karsch-Mizrachi, Tanya Barrett, Anjanette Johnston, Thomas R Connor, Samuel M Nicholls, Adam A Witney, Gregory H Tyson, Simon H Tausch, Amogelang R Raphenya, Brian Alcock, David M Aanensen, Emma Hodcroft, William W L Hsiao, Ana Tereza R Vasconcelos, Duncan R MacCannell, on behalf of the Public Health Alliance for Genomic Epidemiology (PHA4GE) consortium, Future-proofing and maximizing the utility of metadata: The PHA4GE SARS-CoV-2 contextual data specification package, GigaScience, Volume 11, 2022, giac003, [https://doi.org/10.1093/gigascience/giac003](https://doi.org/10.1093/gigascience/giac003)
 
 ## License
 
