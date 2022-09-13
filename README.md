@@ -75,13 +75,13 @@ The entire collection of submission protocols is available as a workflow at prot
 This SOP provides users with step-by-step instructions for populating the collection template. The SOP is available in protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.btpznmp6](https://dx.doi.org/10.17504/protocols.io.btpznmp6)
 
 2. **Overview of NCBI's submission process and the metadata required**
-Provides an overview of the submission process and includes a brief training video. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsbpnamn](https://dx.doi.org/10.17504/protocols.io.bsbpnamn).
+Provides an overview of the submission process and includes a brief training video. The protocol is available at protocols.io under the DOI [https://dx.doi.org/10.17504/protocols.io.b35iqq4e](https://dx.doi.org/10.17504/protocols.io.b35iqq4e).
 
 3. **SARS-CoV-2 NCBI submission protocol: SRA, BioSample, and BioProject**
 Step-by-step instructions for establishing a new NCBI laboratory submission account, creating and linking a new BioProject to an existing umbrella effort, and submitting raw sequence data with assocated metadata to SRA and BioSample. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bsypnfvn](https://dx.doi.org/10.17504/protocols.io.bsypnfvn).
 
 4. **SARS-CoV-2 NCBI consensus submission protocol: GenBank**
-Step-by-step instructions for submitting SARS-CoV-2 consensus sequencing to NCBI GenBank and linking to existing BioProject, BioSamples, and raw data. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.bid7ka9n](https://dx.doi.org/10.17504/protocols.io.bid7ka9n).
+Step-by-step instructions for submitting SARS-CoV-2 consensus sequencing to NCBI GenBank and linking to existing BioProject, BioSamples, and raw data. The protocol is available at protocols.io under the DOI [dx.doi.org/10.17504/protocols.io.b3bnqime](dx.doi.org/10.17504/protocols.io.b3bnqime).
 
 ##### ENA
 
